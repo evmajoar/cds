@@ -1,0 +1,37 @@
+@import '../helpers/variables';
+@import '../helpers/mixins';
+
+.preloader {
+  height: 100%;
+
+  .container {
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+
+  &__text {
+    animation: width 2s ease-in-out .3s forwards;
+    width: 0;
+    opacity: 0;
+  }
+
+  &__logo {
+
+    &-text {
+      animation: scaleIn .6s ease-in-out;
+    }
+
+    &-red {
+      animation: sBottom .6s ease-in-out .3s forwards;
+      opacity: 0;
+    }
+
+    &-blue {
+      animation: sLeft .6s ease-in-out .5s forwards;
+      opacity: 0;
+    }
+
+  }
+
+}
