@@ -1,10 +1,30 @@
 @import '../helpers/variables';
 @import '../helpers/mixins';
 
+// @font-face {
+//     font-family: 'ProximaNova';
+//     font-display: swap;
+//     src: local('ProximaNova-Black'), url($fontDir + 'ProximaNova/ProximaNova-Black.woff2') format('woff2'), url($fontDir + 'ProximaNova/ProximaNova-Black.woff') format('woff');
+//     font-weight: 900;
+//     font-style: normal;
+// }
 @font-face {
-    font-family: 'ProximaNova';
-    font-display: swap;
-    src: local('ProximaNova-Black'), url($fontDir + 'ProximaNova/ProximaNova-Black.woff2') format('woff2'), url($fontDir + 'ProximaNova/ProximaNova-Black.woff') format('woff');
-    font-weight: 900;
-    font-style: normal;
+  font-family: 'Ubuntu';
+  src: local('Ubuntu'), url($fontDir + 'ubuntu.woff2') format('woff2'), url($fontDir + 'ubuntu.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Ubuntu Medium';
+  src: local('Ubuntu Medium'), local('Ubuntu-Medium'), url($fontDir + 'ubuntumedium.woff2') format('woff2'), url($fontDir + 'ubuntumedium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Ubuntu Bold';
+  src: local('Ubuntu Bold'), local('Ubuntu-Bold'), url($fontDir + 'ubuntubold.woff2') format('woff2'), url($fontDir + 'ubuntubold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
 }

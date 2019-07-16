@@ -4,22 +4,42 @@
 .container {
   display: flex;
   flex-wrap: wrap;
+  flex-direction: column;
   max-width: $commonWidth;
   margin: 0 auto;
   padding: 0 $gutter;
   width: 100%;
-  @include breakpoint(el) {
-    max-width: 992px;
+
+  // брейпоинты для десктопной верстки
+
+  // @include breakpoint(el) {
+  //   max-width: 992px;
+  // }
+  // @include breakpoint(lg) {
+  //   max-width: 768px;
+  // }
+  // @include breakpoint(md) {
+  //   max-width: 576px;
+  // }
+  // @include breakpoint(sm) {
+  //   max-width: 480px;
+  // }
+
+  // брейпоинты для mobile first
+
+  @include breakpoint(xs) {
+    max-width: 320px;
   }
-  @include breakpoint(lg) {
-    max-width: 768px;
+
+  @include breakpoint(sm) {
+    max-width: 570px;
   }
   @include breakpoint(md) {
-    max-width: 576px;
+    max-width: 750px;
   }
-  @include breakpoint(sm) {
-    max-width: 480px;
-  }
+  @include breakpoint(lg) {
+    max-width: 1030px;
+  } 
 }
 
 .visually-hidden {
@@ -34,3 +54,41 @@
   padding: 0;
   border: 0;
 }
+
+
+// для построение сетки
+
+// .fon1{
+//   background-color: rgba(49, 174, 49, 0.2);
+//   border: 1px solid rgb(49, 174, 49);
+// }
+
+// .fon2{
+//   background-color: rgba(201, 191, 55, 0.2);
+//   border: 1px solid rgb(201, 191, 55);
+// }
+
+// .fon3{
+//   background-color: rgba(231, 154, 72, 0.2);
+//   border: 1px solid rgb(231, 154, 72);
+// }
+
+// .fon4{
+//   background-color: rgba(125, 77, 77, 0.2);
+//   border: 1px solid rgb(125, 77, 77);
+// }
+
+// .fon5{
+//   background-color: rgba(138, 103, 226, 0.2);
+//   border: 1px solid rgb(138, 103, 226);
+// }
+
+// .fon6{
+//   background-color: rgba(119, 231, 122, 0.2);
+//   border: 1px solid rgb(119, 231, 122);
+// }
+
+// .fon7{
+//   background-color: rgba(208, 70, 166, 0.2);
+//   border: 1px solid rgb(208, 70, 166);
+// }
