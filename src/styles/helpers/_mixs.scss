@@ -249,11 +249,17 @@
   width: 100%;
 }
 
-.menu{
+.menu {
   display: none;
 }
-.menu--open{
+
+.menu--open {
   display: block;
+}
+
+.icon-play {
+  fill: $lightBlue;
+  transition: ease-out .5s;
 }
 
 

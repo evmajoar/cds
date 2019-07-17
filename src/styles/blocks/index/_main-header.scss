@@ -215,7 +215,6 @@
 
 .main-header__film-complex {
   position: relative;
-
   padding: 12px 40px 10px 70px;
   margin-bottom: 40px;
   text-align: left;
@@ -226,7 +225,9 @@
   border-radius: 4px;
 
   &:hover {
-    background-color: rgba(#002432, .8);
+    .icon-play {
+      fill: $red;
+    }
   }
 
   @include breakpoint(sm) {
@@ -235,20 +236,27 @@
     padding: 12px 75px 10px 75px;
   }
 
-  &:after {
-    @include pseudo;
-    content: url(../../../images/icon-play.svg);
-    // left: 10px;
-    left: 12px;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 48px;
-    height: 48px;
-  }
+  // &:after {
+  //   @include pseudo;
+  //   content: url(../../../images/icon-play.svg);
+  //   // left: 10px;
+  //   left: 12px;
+  //   top: 50%;
+  //   transform: translateY(-50%);
+  //   width: 48px;
+  //   height: 48px;
+  // }
 
   // @include breakpoint(lg) {
   //   padding-right: 70px;
   // }
+}
+
+.main-header__icon-play {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .main-header__sales-list {
@@ -292,6 +300,8 @@
 }
 
 .main-header__sales-item {
+  position: relative;
+  overflow: hidden;
   transform: skew(-25deg, 0deg);
   padding: 10px 20px;
   max-width: 268px;
@@ -299,6 +309,7 @@
   text-align: center;
   font-size: 17px;
   background-color: $white;
+  cursor: pointer;
 
   &:not(:last-child) {
     margin-bottom: 12px;
@@ -306,6 +317,25 @@
 
   &:nth-child(odd) {
     margin-left: auto;
+  }
+  &:after{
+    @include pseudo;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    height: 100%;
+    width: 0;
+    background-color: $lightBlue;
+    transform-origin: left;
+    transition: all .5s;
+  }
+  &:hover{
+    &:after{
+      width: 100%;
+    }
+    .main-header__sales-text{
+      color: $white;
+    }
   }
 }
 
