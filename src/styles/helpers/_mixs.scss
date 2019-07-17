@@ -34,12 +34,14 @@
   @include breakpoint(sm) {
     max-width: 570px;
   }
+
   @include breakpoint(md) {
     max-width: 750px;
   }
+
   @include breakpoint(lg) {
     max-width: 1030px;
-  } 
+  }
 }
 
 .visually-hidden {
@@ -47,13 +49,214 @@
   overflow: hidden;
   white-space: nowrap;
   clip: rect(0 0 0 0);
-  clip-path: inset(0,0,0,0);
+  clip-path: inset(0, 0, 0, 0);
   width: 1px;
   height: 1px;
   margin: -1px;
   padding: 0;
   border: 0;
 }
+
+.link {
+
+  // text-transform: uppercase;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.link--red {
+  color: $red;
+
+  &:active {
+    color: #bb211b;
+  }
+
+  // &:visited{
+  //   color: #6f1310;
+  // }
+}
+
+.link--blue {
+  color: $lightBlue;
+
+  &:active {
+    color: #008abd;
+  }
+
+  // &:visited{
+  //   color: #005271;
+  // }
+}
+
+.button {
+  padding: 15px 25px;
+  color: #fff;
+  font-size: 13px;
+  text-transform: uppercase;
+  border-radius: 4px;
+}
+
+.button--red {
+  background-color: $red;
+
+  &:hover {
+    background-color: #d6251f;
+  }
+
+  &:active {
+    background-color: #bb211b;
+  }
+
+  &:disabled {
+    opacity: .5;
+  }
+}
+
+.close {
+  position: absolute;
+  padding: 0;
+  width: 14px;
+  height: 14px;
+  opacity: .7;
+
+  &:after {
+    @include pseudo;
+    top: 0;
+    left: 50%;
+    transform: rotate(-45deg);
+    width: 1.5px;
+    height: 100%;
+  }
+
+  &:before {
+    @include pseudo;
+    top: 0;
+    left: 50%;
+    transform: rotate(45deg);
+    width: 1.5px;
+    height: 100%;
+  }
+}
+
+.close--white {
+  &:after {
+    background-color: #fff;
+  }
+
+  &:before {
+    background-color: #fff;
+  }
+}
+
+.close--grey {
+  &:after {
+    background-color: #b2c0cd;
+  }
+
+  &:before {
+    background-color: #b2c0cd;
+  }
+}
+
+.burger-button {}
+
+.navigation {}
+
+.block-phone {
+  color: #1f1f1f;
+}
+
+.block-phone__link {
+  display: block;
+  font-family: $UbuntuMedium;
+
+  @include breakpoint(lg) {
+    font-size: 20px;
+  }
+}
+
+.block-phone__description {
+  font-size: 13px;
+  line-height: 16px;
+  text-align: right;
+}
+
+.menu {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 4;
+  background-color: rgba($color: #002432, $alpha: .56);
+}
+
+.menu__content {
+  position: relative;
+  z-index: 1;
+  margin-top: 40px;
+  padding-top: 40px;
+  padding-left: 25px;
+  padding-right: 25px;
+  max-width: 320px;
+  background-color: $white;
+  box-shadow: 0 6px 18px rgba(0, 36, 50, 0.32);
+  border-radius: 0 4px 4px 0;
+
+  &:after {
+    @include pseudo;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+    clip-path: polygon(100% 0, 100% 0, 100% 100%, 0 100%);
+    width: 172px;
+    height: 300px;
+    background: #00adef;
+  }
+}
+
+.menu__title-list {
+  margin-bottom: 15px;
+  font-size: 20px;
+  color: #002432;
+}
+
+.menu__list {
+  margin-bottom: 35px;
+  padding-left: 25px;
+}
+
+.menu__item {
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
+}
+
+.menu__link {
+  font-size: 17px;
+}
+
+.menu__button-container {
+  margin: 0 -25px;
+  padding: 25px;
+  background-color: $white;
+  box-shadow: 0 6px 18px rgba(0, 36, 50, 0.32);
+  border-radius: 0 4px 4px 0;
+}
+
+.menu__button-selection {
+  width: 100%;
+}
+
+.menu{
+  display: none;
+}
+.menu--open{
+  display: block;
+}
+
+
 
 
 // для построение сетки
