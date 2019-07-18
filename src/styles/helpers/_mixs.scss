@@ -120,11 +120,13 @@
   &:hover {
     color: #d6251f;
     border: 1px solid #d6251f;
+    background-color: rgba($color: #d6251f, $alpha: .1);
   }
 
   &:active {
     color: #bb211b;
     border: 1px solid #bb211b;
+    background-color: rgba($color: #bb211b, $alpha: .2);
   }
 
   &:disabled {
@@ -339,6 +341,7 @@
   border: 1px solid #d3dfeb;
   box-sizing: border-box;
   border-radius: 4px;
+  transition: ease-out .3s;
 }
 
 .type__checkbox input:checked~.type__checkbox-checkmark {
@@ -354,6 +357,10 @@
 
 .type__checkbox input:checked~.type__checkbox-checkmark:after {
   display: block;
+}
+
+.type__item .type__checkbox-checkmark:hover {
+  background-color: #f8f9fb;
 }
 
 .type__checkbox-checkmark:after {

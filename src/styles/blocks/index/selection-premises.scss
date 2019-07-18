@@ -119,6 +119,7 @@
   }
 
   tr {
+    transition: all .5s;
     &:not(:last-child) {
       border-bottom: 1px solid #d3dfeb;
     }
@@ -126,7 +127,6 @@
     &:hover {
       @include breakpoint(lg) {
         border-radius: 4px;
-        transition: all .5s;
         box-shadow: 0 6px 18px rgba(0, 36, 50, .32);
         cursor: pointer;
       }
