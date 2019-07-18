@@ -341,7 +341,7 @@
   border: 1px solid #d3dfeb;
   box-sizing: border-box;
   border-radius: 4px;
-  transition: ease-out .3s;
+  transition: all .3s;
 }
 
 .type__checkbox input:checked~.type__checkbox-checkmark {
@@ -424,7 +424,7 @@
   margin: 0;
   height: 24px;
   width: 24px;
-  padding: 16px 23px;
+  padding: 16px 21px;
   background: #ffffff;
   border: 1px solid rgba(#d3dfeb, .7);
   transition: all 0.3s;

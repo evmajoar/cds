@@ -1,8 +1,8 @@
 <section class="selection-premises">
   <div class="container">
     <h2 class="selection-premises__title">Подбор помещения по параметрам</h2>
-    <button class="selection-premises__options-button button button--transparent- js-popup" type="button">Параметры (6)</button>
-    <form class="selection-premises__form" action="#">
+    <button class="selection-premises__options-button button button--transparent-grey js-popup" type="button" data-id="options">Параметры (6)</button>
+    <form class="selection-premises__form selection-premises__form--none" action="#">
       <fieldset class="selection-premises__type type">
         <legend class="visually-hidden">Тип помещения</legend>
         <ul class="selection-premises__type-list type__list">
@@ -15,7 +15,7 @@
           </li>
           <li class="selection-premises__type-item type__item">
             <label class="container-checkboxes type__checkbox">
-              <input class="type__checkbox-input" type="checkbox">
+              <input class="type__checkbox-input" type="checkbox" checked="checked">
               <span class="type__checkbox-checkmark"></span>
               <span class="type__checkbox-name">Коммерческое</span>
             </label>
@@ -198,3 +198,6 @@
     <button class="selection-premises__more-button button button--transparent-red" type="button">Загрузить еще</button>
   </div>
 </section>
+
+
+<button class="main-header__callback-btn btn btn--yellow js-popup" type="button" data-id="callback">Заказать звонок</button>
