@@ -4,19 +4,19 @@
   Year: 2019
 */
 $(function () {
+
     // PRELOADER
     setTimeout(function() {
-      $( '.preloader' ).addClass( 'preloader--hide' );
+      $( 'body' ).removeClass( 'hidden' ).find( '.preloader' ).addClass( 'preloader--hide' );
     }, 2000);
 
-    $('.burger-button').on('click', function (e) {
-        e.preventDefault();
-        // $(this).addClass("menu--open");
-        $('.menu').addClass("menu--open");
+    // MENU
+    $( '.burger-button' ).click(function() {
+      $( '.menu' ).addClass( 'menu--opened' ).find( '.menu__content' ).addClass( 'menu__content--slide' );
     });
 
-    $('.main-header__menu-close').on('click', function (e) {
-        $('.menu').removeClass("menu--open");
+    $( '.main-header__menu-close' ).click(function() {
+      $( '.menu' ).removeClass( 'menu--opened' ).find( '.menu__content' ).removeClass( 'menu__content--slide' );;
     });
 
 });

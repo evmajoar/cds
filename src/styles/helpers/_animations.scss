@@ -1,57 +1,6 @@
 @import '../helpers/variables';
 @import '../helpers/mixins';
 
-@keyframes scaleIn {
-  0% {
-    transform: scale(1.5);
-    opacity: 0;
-  }
-  100% {
-    transform: scale(1);
-    opacity: 1;
-  }
-}
-
-@keyframes scaleOut {
-  0% {
-    transform: scale(0);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-
-@keyframes sTop {
-  0% {
-    transform: translate3d(0, -100%, 0);
-  }
-  100% {
-    transform: translate3d(0, 0, 0);
-    opacity: 1;
-  }
-}
-
-@keyframes sBottom {
-  0% {
-    transform: translate3d(0, 100%, 0);
-  }
-  100% {
-    transform: translate3d(0, 0, 0);
-    opacity: 1;
-  }
-}
-
-@keyframes width {
-  0% {
-    width: 215px;
-  }
-  100% {
-    width: 500px;
-  }
-}
-
-// ========================================
-
 @keyframes load {
   0% {
     transform: rotate(0deg);
@@ -73,7 +22,16 @@
   }
 }
 
-@keyframes slide-down {
+@keyframes hide {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes slideDown {
   0% {
     opacity: 0;
     transform: translate3d(0, -100px, 0);
@@ -81,5 +39,34 @@
   100% {
     opacity: 1;
     transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes slideRight {
+  0% {
+    transform: translate3d(-100px, 0, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes scaleIn {
+  0% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes widthOut {
+  0% {
+    width: 215px;
+  }
+  100% {
+    width: 500px;
   }
 }
