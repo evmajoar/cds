@@ -4,6 +4,10 @@
 .preloader {
   height: 100%;
 
+  &--hide {
+    transform: translate3d(-100%, 0, 0);
+  }
+
   .container {
     align-items: center;
     justify-content: center;
@@ -17,19 +21,21 @@
   }
 
   &__logo {
+    width: 215px;
+    animation: scaleIn .6s ease-in-out, width .6s ease-in-out .6s forwards;
 
-    &-text {
-      animation: scaleIn .6s ease-in-out;
-    }
-
-    &-red {
-      animation: sBottom .6s ease-in-out .3s forwards;
+    &-letter {
+      fill:#060707;
+      animation: show .3s ease-in-out .56s forwards;
       opacity: 0;
     }
 
     &-blue {
-      animation: sLeft .6s ease-in-out .5s forwards;
-      opacity: 0;
+      fill:#2C416D;
+    }
+
+    &-red {
+      fill:#CE383A;
     }
 
   }
