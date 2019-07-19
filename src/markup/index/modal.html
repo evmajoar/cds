@@ -1,0 +1,124 @@
+<div id="options" class="modal modal-options">
+  <div class="modal__dialog">
+    <!-- <button class="modal__close" type="button"><span class="visually-hidden">Закрыть модальное окно</span></button> -->
+    <button class="modal__close close close--grey" type="button">
+      <span class="visually-hidden">Закрыть модальное окно</span>
+    </button>
+    <div class="modal__content modal-options__content">
+      <h2 class="selection-premises__title modal-options__title">Подбор помещения по параметрам</h2>
+      <form class="selection-premises__form modal-options__form" action="#">
+        <fieldset class="selection-premises__type type">
+          <legend class="visually-hidden">Тип помещения</legend>
+          <ul class="selection-premises__type-list type__list modal-options__type-list">
+            <li class="selection-premises__type-item type__item modal-options__type-item">
+              <label class="container-checkboxes type__checkbox">
+                <input class="type__checkbox-input" type="checkbox">
+                <span class="type__checkbox-checkmark"></span>
+                <span class="type__checkbox-name">Жилое</span>
+              </label>
+            </li>
+            <li class="selection-premises__type-item type__item modal-options__type-item">
+              <label class="container-checkboxes type__checkbox">
+                <input class="type__checkbox-input" type="checkbox" checked="checked">
+                <span class="type__checkbox-checkmark"></span>
+                <span class="type__checkbox-name">Коммерческое</span>
+              </label>
+            </li>
+            <li class="selection-premises__type-item type__item modal-options__type-item">
+              <label class="container-checkboxes type__checkbox">
+                <input class="type__checkbox-input" type="checkbox">
+                <span class="type__checkbox-checkmark"></span>
+                <span class="type__checkbox-name">Паркинг</span>
+              </label>
+            </li>
+            <li class="selection-premises__type-item type__item modal-options__type-item">
+              <label class="container-checkboxes type__checkbox">
+                <input class="type__checkbox-input" type="checkbox">
+                <span class="type__checkbox-checkmark"></span>
+                <span class="type__checkbox-name">Кладовка</span>
+              </label>
+            </li>
+          </ul>
+        </fieldset>
+
+        <div class="selection-premises__fieldset-block modal-options__fieldset-block">
+          <fieldset class="selection-premises__housing checkbox-square">
+            <legend class="selection-premises__housing-title checkbox-square__title legend">Корпус</legend>
+            <ul class="selection-premises__housing-list checkbox-square__list">
+              <li class="selection-premises__housing-item checkbox-square__item">
+                <label
+                  class="selection-premises__housing-container checkbox-square__checkbox checkbox-square__checkbox--big">
+                  <input class="checkbox-square__input" type="checkbox">
+                  <span class="checkbox-square__checkmark checkbox-square__checkmark--big">1</span>
+                </label>
+              </li>
+              <li class="selection-premises__housing-item checkbox-square__item">
+                <label
+                  class="selection-premises__housing-container checkbox-square__checkbox checkbox-square__checkbox--big">
+                  <input class="checkbox-square__input" type="checkbox" checked="checked">
+                  <span class="checkbox-square__checkmark checkbox-square__checkmark--big">2</span>
+                </label>
+              </li>
+            </ul>
+          </fieldset>
+
+          <fieldset class="selection-premises__room checkbox-square">
+            <legend class="selection-premises__room-title checkbox-square__title legend">Количество комнат</legend>
+            <ul class="selection-premises__room-list checkbox-square__list modal-options__room-list">
+              <li class="selection-premises__room-item checkbox-square__item modal-options__room-item">
+                <label
+                  class="selection-premises__room-container checkbox-square__checkbox checkbox-square__checkbox--big">
+                  <input class="checkbox-square__input" type="checkbox">
+                  <span class="checkbox-square__checkmark checkbox-square__checkmark--big">Студия</span>
+                </label>
+              </li>
+              <li class="selection-premises__room-item checkbox-square__item">
+                <label
+                  class="selection-premises__room-container checkbox-square__checkbox checkbox-square__checkbox--big">
+                  <input class="checkbox-square__input" type="checkbox">
+                  <span class="checkbox-square__checkmark checkbox-square__checkmark--big">1</span>
+                </label>
+              </li>
+              <li class="selection-premises__room-item checkbox-square__item">
+                <label
+                  class="selection-premises__room-container checkbox-square__checkbox checkbox-square__checkbox--big">
+                  <input class="checkbox-square__input" type="checkbox" checked="checked">
+                  <span class="checkbox-square__checkmark checkbox-square__checkmark--big">2</span>
+                </label>
+              </li>
+              <li class="selection-premises__room-item checkbox-square__item">
+                <label
+                  class="selection-premises__room-container checkbox-square__checkbox checkbox-square__checkbox--big">
+                  <input class="checkbox-square__input" type="checkbox" checked="checked">
+                  <span class="checkbox-square__checkmark checkbox-square__checkmark--big">2 евро</span>
+                </label>
+              </li>
+              <li class="selection-premises__room-item checkbox-square__item">
+                <label
+                  class="selection-premises__room-container checkbox-square__checkbox checkbox-square__checkbox--big">
+                  <input class="checkbox-square__input" type="checkbox">
+                  <span class="checkbox-square__checkmark checkbox-square__checkmark--big">3</span>
+                </label>
+              </li>
+              <li class="selection-premises__room-item checkbox-square__item">
+                <label
+                  class="selection-premises__room-container checkbox-square__checkbox checkbox-square__checkbox--big">
+                  <input class="checkbox-square__input" type="checkbox">
+                  <span class="checkbox-square__checkmark checkbox-square__checkmark--big">3 евро</span>
+                </label>
+              </li>
+              <li class="selection-premises__room-item checkbox-square__item">
+                <label
+                  class="selection-premises__room-container checkbox-square__checkbox checkbox-square__checkbox--big">
+                  <input class="checkbox-square__input" type="checkbox">
+                  <span class="checkbox-square__checkmark checkbox-square__checkmark--big">4</span>
+                </label>
+              </li>
+            </ul>
+          </fieldset>
+        </div>
+        <button class="modal-options__choose-button button button--red" type="button">Подобрать</button>
+      </form>
+    </div>
+  </div>
+</div>

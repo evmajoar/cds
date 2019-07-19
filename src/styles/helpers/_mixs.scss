@@ -81,7 +81,7 @@
 }
 
 .button {
-  padding: 15px 25px;
+  padding: 14px 25px;
   color: #fff;
   font-size: 13px;
   text-transform: uppercase;
@@ -102,6 +102,32 @@
   &:disabled {
     opacity: .5;
   }
+}
+
+.button--transparent-red {
+  color: $red;
+  border: 1px solid $red;
+
+  &:hover {
+    color: #d6251f;
+    border: 1px solid #d6251f;
+    background-color: rgba($color: #d6251f, $alpha: .1);
+  }
+
+  &:active {
+    color: #bb211b;
+    border: 1px solid #bb211b;
+    background-color: rgba($color: #bb211b, $alpha: .2);
+  }
+
+  &:disabled {
+    opacity: .5;
+  }
+}
+
+.button--transparent-grey {
+  color: $lightBlack;
+  border: 1px solid #d3dfeb;
 }
 
 .close {
@@ -174,11 +200,13 @@
   transition: ease-out .5s;
 }
 
+// чекбокс с галочками
 .type__list {
   @include breakpoint(sm) {
     display: flex;
     justify-content: space-between;
   }
+
   @include breakpoint(lg) {
     justify-content: flex-start;
   }
@@ -187,15 +215,7 @@
 .type__item {
   display: flex;
   justify-content: space-between;
-  &:not(:last-child){
-    margin-bottom: 10px;
-    @include breakpoint(sm) {
-      margin-bottom: 0;
-    }
-    @include breakpoint(lg) {
-      margin-right: 140px;
-    }
-  }
+  height: 32px;
 }
 
 .type__checkbox {
@@ -212,11 +232,11 @@
 
 .type__checkbox {
   position: relative;
-  display: block;
-  padding-left: 35px;
-  font-size: 22px;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding-left: 45px;
   cursor: pointer;
-  user-select: none;
 }
 
 .type__checkbox-input {
@@ -231,16 +251,17 @@
   position: absolute;
   top: 0;
   left: 0;
-  height: 32px;
+  height: 100%;
   width: 32px;
   border: 1px solid #d3dfeb;
   box-sizing: border-box;
   border-radius: 4px;
+  transition: all .3s;
 }
 
 .type__checkbox input:checked~.type__checkbox-checkmark {
   background-color: #f8f9fb;
-  border: 2px solid #d3dfeb;
+  border: 1px solid #c6d1db;
 }
 
 .type__checkbox-checkmark:after {
@@ -253,22 +274,135 @@
   display: block;
 }
 
+.type__item .type__checkbox-checkmark:hover {
+  background-color: #f8f9fb;
+}
+
 .type__checkbox-checkmark:after {
   content: url($imageDir + 'checked-filter.svg');
   left: 5px;
-  top: 2px;
+  top: 7px;
   color: #00adef;
 }
 
 .type__checkbox-name {
   position: relative;
-  top: 2px;
-  left: 10px;
   font-size: 15px;
   line-height: 24px;
   color: #1f1f1f;
 }
 
+// чекбоксы квадртные
+.checkbox-square__list {
+  display: flex;
+  color: #1f1f1f;
+}
+
+.checkbox-square__item {
+  margin: 0;
+  height: 52px;
+  display: flex;
+  transition: all 0.3s;
+
+  &:not(:first-child) {
+    margin-left: -1px;
+  }
+
+  .checkbox-square__checkmark {
+    @include breakpoint(lg) {
+      &:hover {
+        background-color: #f8f9fb;
+      }
+    }
+  }
+}
+
+.checkbox-square__checkbox {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.checkbox-square__checkbox input {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+
+.checkbox-square__checkmark {
+  // position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0;
+  height: 24px;
+  width: 24px;
+  padding: 16px 21px;
+  background: #ffffff;
+  border: 1px solid rgba(#d3dfeb, .7);
+  transition: all 0.3s;
+}
+
+
+
+.checkbox-square__checkbox input:checked~.checkbox-square__checkmark {
+  background-color: #f8f9fb;
+  border: 1px solid #c6d1db;
+}
+
+
+// .checkbox-square__checkbox input:disabled~.checkbox-square__checkmark {
+//   background: #e6e6e6;
+//   opacity: 0.6;
+//   pointer-events: none;
+// }
+
+.checkbox-square__checkmark:after {
+  box-sizing: unset;
+  content: '';
+  position: absolute;
+  display: none;
+}
+
+.contrcheckbox-square__checkboxol input:checked~.checkbox-square__checkmark:after {
+  display: block;
+}
+
+.control-checkbox .checkbox-square__checkmark:after {
+  left: 8px;
+  top: 3px;
+  width: 5px;
+  height: 10px;
+  border: solid #423f34;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.control-checkbox input:disabled~.checkbox-square__checkmark:after {
+  border-color: #7b7b7b;
+}
+
+
+.checkbox-square__checkbox--big {
+  width: 100%;
+  height: 100%;
+}
+
+.checkbox-square__checkmark--big {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.legend {
+  margin-bottom: 7px;
+  color: #999999;
+  font-size: 13px;
+}
 
 
 
