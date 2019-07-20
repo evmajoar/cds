@@ -6,18 +6,18 @@
 $(function () {
 
 
-    $('.burger-button').on('click', function (e) {
-        e.preventDefault();
-        // $(this).addClass("menu--open");
-        $('.menu').addClass("menu--open");
-    });
+  $('.burger-button').on('click', function (e) {
+    e.preventDefault();
+    // $(this).addClass("menu--open");
+    $('.menu').addClass("menu--open");
+  });
 
-    $('.main-header__menu-close').on('click', function (e) {
-        $('.menu').removeClass("menu--open");
-    });
+  $('.main-header__menu-close').on('click', function (e) {
+    $('.menu').removeClass("menu--open");
+  });
 
 
-    // попап окна
+  // попап окна
   $('.js-popup').click(function (event) {
     var $that = $(this),
       $thatDataId = $that.data('id'),
@@ -65,6 +65,31 @@ $(function () {
   $('.modal__close').click(function () {
     $('body').removeClass('hidden');
     $(this).closest('.modal').removeClass('show');
+  });
+
+
+  $('.layouts__carousel-list').slick({
+    dots: false,
+    appendArrows: $('.layouts__buttons2'),
+    prevArrow: ' <button type="button" class="btn-prev layouts__carousel-prev"><span class="visually-hidden">Листать назад</span></button>',
+    nextArrow: '<button type="button" class="btn-next layouts__carousel-next"><span class="visually-hidden">Листать вперед</span></button>',
+    responsive: [{
+      breakpoint: 768,
+      settings: {
+        dots: false,
+        appendArrows: $('.layouts__buttons'),
+        prevArrow: ' <button type="button" class="btn-prev carousel-switch__prev"><span class="visually-hidden">Листать назад</span></button>',
+        nextArrow: '<button type="button" class="btn-next carousel-switch__next"><span class="visually-hidden">Листать вперед</span></button>'
+      }
+    }]
+  });
+
+
+  $(".layouts__carousel-list").on('afterChange', function (event, slick, currentSlide) {
+    $("#number-slide").text(currentSlide + 1);
+  });
+  $(".layouts__carousel-list").on('afterChange', function (event, slick, currentSlide) {
+    $("#number-slide2").text(currentSlide + 1);
   });
 
 });

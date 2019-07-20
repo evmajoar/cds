@@ -1,0 +1,270 @@
+@import '../../helpers/variables';
+@import '../../helpers/mixins';
+
+
+.layouts {
+  padding: 35px 0;
+
+  @include breakpoint(md) {
+    padding: 70px 0;
+  }
+}
+
+.layouts__title {
+  @include titleH2;
+  margin-bottom: 20px;
+
+  @include breakpoint(sm) {
+    text-align: center;
+  }
+}
+
+.layouts__tabs-room-list {
+  position: relative;
+  margin-bottom: 20px;
+
+  @include breakpoint(lg) {
+    margin-bottom: 60px;
+  }
+}
+
+.layouts__carousel-switch {
+  margin-bottom: 20px;
+}
+
+.layouts__carousel-switch--mobile {
+  @include breakpoint(md) {
+    display: none;
+    // width: 120px;
+    // margin: 0 auto 20px;
+  }
+
+  // @include breakpoint(lg) {
+  //   display: none;
+  //   position: absolute;
+  //   right: 0;
+  //   bottom: 0;
+  // }
+}
+
+.layouts__carousel-switch--desktop {
+  display: none;
+
+  @include breakpoint(md) {
+    position: absolute;
+    right: -20px;
+    bottom: 0;
+    display: block;
+    margin-bottom: 0;
+  }
+  @include breakpoint(lg) {
+    right: -25px;
+  }
+}
+
+.layouts__carousel-list-img {
+  margin: 0 auto;
+  width: 205px;
+}
+
+.layouts__carousel-box {
+  margin-bottom: 25px;
+  margin-left: -15px;
+  margin-right: -15px;
+  position: relative;
+  padding: 35px 0 50px;
+  text-align: center;
+  background-color: rgba(#77888f8e, .08);
+
+  @include breakpoint(md) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-row: 1 / 6;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.layouts__carousel-zoom {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  right: 10px;
+  bottom: 10px;
+  background-image: url($imageDir + 'scale.svg');
+  @include breakpoint(md) {
+    right: 25px;
+    top: 25px;
+    bottom: 0;
+  }
+}
+
+.layouts__carousel-tabs-list {
+  margin-bottom: 20px;
+}
+
+.layouts__carousel-tabs-title {
+  margin-bottom: 10px;
+}
+
+.layouts__carousel-wrapper {
+  position: relative;
+  max-width: 100%;
+}
+
+.layouts__carousel-list {
+  position: relative;
+  max-width: 100%;
+
+  @include breakpoint(md) {
+    margin: 0 20px;
+  }
+}
+
+.layouts__carousel-item {
+  padding-bottom: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
+  border-radius: 4px;
+  border: 1px solid #d2deec;
+
+  @include breakpoint(md) {
+    display: grid !important;
+    grid-column-gap: 15px;
+    grid-template-columns: 300px auto;
+    padding: 0;
+  }
+
+  @include breakpoint(lg) {
+    grid-column-gap: 30px;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.layouts__carousel-table {
+  @include breakpoint(md) {
+    grid-row: 1 / 2;
+    margin-bottom: 35px;
+  }
+
+  tbody {
+    position: relative;
+
+    @include breakpoint(md) {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &:after {
+      @include breakpoint(md) {
+        @include pseudo;
+        top: 0;
+        left: 48%;
+        display: block;
+        width: 2px;
+        height: 100%;
+        background-color: #d2deec;
+      }
+    }
+  }
+}
+
+.layouts__carousel-tabs-wrapper {
+  display: grid;
+
+  @include breakpoint(md) {
+    padding: 35px 15px 25px 0;
+  }
+
+  @include breakpoint(lg) {
+    padding: 35px 50px 25px 0;
+  }
+}
+
+.layouts__carousel-table-row {
+  position: relative;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+
+  @include breakpoint(md) {
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  &:first-child {
+    &:after {
+      @include pseudo;
+      bottom: 0;
+      left: 0;
+      width: 60px;
+      height: 2px;
+      background-color: #d2deec;
+
+      @include breakpoint(md) {
+        display: none;
+      }
+    }
+  }
+
+  &:last-child {
+    .layouts__carousel-table-value {
+      color: $lightBlue;
+    }
+  }
+}
+
+.layouts__carousel-table-value {
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.layouts__carousel-table-options {
+  color: #999999;
+  font-size: 13px;
+}
+
+.layouts__carousel-button {
+  display: block;
+  width: 100%;
+
+  @include breakpoint(sm) {
+    margin: 0 auto;
+    width: auto;
+  }
+
+  @include breakpoint(md) {
+    justify-self: flex-start;
+    margin: 0;
+  }
+}
+
+.layouts__carousel-row-button {
+  display: none;
+
+  @include breakpoint(md) {
+    display: block;
+  }
+}
+
+.layouts__carousel-prev {
+  position: absolute;
+  left: -20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.layouts__carousel-next {
+  position: absolute;
+  right: -20px;
+  top: 50%;
+  transform: translateY(-50%) rotate(-180deg);
+}
+
+.carousel__item {
+  width: 100%;
+  height: 300px;
+  background-color: red;
+}

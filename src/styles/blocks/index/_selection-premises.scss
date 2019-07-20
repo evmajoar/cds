@@ -11,11 +11,9 @@
 }
 
 .selection-premises__title {
+  @include titleH2;
   margin-bottom: 24px;
   text-align: left;
-  font-size: 28px;
-  font-family: $UbuntuMedium;
-  font-weight: normal;
 
   @include breakpoint(md) {
     margin-bottom: 40px;
