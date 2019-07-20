@@ -1,0 +1,48 @@
+@import '../../helpers/variables';
+@import '../../helpers/mixins';
+
+.navigation-site{
+  border-bottom: 1px solid #d3dfeb;
+  .container{
+    @media only screen and (max-width : 768px) {
+      padding-right: 0;
+    }
+  }
+}
+
+.navigation-site__navigation{
+  padding-top: 20px;
+  width: 100%;
+}
+
+.navigation-site__list{
+  
+}
+
+.navigation-site__item{
+  position: relative;
+  &:not(:last-child){
+    margin-right: 15px;
+    @include breakpoint(md) {
+      margin-right: 25px;
+    }
+  }
+  &:first-child{
+    margin-right: 56px;
+    &:before{
+      @include pseudo;
+      top: -5px;
+      right: -50%;
+      transform: rotate(180deg) translateX(50%);
+      width: 8px;
+      height: 25px;
+      background-image: url(../../../images/arrow-left.svg);
+      background-repeat: no-repeat;
+      opacity: .4;
+    }
+  }
+}
+
+.navigation-site__link{
+  display: block;
+}
