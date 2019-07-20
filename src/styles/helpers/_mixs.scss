@@ -28,7 +28,7 @@
   // брейпоинты для mobile first
 
   @include breakpoint(xs) {
-    max-width: 320px;
+    // max-width: 100%;
   }
 
   @include breakpoint(sm) {
@@ -153,7 +153,7 @@
   background-position: center;
 }
 
-.carousel-switch__number-slide--first {
+.carousel-switch__number-slide--active {
   position: relative;
   padding-right: 13px;
   color: #1f1f1f;
@@ -454,8 +454,18 @@
   display: flex;
   overflow-x: scroll;
   overflow-y: hidden;
+
   @include breakpoint(sm) {
-    justify-content: center;
+    overflow: visible;
+  }
+}
+
+.tabs-words--long {
+  @include breakpoint(sm) {
+    overflow-x: scroll;
+    overflow-y: hidden;
+  }
+  @include breakpoint(md) {
     overflow: visible;
   }
 }
@@ -463,10 +473,6 @@
 .tabs-words__item {
   position: relative;
   flex-shrink: 0;
-
-  &:not(:last-child) {
-    margin-right: 15px;
-  }
 }
 
 .tabs-words__item--active {
@@ -484,7 +490,7 @@
 }
 
 .tabs-words__button {
-  padding-bottom: 10px;
+  padding-bottom: 15px;
   font-size: 13px;
 
   &:hover {
@@ -538,12 +544,14 @@
   font-family: $UbuntuMedium;
 }
 
-.tabs-description__description{
+.tabs-description__description {
   margin-bottom: 30px;
   line-height: 24px;
+
   @include breakpoint(md) {
     margin-bottom: 55px;
   }
+
   @include breakpoint(lg) {
     margin-bottom: 85px;
   }

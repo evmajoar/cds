@@ -29,6 +29,7 @@ body {
   flex-direction: column;
   font-family: $UbuntuReg;
   font-size: 15px;
+  line-height: 24px;
   color: $colorSite;
   background: $white;
   text-rendering: optimizeLegibility;
@@ -42,6 +43,7 @@ body {
 a {
   color: inherit;
   text-decoration: none;
+  transition: .3s ease-out;
 }
 
 img {
