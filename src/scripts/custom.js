@@ -66,18 +66,26 @@ $(function () {
       }
     }
   });
+
   $('.modal__close').click(function () {
     $('body').removeClass('hidden');
     $(this).closest('.modal').removeClass('show');
   });
 
+  var $layuotsCarousel = $( '.layouts__carousel-list' );
+      $layoutsButtons = $('.layouts__buttons'),
+      $layoutsButtons2 = $('.layouts__buttons2'),
 
-  $('.layouts__carousel-list').slick({
+  $layuotsCarousel.on('init afterChange', function(event, slick){
+    $menuCounterThis.text(slick.currentSlide + 1);
+    $menuCounterTotal.text(slick.slideCount);
+  }).slick({
     dots: false,
     appendArrows: $('.layouts__buttons2'),
-    prevArrow: ' <button type="button" class="btn-prev layouts__carousel-prev"><span class="visually-hidden">Листать назад</span></button>',
+    prevArrow: '<button type="button" class="btn-prev layouts__carousel-prev"><span class="visually-hidden">Листать назад</span></button>',
     nextArrow: '<button type="button" class="btn-next layouts__carousel-next"><span class="visually-hidden">Листать вперед</span></button>',
-    responsive: [{
+    responsive: [
+      {
       breakpoint: 768,
       settings: {
         dots: false,
@@ -85,7 +93,8 @@ $(function () {
         prevArrow: ' <button type="button" class="btn-prev carousel-switch__prev"><span class="visually-hidden">Листать назад</span></button>',
         nextArrow: '<button type="button" class="btn-next carousel-switch__next"><span class="visually-hidden">Листать вперед</span></button>'
       }
-    }]
+    }
+  ]
   });
 
 
