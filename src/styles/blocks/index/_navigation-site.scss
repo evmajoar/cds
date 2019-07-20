@@ -15,10 +15,6 @@
   width: 100%;
 }
 
-.navigation-site__list{
-  
-}
-
 .navigation-site__item{
   position: relative;
   &:not(:last-child){
@@ -28,17 +24,19 @@
     }
   }
   &:first-child{
-    margin-right: 56px;
-    &:before{
-      @include pseudo;
-      top: -5px;
-      right: -50%;
-      transform: rotate(180deg) translateX(50%);
-      width: 8px;
-      height: 25px;
-      background-image: url(../../../images/arrow-left.svg);
-      background-repeat: no-repeat;
-      opacity: .4;
+    @include breakpoint(md) {
+      margin-right: 56px;
+      &:before{
+        @include pseudo;
+        top: -5px;
+        right: -50%;
+        transform: rotate(180deg) translateX(50%);
+        width: 8px;
+        height: 25px;
+        background-image: url($imageDir + 'arrow-left.svg');
+        background-repeat: no-repeat;
+        opacity: .4;
+      }
     }
   }
 }
