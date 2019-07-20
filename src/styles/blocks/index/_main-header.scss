@@ -253,7 +253,7 @@
     @include pseudo;
     content: 'Старт продаж';
     top: -12px;
-    left: 39%;
+    right: 120px;
     font-family: $UbuntuMedium;
     text-transform: uppercase;
     font-size: 10px;
@@ -263,8 +263,8 @@
   &:before {
     @include pseudo;
     top: -15px;
-    left: 50%;
-    transform: skew(-25deg, 0deg) translateX(-50%);
+    right: 95px;
+    transform: skew(-25deg, 0deg);
     width: 127px;
     height: 20px;
     background-color: $red;
