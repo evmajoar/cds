@@ -72,9 +72,6 @@
   }
 }
 
-
-.main-header__logo {}
-
 .main-header__block-phone {
   display: grid;
   grid-row-gap: 5px;
@@ -91,8 +88,6 @@
 
   }
 }
-
-.main-header__block-phone-link {}
 
 .main-header__block-phone-link--mobile {
   @include breakpoint(md) {
@@ -235,21 +230,6 @@
     align-self: flex-start;
     padding: 12px 75px 10px 75px;
   }
-
-  // &:after {
-  //   @include pseudo;
-  //   content: url(../../../images/icon-play.svg);
-  //   // left: 10px;
-  //   left: 12px;
-  //   top: 50%;
-  //   transform: translateY(-50%);
-  //   width: 48px;
-  //   height: 48px;
-  // }
-
-  // @include breakpoint(lg) {
-  //   padding-right: 70px;
-  // }
 }
 
 .main-header__icon-play {

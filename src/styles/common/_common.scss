@@ -34,6 +34,10 @@ body {
   background: $white;
   text-rendering: optimizeLegibility;
   // animation: show 1.5s ease-in-out;
+
+  &.hidden {
+    overflow: hidden;
+  }
 }
 
 a {
