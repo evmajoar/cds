@@ -210,9 +210,9 @@
 
 .main-header__film-complex {
   position: relative;
-  justify-self: flex-start;
   padding: 12px 40px 10px 70px;
   margin-bottom: 40px;
+  width: 100%;
   text-align: left;
   color: inherit;
   font-size: 17px;
@@ -226,8 +226,15 @@
     }
   }
 
+  @media only screen and (min-width : 360px) {
+    width: auto;
+    justify-self: flex-start;
+  }
+
   @include breakpoint(sm) {
-    align-self: flex-start;
+    // width: auto;
+    // align-self: flex-start;
+    justify-self: flex-start;
     padding: 12px 75px 10px 75px;
   }
 }
