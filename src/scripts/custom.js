@@ -74,18 +74,19 @@ $(function () {
 
   $('.layouts__carousel-list').slick({
     dots: false,
-    appendArrows: $('.layouts__buttons2'),
-    prevArrow: ' <button type="button" class="btn-prev layouts__carousel-prev"><span class="visually-hidden">Листать назад</span></button>',
-    nextArrow: '<button type="button" class="btn-next layouts__carousel-next"><span class="visually-hidden">Листать вперед</span></button>',
-    responsive: [{
-      breakpoint: 768,
-      settings: {
-        dots: false,
-        appendArrows: $('.layouts__buttons'),
-        prevArrow: ' <button type="button" class="btn-prev carousel-switch__prev"><span class="visually-hidden">Листать назад</span></button>',
-        nextArrow: '<button type="button" class="btn-next carousel-switch__next"><span class="visually-hidden">Листать вперед</span></button>'
-      }
-    }]
+    arrows : false
+    // appendArrows: $('.layouts__buttons2'),
+    // prevArrow: ' <button type="button" class="btn-prev layouts__carousel-prev"><span class="visually-hidden">Листать назад</span></button>',
+    // nextArrow: '<button type="button" class="btn-next layouts__carousel-next"><span class="visually-hidden">Листать вперед</span></button>'
+    // responsive: [{
+    //   breakpoint: 768,
+    //   settings: {
+    //     dots: false,
+    //     appendArrows: $('.layouts__buttons'),
+    //     prevArrow: ' <button type="button" class="btn-prev carousel-switch__prev"><span class="visually-hidden">Листать назад</span></button>',
+    //     nextArrow: '<button type="button" class="btn-next carousel-switch__next"><span class="visually-hidden">Листать вперед</span></button>'
+    //   }
+    // }]
   });
 
 

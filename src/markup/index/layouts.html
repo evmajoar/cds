@@ -16,20 +16,24 @@
       </li>
     </ul>
 
-    <div class="layouts__carousel-switch carousel-switch layouts__carousel-switch--mobile layouts__buttons">
+    <div class="layouts__carousel-switch carousel-switch layouts__carousel-switch--mobile">
+      <button type="button" class="btn-prev carousel-switch__prev"><span class="visually-hidden">Листать назад</span></button>
       <p class="carousel-switch__number-slide">
-        <span class="carousel-switch__number-slide--active" id="number-slide2">1</span>
-        <span class="carousel-switch__number-slide -item">3</span>
+        <span class="carousel-switch__number-slide-item carousel-switch__number-slide--active" id="number-slide">1</span>
+        <span class="carousel-switch__number-slide-item">3</span>
       </p>
+      <button type="button" class="btn-next carousel-switch__next"><span class="visually-hidden">Листать вперед</span></button>
     </div>
 
     <div class="layouts__carousel-wrapper">
       <ul class="layouts__carousel-list">
+
         <li class="layouts__carousel-item">
           <p class="layouts__carousel-box">
             <img class="layouts__carousel-list-img" src="images/flat.svg" alt="Планировка квартиры">
             <button class="layouts__carousel-zoom"><span class="visually-hidden">Увеличить изображение</span></button>
           </p>
+
           <div class="layouts__carousel-tabs-wrapper">
             <ul class="layouts__carousel-tabs-list tabs-number">
               <li class="layouts__carousel-tabs-item tabs-number__item tabs-number__item--active">
@@ -54,7 +58,7 @@
                 <button class="layouts__carousel-tabs-button tabs-number__button">7</button>
               </li>
             </ul>
-            <!-- <div class="layouts__carousel-tabs-description tabs-description"> -->
+
             <h3 class="layouts__carousel-tabs-title tabs-description__title">Уютная классическая кухня</h3>
             <p class="layouts__carousel-tabs-description tabs-description__description">Привычный формат изолированной
               кухни
@@ -69,16 +73,17 @@
                 <td class="layouts__carousel-table-options">175 предложений</td>
               </tr>
             </table>
-            <!-- </div> -->
             <button class="layouts__carousel-button button button--red" type="button">Отдел продаж</button>
           </div>
         </li>
+
         <li class="layouts__carousel-item">
           <p class="layouts__carousel-box">
             <img class="layouts__carousel-list-img" src="images/flat.svg" alt="Планировка квартиры">
           </p>
           <div class="layouts__carousel-tabs-wrapper">
             <ul class="layouts__carousel-tabs-list tabs-number">
+
               <li class="layouts__carousel-tabs-item tabs-number__item tabs-number__item--active">
                 <button class="layouts__carousel-tabs-button tabs-number__button">1</button>
               </li>
@@ -101,7 +106,7 @@
                 <button class="layouts__carousel-tabs-button tabs-number__button">7</button>
               </li>
             </ul>
-            <!-- <div class="layouts__carousel-tabs-description tabs-description"> -->
+    
             <h3 class="layouts__carousel-tabs-title tabs-description__title">Уютная классическая кухня</h3>
             <p class="layouts__carousel-tabs-description tabs-description__description">Привычный формат изолированной
               кухни
@@ -116,10 +121,10 @@
                 <td class="layouts__carousel-table-options">175 предложений</td>
               </tr>
             </table>
-            <!-- </div> -->
             <button class="layouts__carousel-button button button--red" type="button">Отдел продаж</button>
           </div>
         </li>
+
         <li class="layouts__carousel-item">
           <p class="layouts__carousel-box">
             <img class="layouts__carousel-list-img" src="images/flat.svg" alt="Планировка квартиры">
@@ -168,13 +173,14 @@
           </div>
         </li>
       </ul>
-      <!-- <div class="layouts__carousel-switch carousel-switch layouts__carousel-switch--desktop"> -->
       <p class="carousel-switch__number-slide carousel-switch__number-slide--desktop">
-        <span class="carousel-switch__number-slide--active" id="number-slide2">1</span>
-        <span class="carousel-switch__number-slide -item">3</span>
+        <span class="carousel-switch__number-slide-item carousel-switch__number-slide--active" id="number-slide2">1</span>
+        <span class="carousel-switch__number-slide-item">3</span>
       </p>
-      <!-- </div> -->
-      <p class="layouts__carousel-row-button layouts__buttons2"></p>
+      <p class="layouts__carousel-row-button">
+        <button type="button" class="btn-prev layouts__carousel-prev"><span class="visually-hidden">Листать назад</span></button>
+        <button type="button" class="btn-next layouts__carousel-next"><span class="visually-hidden">Листать вперед</span></button>
+      </p>
     </div>
   </div>
 </section>
