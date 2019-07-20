@@ -5,20 +5,20 @@
 */
 $(function () {
 
-    // PRELOADER
-    setTimeout(function() {
-      $( 'body' ).removeClass( 'hidden' ).find( '.preloader' ).addClass( 'preloader--hide' );
-    }, 2000);
+  // PRELOADER
+  setTimeout(function () {
+    $('body').removeClass('hidden').find('.preloader').addClass('preloader--hide');
+  }, 2000);
 
-  
-    // MENU
-    $( '.burger-button' ).click(function() {
-      $( '.menu' ).addClass( 'menu--opened' ).find( '.menu__content' ).addClass( 'menu__content--slide' );
-    });
 
-    $( '.main-header__menu-close' ).click(function() {
-      $( '.menu' ).removeClass( 'menu--opened' ).find( '.menu__content' ).removeClass( 'menu__content--slide' );;
-    });
+  // MENU
+  $('.burger-button').click(function () {
+    $('.menu').addClass('menu--opened').find('.menu__content').addClass('menu__content--slide');
+  });
+
+  $('.main-header__menu-close').click(function () {
+    $('.menu').removeClass('menu--opened').find('.menu__content').removeClass('menu__content--slide');;
+  });
 
 
   // попап окна
@@ -74,26 +74,35 @@ $(function () {
 
   $('.layouts__carousel-list').slick({
     dots: false,
-    appendArrows: $('.layouts__buttons2'),
-    prevArrow: ' <button type="button" class="btn-prev layouts__carousel-prev"><span class="visually-hidden">Листать назад</span></button>',
-    nextArrow: '<button type="button" class="btn-next layouts__carousel-next"><span class="visually-hidden">Листать вперед</span></button>',
-    responsive: [{
-      breakpoint: 768,
-      settings: {
-        dots: false,
-        appendArrows: $('.layouts__buttons'),
-        prevArrow: ' <button type="button" class="btn-prev carousel-switch__prev"><span class="visually-hidden">Листать назад</span></button>',
-        nextArrow: '<button type="button" class="btn-next carousel-switch__next"><span class="visually-hidden">Листать вперед</span></button>'
-      }
-    }]
+    arrows: false
+    // appendArrows: $('.layouts__buttons2'),
+    // prevArrow: ' <button type="button" class="btn-prev layouts__carousel-prev"><span class="visually-hidden">Листать назад</span></button>',
+    // nextArrow: '<button type="button" class="btn-next layouts__carousel-next"><span class="visually-hidden">Листать вперед</span></button>'
+    // responsive: [{
+    //   breakpoint: 768,
+    //   settings: {
+    //     dots: false,
+    //     appendArrows: $('.layouts__buttons'),
+    //     prevArrow: ' <button type="button" class="btn-prev carousel-switch__prev"><span class="visually-hidden">Листать назад</span></button>',
+    //     nextArrow: '<button type="button" class="btn-next carousel-switch__next"><span class="visually-hidden">Листать вперед</span></button>'
+    //   }
+    // }]
   });
 
 
-  $(".layouts__carousel-list").on('afterChange', function (event, slick, currentSlide) {
-    $("#number-slide").text(currentSlide + 1);
-  });
-  $(".layouts__carousel-list").on('afterChange', function (event, slick, currentSlide) {
-    $("#number-slide2").text(currentSlide + 1);
+  // $(".layouts__carousel-list").on('afterChange', function (event, slick, currentSlide) {
+  //   $("#number-slide").text(currentSlide + 1);
+  // });
+  // $(".layouts__carousel-list").on('afterChange', function (event, slick, currentSlide) {
+  //   $("#number-slide2").text(currentSlide + 1);
+  // });
+
+  $('.about-us__carousel-list').slick({
+    dots: false,
+    arrows: false,
+    // slidesToShow: 1,
+    // slidesToScroll: 1,
+    variableWidth: true
   });
 
 });
