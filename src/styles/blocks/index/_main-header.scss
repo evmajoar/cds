@@ -75,6 +75,7 @@
 .main-header__block-phone {
   display: grid;
   grid-row-gap: 5px;
+  line-height: 12px;
 
   @include breakpoint(sm) {
     margin-left: auto;
@@ -200,7 +201,6 @@
 .main-header__description {
   margin-bottom: 30px;
   font-size: 17px;
-  line-height: 20px;
 
   @include breakpoint(lg) {
     font-size: 20px;
@@ -259,7 +259,7 @@
   &:after {
     @include pseudo;
     content: 'Старт продаж';
-    top: -12px;
+    top: -19px;
     right: 120px;
     font-family: $UbuntuMedium;
     text-transform: uppercase;
