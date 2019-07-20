@@ -2,44 +2,17 @@
 @import '../helpers/mixins';
 
 
-// @font-face {
-//   font-family: 'Ubuntu';
-//   src: local('Ubuntu'), url($fontDir + 'ubuntu.woff2') format('woff2'), url($fontDir + 'ubuntu.woff') format('woff');
-//   font-weight: 400;
-//   font-style: normal;
-// }
-
-// @font-face {
-//   font-family: 'Ubuntu Medium';
-//   src: local('Ubuntu Medium'), local('Ubuntu-Medium'), url($fontDir + 'ubuntumedium.woff2') format('woff2'), url($fontDir + 'ubuntumedium.woff') format('woff');
-//   font-weight: 500;
-//   font-style: normal;
-// }
-
-// @font-face {
-//   font-family: 'Ubuntu Bold';
-//   src: local('Ubuntu Bold'), local('Ubuntu-Bold'), url($fontDir + 'ubuntubold.woff2') format('woff2'), url($fontDir + 'ubuntubold.woff') format('woff');
-//   font-weight: 700;
-//   font-style: normal;
-// }
-
 @font-face {
   font-family: 'Ubuntu';
-  src: local('Ubuntu-Regular'), url($fontDir + 'Ubuntu-Regular.woff') format('woff');
-  font-weight: 400;
-  font-style: normal;
+  src: local('Ubuntu'), url($fontDir + 'ubuntu.woff2') format('woff2'), url($fontDir + 'ubuntu.woff') format('woff');
 }
 
 @font-face {
   font-family: 'Ubuntu Medium';
-  src: local('Ubuntu-Medium'), local('Ubuntu-Medium'), url($fontDir + 'Ubuntu-Medium.woff') format('woff');
-  font-weight: 500;
-  font-style: normal;
+  src: local('Ubuntu Medium'), local('Ubuntu-Medium'), url($fontDir + 'ubuntumedium.woff2') format('woff2'), url($fontDir + 'ubuntumedium.woff') format('woff');
 }
 
 @font-face {
   font-family: 'Ubuntu Bold';
-  src: local('Ubuntu-Bold'), local('Ubuntu Bold'),  url($fontDir + 'Ubuntu-Bold.woff') format('woff');
-  font-weight: 700;
-  font-style: normal;
+  src: local('Ubuntu Bold'), local('Ubuntu-Bold'), url($fontDir + 'ubuntubold.woff2') format('woff2'), url($fontDir + 'ubuntubold.woff') format('woff');
 }

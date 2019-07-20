@@ -18,6 +18,7 @@
 html,
 body {
   height: 100%;
+  overflow-x: hidden;
 }
 
 html {
@@ -29,7 +30,7 @@ body {
   flex-direction: column;
   font-family: $UbuntuReg;
   font-size: 15px;
-  color: $black;
+  color: $colorSite;
   background: $white;
   text-rendering: optimizeLegibility;
   // animation: show 1.5s ease-in-out;
@@ -74,6 +75,7 @@ button {
   padding: 0;
   border: 0;
   font: inherit;
+  color: inherit;
   background: none;
   transition: 0.3s ease-out;
 }

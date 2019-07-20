@@ -101,3 +101,9 @@
     font-size: 60px;
   }
 }
+
+@mixin titleH2 {
+  font-size: 28px;
+  font-family: $UbuntuMedium;
+  font-weight: normal;
+}
