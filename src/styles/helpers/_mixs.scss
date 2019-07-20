@@ -28,7 +28,7 @@
   // брейпоинты для mobile first
 
   @include breakpoint(xs) {
-    max-width: 320px;
+    // max-width: 100%;
   }
 
   @include breakpoint(sm) {

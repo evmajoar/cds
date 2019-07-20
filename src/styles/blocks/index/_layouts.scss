@@ -230,6 +230,11 @@
 .layouts__carousel-button {
   display: block;
   width: 100%;
+  @media (min-width: 360px) and(max-width: 576px){
+    width: 100%;
+    max-width: 155px;
+    margin: 0 auto;
+  }
 
   @include breakpoint(sm) {
     margin: 0 auto;
