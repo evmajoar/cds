@@ -47,14 +47,29 @@
   // }
 }
 
-.layouts__carousel-switch--desktop {
+// .layouts__carousel-switch--desktop {
+//   display: none;
+
+//   @include breakpoint(md) {
+//     position: absolute;
+//     right: -20px;
+//     bottom: 0;
+//     display: block;
+//     margin-bottom: 0;
+//   }
+//   @include breakpoint(lg) {
+//     right: -25px;
+//   }
+// }
+
+.carousel-switch__number-slide--desktop{
   display: none;
 
   @include breakpoint(md) {
     position: absolute;
     right: -20px;
     bottom: 0;
-    display: block;
+    display: flex;
     margin-bottom: 0;
   }
   @include breakpoint(lg) {
