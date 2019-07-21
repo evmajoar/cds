@@ -130,10 +130,58 @@
   border: 1px solid #d3dfeb;
 }
 
+.button--unique-blue{
+  position: relative;
+  display: block;
+  padding: 19px 24px;
+  max-width: 300px;
+  width: 100%;
+  font-family: $UbuntuMedium;
+  text-align: left;
+  color: $lightBlue;
+  border: 1px solid #d3dfeb;
+  &:hover{
+    transform: scale(1.02);
+    box-shadow: 0 1px 5px 0 rgba(0,14,63,.25);
+  }
+  &:after{
+    @include pseudo;
+    right: 0;
+    top: 0;
+    width: 88px;
+    height: 64px;
+    background-image: url($imageDir + 'plan-queue.svg');
+    background-repeat: no-repeat;
+  }
+}
+
+.button--unique-red{
+  position: relative;
+  display: block;
+  padding: 19px 24px;
+  max-width: 300px;
+  width: 100%;
+  font-family: $UbuntuMedium;
+  text-align: left;
+  color: $red;
+  border: 1px solid #d3dfeb;
+  &:hover{
+    transform: scale(1.02);
+    box-shadow: 0 1px 5px 0 rgba(0,14,63,.25);
+  }
+  &:after{
+    @include pseudo;
+    right: 0;
+    top: 0;
+    width: 88px;
+    height: 64px;
+    background-image: url($imageDir + '3d.svg');
+    background-repeat: no-repeat;
+  }
+}
+
 .btn-prev {
   padding: 10px;
-  // width: 8px;
-  // height: 20px;
   background-color: transparent;
   border: none;
   background-image: url($imageDir + 'arrow-left.svg');
@@ -144,8 +192,6 @@
 .btn-next {
   padding: 10px;
   transform: rotate(-180deg);
-  // width: 8px;
-  // height: 20px;
   background-color: transparent;
   border: none;
   background-image: url($imageDir + 'arrow-left.svg');
