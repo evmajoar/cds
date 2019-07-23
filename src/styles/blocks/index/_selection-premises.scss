@@ -264,7 +264,7 @@
   }
 
   @include breakpoint(lg) {
-    padding: 32px 20px 20px 24px;
+    padding: 36px 24px 20px 24px;
   }
 }
 
@@ -274,10 +274,24 @@
   font-family: $UbuntuMedium;
   font-weight: normal;
   font-size: 17px;
+
+  @include breakpoint(sm) {
+    font-size: 20px;
+    line-height: 26px;
+  }
+
+  @include breakpoint(md) {
+    margin-bottom: 13px;
+    font-size: 28px;
+    line-height: 36px;
+  }
 }
 
 .selection-premises__find-apartments-text{
   margin-bottom: 24px;
+  @include breakpoint(md) {
+    margin-bottom: 55px;
+  }
 }
 
 .selection-premises__find-apartments-link{
@@ -298,7 +312,7 @@
   display: none;
   right: 28%;
   top: -15px;
-  @include breakpoint(md) {
+  @include breakpoint(lg) {
     display: block;
   }
 }
