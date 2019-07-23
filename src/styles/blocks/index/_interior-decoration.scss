@@ -1,0 +1,100 @@
+@import '../../helpers/variables';
+@import '../../helpers/mixins';
+
+.interior-decoration {
+  padding-bottom: 35px;
+  @include breakpoint(md) {
+    padding-bottom: 70px;
+  }
+}
+
+.interior-decoration__list {
+  @include breakpoint(md) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.interior-decoration__item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 24px 24px 20px;
+  color: $white;
+  border-radius: 4px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  cursor: pointer;
+
+  @include breakpoint(md) {
+    padding-top: 35px;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 12px;
+
+    @include breakpoint(md) {
+      margin-bottom: 0;
+      margin-right: 20px;
+    }
+  }
+
+  &:after {
+    @include pseudo;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: ease-out .3s;
+  }
+
+  &:hover {
+    &:after {
+      background-color: rgba(0, 173, 239, .8);
+    }
+
+    .interior-decoration__link {
+      background-color: rgba(255, 255, 255, 0.24);
+    }
+  }
+}
+
+.interior-decoration__item--1 {
+  background-image: url($imageDir + 'interior-item-1.jpg');
+  background-color: #222e3a;
+}
+
+.interior-decoration__item--2 {
+  background-image: url($imageDir + 'interior-item-2.jpg');
+  background-color: #6f6960;
+}
+
+
+.interior-decoration__title {
+  z-index: 2;
+  margin-bottom: 12px;
+  font-size: 17px;
+  font-family: $UbuntuMedium;
+  font-weight: normal;
+}
+
+.interior-decoration__description {
+  z-index: 2;
+  margin-bottom: 12px;
+  max-width: 440px;
+  font-size: 13px;
+  @include breakpoint(md) {
+    margin-bottom: 65px;
+  }
+}
+
+.interior-decoration__link {
+  z-index: 2;
+  align-self: flex-end;
+  line-height: 13px;
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.24);
+  }
+}

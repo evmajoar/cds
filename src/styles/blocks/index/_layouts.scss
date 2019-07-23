@@ -3,10 +3,12 @@
 
 
 .layouts {
-  padding: 35px 0;
+  // padding: 35px 0;
+  padding-bottom: 35px;
 
   @include breakpoint(md) {
-    padding: 70px 0;
+    // padding: 70px 0;
+    padding-bottom: 70px;
   }
 }
 

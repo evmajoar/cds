@@ -3,10 +3,10 @@
 
 
 .selection-premises {
-  padding: 35px 0;
+  padding-bottom: 35px;
 
   @include breakpoint(md) {
-    padding: 70px 0;
+    padding-bottom: 70px;
   }
 }
 
