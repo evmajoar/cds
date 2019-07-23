@@ -226,14 +226,64 @@
 }
 
 .selection-premises__more-button {
+  margin-bottom: 30px;
 
   @media (min-width: 360px) and(max-width: 576px){
     width: 100%;
     max-width: 155px;
-    margin: 0 auto;
+    margin: 0 auto 30px;
   }
   
   @include breakpoint(sm) {
     align-self: center;
+  }
+
+  @include breakpoint(md) {
+    margin-bottom: 70px;
+  }
+}
+
+.selection-premises__find-apartments{
+  padding: 24px;
+  color: $white;
+  background-image: url($imageDir + 'apartment-img.jpg');
+  background-color: #2a2c2a;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top right -220px;
+
+  @media only screen and (min-width: 360px) {
+    background-position: top right;
+  }
+
+  @include breakpoint(lg) {
+    padding: 32px 20px 20px 24px;
+  }
+}
+
+.selection-premises__find-apartments-heading{
+  margin-bottom: 10px;
+  display: block;
+  font-family: $UbuntuMedium;
+  font-weight: normal;
+  font-size: 17px;
+}
+
+.selection-premises__find-apartments-text{
+  margin-bottom: 24px;
+}
+
+.selection-premises__find-apartments-link{
+  display: block;
+  width: 100%;
+  text-align: center;
+
+  @media only screen and (min-width: 360px) {
+    margin: 0 auto;
+    max-width: 155px;
+  }
+  @include breakpoint(sm) {
+    margin: 0;
+    // margin-right: auto;
   }
 }
