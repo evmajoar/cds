@@ -172,6 +172,10 @@
   // }
 }
 
+.button--transparent-white-uppercase {
+  text-transform: uppercase;
+}
+
 .button--unique-blue{
   position: relative;
   display: block;
@@ -665,6 +669,12 @@
   @include breakpoint(lg) {
     margin-bottom: 85px;
   }
+}
+
+.marker-red-icon{
+  position: absolute;
+  fill: $red;
+  fill-opacity: .9;
 }
 
 

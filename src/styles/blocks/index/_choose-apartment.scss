@@ -1,0 +1,81 @@
+@import '../../helpers/variables';
+@import '../../helpers/mixins';
+
+.choose-apartment {
+  position: relative;
+  color: $white;
+  background-image: url($imageDir + 'choose-apartment-bg-mobile.jpg');
+  background-color: #898181;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: cover;
+
+  @include breakpoint(sm) {
+    background-image: url($imageDir + 'choose-apartment-bg.jpg');
+  }
+
+  .container {
+    padding: 24px 15px 15px;
+
+    @include breakpoint(sm) {
+      margin: 0 auto;
+      max-width: 480px;
+      text-align: center;
+    }
+
+    @include breakpoint(lg) {
+      padding: 72px 15px;
+    }
+  }
+}
+
+.choose-apartment__heading {
+  position: relative;
+  margin-bottom: 10px;
+  z-index: 1;
+  display: block;
+  font-family: $UbuntuMedium;
+  font-weight: normal;
+  font-size: 17px;
+
+  @include breakpoint(sm) {
+    font-size: 20px;
+    line-height: 26px;
+  }
+
+  @include breakpoint(md) {
+    margin-bottom: 17px;
+    font-size: 28px;
+    line-height: 36px;
+  }
+}
+
+.choose-apartment__text {
+  margin-bottom: 24px;
+
+  @include breakpoint(md) {
+    margin-bottom: 40px;
+  }
+}
+
+.choose-apartment__link {
+  display: block;
+  width: 100%;
+  text-align: center;
+
+  @media only screen and (min-width: 360px) {
+    margin: 0 auto;
+    max-width: 200px;
+  }
+}
+
+.choose-apartment__marker-red-icon {
+  display: none;
+
+  @include breakpoint(md) {
+    display: block;
+    top: -7px;
+    left: -15px;
+    z-index: -1;
+  }
+}

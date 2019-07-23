@@ -3,7 +3,13 @@
 
 
 .selection-premises {
+  position: relative;
   padding-bottom: 35px;
+
+  // &:after{
+  //   @include pseudo;
+
+  // }
 
   @include breakpoint(md) {
     padding-bottom: 70px;
@@ -244,6 +250,7 @@
 }
 
 .selection-premises__find-apartments{
+  position: relative;
   padding: 24px;
   color: $white;
   background-image: url($imageDir + 'apartment-img.jpg');
@@ -284,6 +291,14 @@
   }
   @include breakpoint(sm) {
     margin: 0;
-    // margin-right: auto;
+  }
+}
+
+.selection-premises__marker-red-icon{
+  display: none;
+  right: 28%;
+  top: -15px;
+  @include breakpoint(md) {
+    display: block;
   }
 }
