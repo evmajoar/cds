@@ -81,11 +81,14 @@
 }
 
 .button {
-  padding: 14px 25px;
+  padding: 10px 25px;
   color: #fff;
   font-size: 13px;
   text-transform: uppercase;
   border-radius: 4px;
+  &:disabled {
+    opacity: .5;
+  }
 }
 
 .button--red {
@@ -98,9 +101,18 @@
   &:active {
     background-color: #bb211b;
   }
+}
 
-  &:disabled {
-    opacity: .5;
+.button--white{
+  color: $lightBlack;
+  font-family: $UbuntuMedium;
+  background-color: $white;
+  &:hover {
+    background-color: #e0e4e6;
+  }
+
+  &:active {
+    background-color: #c2cbce;
   }
 }
 
@@ -118,10 +130,6 @@
     color: #bb211b;
     border: 1px solid #bb211b;
     background-color: rgba($color: #bb211b, $alpha: .2);
-  }
-
-  &:disabled {
-    opacity: .5;
   }
 }
 
@@ -141,10 +149,6 @@
 
   &:active{
     background-color: rgba(255, 255, 255, 0.48);
-  }
-
-  &:disabled {
-    opacity: .5;
   }
 
   @include breakpoint(md) {

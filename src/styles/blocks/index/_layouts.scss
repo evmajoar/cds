@@ -3,11 +3,9 @@
 
 
 .layouts {
-  // padding: 35px 0;
   padding-bottom: 35px;
 
   @include breakpoint(md) {
-    // padding: 70px 0;
     padding-bottom: 70px;
   }
 }
@@ -68,18 +66,19 @@
 //   }
 // }
 
-.carousel-switch__number-slide--desktop{
+.carousel-switch__number-slide--desktop {
   display: none;
 
   @include breakpoint(md) {
     position: absolute;
-    right: -20px;
+    right: 0;
     bottom: 0;
     display: flex;
     margin-bottom: 0;
   }
+
   @include breakpoint(lg) {
-    right: -25px;
+    right: 0;
   }
 }
 
@@ -114,6 +113,7 @@
   right: 10px;
   bottom: 10px;
   background-image: url($imageDir + 'scale.svg');
+
   @include breakpoint(md) {
     right: 25px;
     top: 25px;
@@ -131,6 +131,7 @@
 
 .layouts__carousel-wrapper {
   position: relative;
+  margin-bottom: 30px;
   max-width: 100%;
 }
 
@@ -139,7 +140,11 @@
   max-width: 100%;
 
   @include breakpoint(md) {
-    margin: 0 20px;
+    margin: 0 35px;
+  }
+
+  @include breakpoint(lg) {
+    margin: 0 55px;
   }
 }
 
@@ -153,7 +158,7 @@
   @include breakpoint(md) {
     display: grid !important;
     grid-column-gap: 15px;
-    grid-template-columns: 300px auto;
+    grid-template-columns: 250px auto;
     padding: 0;
   }
 
@@ -251,7 +256,8 @@
 .layouts__carousel-button {
   display: block;
   width: 100%;
-  @media (min-width: 360px) and(max-width: 576px){
+
+  @media (min-width: 360px) and(max-width: 576px) {
     width: 100%;
     max-width: 155px;
     margin: 0 auto;
@@ -278,14 +284,14 @@
 
 .layouts__carousel-prev {
   position: absolute;
-  left: -20px;
+  left: 0;
   top: 50%;
   transform: translateY(-50%);
 }
 
 .layouts__carousel-next {
   position: absolute;
-  right: -20px;
+  right: 0;
   top: 50%;
   transform: translateY(-50%) rotate(-180deg);
 }
@@ -299,5 +305,93 @@
 .layouts__tabs-room-item {
   &:not(:last-child) {
     margin-right: 15px;
+  }
+}
+
+.layout-dowload__wrapper {
+  padding: 24px;
+  color: $white;
+  background-image: url($imageDir + 'layout-dowload-mobile.jpg');
+  background-color: #4f3f39;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @include breakpoint(lg) {
+    padding: 32px 20px 20px 24px;
+    display: flex;
+    justify-content: space-between;
+    background-image: url($imageDir + 'layout-dowload-desktop.jpg');
+  }
+}
+
+.layout-dowload__box--1 {
+  @include breakpoint(lg) {
+    max-width: 640px;
+    width: 100%;
+  }
+}
+
+.layout-dowload__box--2 {
+  @include breakpoint(lg) {
+    max-width: 280px;
+  }
+}
+
+.layout-dowload__heading {
+  margin-bottom: 10px;
+  display: block;
+  font-family: $UbuntuMedium;
+  font-weight: normal;
+  font-size: 17px;
+}
+
+.layout-dowload__description {
+  position: relative;
+  padding-bottom: 235px;
+  margin-bottom: 30px;
+
+  @include breakpoint(lg) {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    padding-right: 350px;
+  }
+
+  &:after {
+    @include pseudo;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 255px;
+    height: 205px;
+    background-image: url($imageDir + 'preview-layout.png');
+
+    @include breakpoint(lg) {
+      top: -45%;
+      right: 0;
+      left: auto;
+      transform: translateX(0);
+      width: 320px;
+      height: 180px;
+      background-image: url($imageDir + 'preview-layout-desktop.png');
+    }
+  }
+}
+
+.layout-dowload__text {
+  margin-bottom: 30px;
+}
+
+.layout-dowload__link {
+  display: block;
+  width: 100%;
+  text-align: center;
+
+  @media only screen and (min-width: 360px) {
+    margin: 0 auto;
+    max-width: 155px;
+  }
+  @include breakpoint(lg) {
+    margin: 0;
+    margin-left: auto;
   }
 }
