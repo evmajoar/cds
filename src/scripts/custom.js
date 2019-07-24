@@ -105,4 +105,22 @@ $(function () {
     variableWidth: true
   });
 
+  $('.discounts__carousel-list').slick({
+    dots: false,
+    arrows: false,
+    slidesToShow: 3,
+    // slidesToScroll: 1,
+    variableWidth: true,
+    responsive: [{
+      breakpoint: 767,
+      settings: {
+        dots: false,
+        arrows: false,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        variableWidth: true
+      }
+    }]
+  });
+
 });

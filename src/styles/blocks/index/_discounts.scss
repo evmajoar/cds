@@ -1,0 +1,141 @@
+@import '../../helpers/variables';
+@import '../../helpers/mixins';
+
+.discounts {
+  padding-bottom: 35px;
+
+  @include breakpoint(lg) {
+    padding-bottom: 70px;
+  }
+
+  .container {
+    @media only screen and (max-width: 576px) {
+      padding-right: 0;
+    }
+  }
+}
+
+.discounts__carousel-list {
+  width: 100%;
+  margin: 0;
+  margin-right: -15px;
+  margin-bottom: 20px;
+  padding: 0;
+  list-style: none;
+
+  @include breakpoint(sm) {
+    margin: 0 -5px 20px 0;
+  }
+
+  .slick-slide {
+    width: 190px;
+    margin-left: 10px;
+    margin-right: 10px;
+
+    @include breakpoint(md) {
+      margin-left: 0;
+      margin-right: 0;
+      width: 220px;
+    }
+    @include breakpoint(lg) {
+      width: 320px;
+    }
+
+    &:not(:last-child) {
+      @include breakpoint(md) {
+        margin-right: 30px;
+      }
+
+      @include breakpoint(lg) {
+        margin-right: 20px;
+      }
+    }
+  }
+}
+
+.discounts__item {
+  position: relative;
+  display: flex !important;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 16px 25px 14px 25px;
+  min-height: 190px;
+  font-size: 20px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 10px;
+  outline: none;
+
+  @include breakpoint(md) {
+    margin: 0;
+    width: auto;
+  }
+
+  @include breakpoint(lg) {
+    padding: 32px 25px 25px;
+    height: 280px;
+  }
+}
+
+.discounts__item--1 {
+  color: $white;
+  background-color: #536f8a;
+  background-image: url($imageDir + 'discounts-1.jpg');
+}
+
+.discounts__item--2 {
+  color: $lightBlack;
+  background-color: #f8f9fb;
+  background-image: url($imageDir + 'discounts-2.jpg');
+  background-position: center top 40px;
+  @include breakpoint(lg) {
+    background-position: center;
+  }
+}
+
+.discounts__item--3 {
+  color: $lightBlack;
+  background-color: #d2deec;
+  background-image: url($imageDir + 'discounts-3.jpg');
+  background-position: top 20px right -60px;
+  @include breakpoint(md) {
+    background-position: center right -40px;
+  }
+  @include breakpoint(lg) {
+    background-position: center;
+  }
+}
+
+
+.discounts__item-title{
+  font-size: 17px;
+  font-family: $UbuntuMedium;
+  font-weight: normal;
+  @include breakpoint(lg) {
+    font-size: 20px;
+  }
+}
+.discounts__item-date{
+  font-size: 15px;
+}
+
+.discounts__more-button-row{
+  width: 100%;
+  padding-right: 15px;
+  @include breakpoint(sm) {
+    padding-right: 0;
+  }
+
+  @media only screen and (min-width : 360px) {
+    max-width: 180px;
+    margin: 0 auto;
+  }
+}
+
+
+.discounts__more-button{
+  padding: 3px 20px;
+  width: 100%;
+  text-transform: none;
+}

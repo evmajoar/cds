@@ -1,0 +1,44 @@
+@import '../../helpers/variables';
+@import '../../helpers/mixins';
+
+// .calculator-mortgages__title{
+//   @include titleH2;
+//   margin-bottom: 20px;
+// }
+
+// .calculator-mortgages__form-list{
+//   max-width: 425px;
+// }
+
+// .calculator-mortgages__form-item{
+//   position: relative;
+//   &:after{
+//     @include pseudo;
+//     background-color: #00adef;
+//     height: 2px;
+//     min-width: 1px;
+//     width: 50%;
+//   }
+// }
+
+// .calculator-mortgages__form-field{
+//   display: flex;
+//   flex-direction: column;
+// }
+
+// .calculator-mortgages__form-price{
+//   margin-bottom: 7px;
+//   font-size: 13px;
+//   font-style: normal;
+//   color: $grey;
+// }
+
+// .calculator-mortgages__form-input{
+//   padding: 14px 16px 12px 16px;
+//   color: $lightBlack;
+//   border: 1px solid #d3dfeb;
+//   border-radius: 4px;
+//   @include placeholder {
+//     color: $lightBlack;
+//   }
+// }
