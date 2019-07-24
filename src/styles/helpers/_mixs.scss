@@ -579,7 +579,7 @@
     overflow-x: scroll;
     overflow-y: hidden;
   }
-  @include breakpoint(md) {
+  @include breakpoint(lg) {
     overflow: visible;
   }
 }

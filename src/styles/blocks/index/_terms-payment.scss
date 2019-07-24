@@ -1,0 +1,161 @@
+@import '../../helpers/variables';
+@import '../../helpers/mixins';
+
+.terms-payment {
+  padding-bottom: 35px;
+
+  @include breakpoint(md) {
+    padding-bottom: 70px;
+  }
+}
+
+.terms-payment__container-tabs {
+  margin-bottom: 20px;
+
+  @media only screen and (max-width: 768px) {
+    padding-right: 0;
+  }
+  @include breakpoint(md) {
+    margin-bottom: 40px;
+  }
+}
+
+.terms-payment__title {
+  @include titleH2;
+  margin-bottom: 20px;
+
+  @include breakpoint(sm) {
+    text-align: center;
+  }
+
+  @include breakpoint(lg) {
+    margin-bottom: 24px;
+  }
+}
+
+.terms-payment__list {
+  width: 100%;
+  @include breakpoint(lg) {
+    justify-content: center;
+  }
+}
+
+.terms-payment__item {
+  position: relative;
+
+  &:not(:last-child) {
+    margin-right: 15px;
+
+    @include breakpoint(md) {
+      margin-right: 25px;
+    }
+  }
+}
+
+.terms-payment__link {
+  display: block;
+}
+
+.terms-payment__wrapper {
+  padding: 24px;
+  color: $white;
+  background-image: url($imageDir + 'terms-payment-mobile.jpg');
+  background-color: #2a2722;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  @include breakpoint(sm) {
+    background-position: center bottom -400px;
+  }
+
+  @include breakpoint(lg) {
+    padding: 32px 20px 20px 24px;
+    background-position: center;
+    background-image: url($imageDir + 'terms-payment-desktop.jpg');
+    display: grid;
+    grid-template-columns: 400px auto;
+  }
+}
+
+.terms-payment__box {
+  @include breakpoint(lg) {
+    max-width: 640px;
+    width: 100%;
+  }
+}
+
+.terms-payment__simplified-mortgage-list {
+  margin-bottom: 30px;
+
+  @include breakpoint(md) {
+    display: flex;
+  }
+
+  @include breakpoint(lg) {
+    margin-top: 30px;
+  }
+}
+
+.terms-payment__simplified-mortgage-item {
+  &:not(:last-child) {
+    margin-bottom: 12px;
+
+    @include breakpoint(md) {
+      margin-right: 35px;
+      margin-bottom: 0;
+    }
+
+    @include breakpoint(lg) {
+      margin-right: 50px;
+    }
+  }
+}
+
+.terms-payment__simplified-mortgage-heading {
+  font-family: $UbuntuReg;
+  font-weight: normal;
+}
+
+.terms-payment__simplified-mortgage-text {
+  font-size: 13px;
+  opacity: .7;
+}
+
+.terms-payment__heading {
+  margin-bottom: 10px;
+  display: block;
+  font-family: $UbuntuMedium;
+  font-weight: normal;
+  font-size: 17px;
+}
+
+.terms-payment__description {
+  position: relative;
+  margin-bottom: 145px;
+
+  @include breakpoint(md) {
+    margin-bottom: 40px;
+  }
+
+  @include breakpoint(lg) {
+    padding-bottom: 0;
+    max-width: 175px;
+  }
+}
+
+.terms-payment__link {
+  display: block;
+  width: 100%;
+  text-align: center;
+
+  @media only screen and (min-width: 360px) {
+    margin: 0 auto;
+    max-width: 200px;
+  }
+
+  @include breakpoint(lg) {
+    grid-column-start: 2;
+    margin: 0;
+  }
+}

@@ -3,6 +3,7 @@
 
 .choose-apartment {
   position: relative;
+  margin-bottom: 35px;
   color: $white;
   background-image: url($imageDir + 'choose-apartment-bg-mobile.jpg');
   background-color: #898181;
@@ -12,6 +13,10 @@
 
   @include breakpoint(sm) {
     background-image: url($imageDir + 'choose-apartment-bg.jpg');
+  }
+
+  @include breakpoint(md) {
+    margin-bottom: 70px;
   }
 
   .container {

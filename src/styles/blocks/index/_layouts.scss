@@ -133,6 +133,9 @@
   position: relative;
   margin-bottom: 30px;
   max-width: 100%;
+  @include breakpoint(md) {
+    margin-bottom: 70px;
+  }
 }
 
 .layouts__carousel-list {
