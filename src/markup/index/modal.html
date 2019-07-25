@@ -247,4 +247,24 @@
   </div>
 </div> -->
 
-<!-- fill in the form Заполнить анкету -->
+<!-- Заполнить анкету -->
+<div id="fill-form" class="modal modal-fill-form">
+  <div class="modal__dialog">
+    <button class="modal__close close close--grey" type="button">
+      <span class="visually-hidden">Закрыть модальное окно</span>
+    </button>
+    <div class="modal__content">
+      <h2 class="modal__title">Один запрос во все банки сразу</h2>
+      <p class="modal__description">Оставьте заявку — и ваш личный менеджер расскажет
+        обо всех текущих акциях и поможет с оформлением ипотеки на лучших условиях через нашего представителя
+        в нужном банке</p>
+      <form class="modal__form" action="#">
+        <p class="modal__block-input modal-callback__block">
+          <label class="visually-hidden" for="number-input">Номер телефона</label>
+          <input class="modal-callback__input input" id="number-input" type="number" placeholder="+7 (910) 123-45-67">
+        </p>
+        <button class="modal__button button--blue button js-popup" type="submit">Оставить заявку</button>
+      </form>
+    </div>
+  </div>
+</div>
