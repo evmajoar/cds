@@ -90,12 +90,12 @@ $(function () {
   });
 
 
-  // $(".layouts__carousel-list").on('afterChange', function (event, slick, currentSlide) {
-  //   $("#number-slide").text(currentSlide + 1);
-  // });
-  // $(".layouts__carousel-list").on('afterChange', function (event, slick, currentSlide) {
-  //   $("#number-slide2").text(currentSlide + 1);
-  // });
+  $(".layouts__carousel-list").on('afterChange', function (event, slick, currentSlide) {
+    $("#number-slide").text(currentSlide + 1);
+  });
+  $(".layouts__carousel-list").on('afterChange', function (event, slick, currentSlide) {
+    $("#number-slide2").text(currentSlide + 1);
+  });
 
   $('.about-us__carousel-list').slick({
     dots: false,
