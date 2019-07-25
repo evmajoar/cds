@@ -187,7 +187,7 @@
 }
 
 
-
+// Нравится планировка
 .modal-like-layout__dialog {
   max-width: 830px;
   padding: 0;
@@ -293,10 +293,44 @@
   }
 }
 
-.modal-like-layout__title{
+.modal-like-layout__title {
   text-align: left;
 }
 
-.modal-like-layout__description{
+.modal-like-layout__description {
   text-align: left;
+}
+
+// Акции и скидки 
+.modal-discounts__dialog {
+  max-width: 830px;
+  max-height: 100%;
+  @include breakpoint(md) {
+    max-height: 630px;
+  }
+}
+
+.discounts__carousel-list--modal {
+  display: grid;
+  grid-template-columns: repeat(2, 190px);
+  grid-gap: 20px;
+  justify-content: center;
+  margin: 0;
+
+  @include breakpoint(md) {
+    grid-template-columns: repeat(2, 220px);
+  }
+
+  @include breakpoint(lg) {
+    grid-template-columns: repeat(2, 320px);
+  }
+}
+
+.modal__scroll{
+  @include breakpoint(lg) {
+    padding-top: 80px;
+  }
+  
+  height: auto;
+  overflow-y: auto;
 }

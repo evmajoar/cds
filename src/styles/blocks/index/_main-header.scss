@@ -353,3 +353,9 @@
   top: 20px;
   right: 20px;
 }
+
+.main-header__logo{
+  @include breakpoint(lg) {
+    margin-left: 25px;
+  }
+}

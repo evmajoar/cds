@@ -248,7 +248,7 @@
 </div> -->
 
 <!-- Заполнить анкету -->
-<div id="fill-form" class="modal modal-fill-form">
+<!-- <div id="fill-form" class="modal modal-fill-form">
   <div class="modal__dialog">
     <button class="modal__close close close--grey" type="button">
       <span class="visually-hidden">Закрыть модальное окно</span>
@@ -267,4 +267,128 @@
       </form>
     </div>
   </div>
+</div> -->
+
+<!-- Предварительное одобрение -->
+<!-- <div id="approval" class="modal modal-approval">
+  <div class="modal__dialog">
+    <button class="modal__close close close--grey" type="button">
+      <span class="visually-hidden">Закрыть модальное окно</span>
+    </button>
+    <div class="modal__content">
+      <h2 class="modal__title">Предварительное одобрение</h2>
+      <p class="modal__description">Оставьте заявку — и ваш личный менеджер рассчитает выгодные условия по ипотеке,
+        направит запрос в банк
+        и получит предварительное одобрение для вас</p>
+      <form class="modal__form" action="#">
+        <p class="modal__block-input modal-callback__block">
+          <label class="visually-hidden" for="number-input">Номер телефона</label>
+          <input class="modal-callback__input input" id="number-input" type="number" placeholder="+7 (910) 123-45-67">
+        </p>
+        <button class="modal__button button--blue button js-popup" type="submit">Оставить заявку</button>
+      </form>
+    </div>
+  </div>
+</div> -->
+
+<!-- Акции и скидки -->
+<div id="discounts" class="modal modal-discounts">
+  <div class="modal__dialog modal-discounts__dialog">
+    <button class="modal__close close close--grey" type="button">
+      <span class="visually-hidden">Закрыть модальное окно</span>
+    </button>
+    <div class="modal__content modal__scroll">
+      <h2 class="modal__title">Акции и скидки</h2>
+      <ul class="discounts__carousel-list discounts__carousel-list--modal">
+        <li class="discounts__item discounts__item--1">
+          <a class="discounts__item-popup" href="#">
+            <h3 class="discounts__item-title">Скидки на паркинг<br>до 300 000 руб.</h3>
+            <p class="discounts__item-info">
+              <span class="discounts__item-date">до <time datetime="06-30">30 июня</time></span>
+              <a class="discounts__item-link" href="#">
+                <span class="visually-hidden">Просмотреть подробнее</span>
+              </a>
+            </p>
+          </a>
+        </li>
+        <li class="discounts__item discounts__item--2">
+          <a class="discounts__item-popup" href="#">
+            <h3 class="discounts__item-title">Удваиваем скидку<br>за повторную покупку</h3>
+            <p class="discounts__item-info">
+              <span class="discounts__item-date">до <time datetime="06-18">18 июня</time></span>
+              <a class="discounts__item-link" href="#">
+                <span class="visually-hidden">Просмотреть подробнее</span>
+              </a>
+            </p>
+          </a>
+        </li>
+        <li class="discounts__item discounts__item--3">
+          <a class="discounts__item-popup" href="#">
+            <h3 class="discounts__item-title">Суперцены на старте<br>продаж!</h3>
+            <p class="discounts__item-info">
+              <span class="discounts__item-date">до <time datetime="09-1">1 сентября</time></span>
+              <a class="discounts__item-link" href="#">
+                <span class="visually-hidden">Просмотреть подробнее</span>
+              </a>
+            </p>
+          </a>
+        </li>
+        <li class="discounts__item discounts__item--4">
+          <a class="discounts__item-popup" href="#">
+            <h3 class="discounts__item-title">Суперцены на старте<br>продаж!</h3>
+            <p class="discounts__item-info">
+              <span class="discounts__item-date">до <time datetime="09-1">1 сентября</time></span>
+              <a class="discounts__item-link" href="#">
+                <span class="visually-hidden">Просмотреть подробнее</span>
+              </a>
+            </p>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
 </div>
+
+
+<!-- room-catalog Каталог помещений -->
+<!-- <div id="room-catalog" class="modal modal-room-catalog">
+  <div class="modal__dialog">
+    <button class="modal__close close close--grey" type="button">
+      <span class="visually-hidden">Закрыть модальное окно</span>
+    </button>
+    <div class="modal__content">
+      <h2 class="modal__title">Каталог помещений</h2>
+      <p class="modal__description">Оставьте свой телефон — мы пришлем ссылку
+          на скачивание каталога со всеми квартирами, машиноместами, кладовками и коммерческими помещениями в продаже</p>
+      <form class="modal__form" action="#">
+        <p class="modal__block-input modal-callback__block">
+          <label class="visually-hidden" for="number-input">Номер телефона</label>
+          <input class="modal-callback__input input" id="number-input" type="number" placeholder="+7 (910) 123-45-67">
+        </p>
+        <button class="modal__button button--blue button js-popup" type="submit">Скачать каталог</button>
+      </form>
+    </div>
+  </div>
+</div> -->
+
+
+<!-- Акции  -->
+<div id="promotions" class="modal modal-promotions">
+    <div class="modal__dialog">
+      <button class="modal__close close close--grey" type="button">
+        <span class="visually-hidden">Закрыть модальное окно</span>
+      </button>
+      <div class="modal__content">
+        <h2 class="modal__title">Акции</h2>
+        <p class="modal__description">Ежемесячно в жилых комплексах ЦДС действуют акции и скидки: машиноместа со скидками, метры или чистовая отделка в подарок и многие другие. Оставьте заявку —
+            и узнайте о текущих выгодных предложениях напрямую</p>
+        <form class="modal__form" action="#">
+          <p class="modal__block-input modal-callback__block">
+            <label class="visually-hidden" for="number-input">Номер телефона</label>
+            <input class="modal-callback__input input" id="number-input" type="number" placeholder="+7 (910) 123-45-67">
+          </p>
+          <button class="modal__button button--blue button js-popup" type="submit">Оставить заявку</button>
+        </form>
+      </div>
+    </div>
+  </div>

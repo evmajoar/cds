@@ -107,6 +107,19 @@
   }
 }
 
+.discounts__item--4 {
+  color: $white;
+  background-color: #536f8a;
+  background-image: url($imageDir + 'discounts-4.jpg');
+  background-position: top 20px right -60px;
+  @include breakpoint(md) {
+    background-position: center right -40px;
+  }
+  @include breakpoint(lg) {
+    background-position: center;
+  }
+}
+
 
 .discounts__item-title{
   font-size: 17px;

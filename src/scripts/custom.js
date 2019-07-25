@@ -105,7 +105,7 @@ $(function () {
     variableWidth: true
   });
 
-  $('.discounts__carousel-list').slick({
+  $('.discounts__carousel-list--carousel').slick({
     dots: false,
     arrows: false,
     slidesToShow: 3,
