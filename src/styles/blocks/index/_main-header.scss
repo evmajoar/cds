@@ -131,11 +131,19 @@
   color: $lightBlue;
   text-transform: uppercase;
   &:hover {
-    background-color: #d6251f;
+    color: #009ed8;
+    @include breakpoint(lg) {
+      color: $white;
+      background-color: #d6251f;
+    }
   }
 
   &:active {
-    background-color: #bb211b;
+    color: #008abd;
+    @include breakpoint(lg) {
+      color: $white;
+      background-color: #d6251f;
+    }
   }
 
   @include breakpoint(lg) {

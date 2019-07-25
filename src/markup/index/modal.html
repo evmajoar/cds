@@ -1,7 +1,6 @@
 <div id="options" class="modal modal-options">
-  <div class="modal__dialog">
-    <!-- <button class="modal__close" type="button"><span class="visually-hidden">Закрыть модальное окно</span></button> -->
-    <button class="modal__close close close--grey" type="button">
+  <div class="modal__dialog modal-options__dialog">
+    <button class="modal__close modal-options__close close close--grey" type="button">
       <span class="visually-hidden">Закрыть модальное окно</span>
     </button>
     <div class="modal__content modal-options__content">
@@ -118,6 +117,29 @@
           </fieldset>
         </div>
         <button class="modal-options__choose-button button button--red" type="button">Подобрать</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+<!-- Обратный звонок -->
+<div id="callback" class="modal modal-callback">
+  <div class="modal__dialog">
+    <button class="modal__close close close--grey" type="button">
+      <span class="visually-hidden">Закрыть модальное окно</span>
+    </button>
+    <div class="modal__content modal-callback__content">
+      <h2 class="modal__title modal-callback__title">Хотите купить квартиру, паркинг или коммерческое помещение?</h2>
+      <p class="modal-callback__description">Оставьте свой телефон — мы перезвоним через 10 минут, ответим на все ваши
+        вопросы и расскажем об актуальных скидках и предложениях!</p>
+      <form class="modal-callback__form" action="#">
+        <p class="modal-callback__block">
+          <label class="visually-hidden" for="number-input">Номер телефона</label>
+          <input class="modal-callback__input input" id="number-input" type="number" placeholder="+7 (910) 123-45-67">
+        </p>
+        <button class="modal-callback__button button--blue button js-popup" type="submit">Заказать
+          звонок</button>
       </form>
     </div>
   </div>

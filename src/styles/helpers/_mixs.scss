@@ -86,6 +86,7 @@
   font-size: 13px;
   text-transform: uppercase;
   border-radius: 4px;
+
   &:disabled {
     opacity: .5;
   }
@@ -103,10 +104,25 @@
   }
 }
 
-.button--white{
+.button--blue {
+  background-color: $lightBlue;
+
+  &:hover {
+    background-color: #009ed8;
+  }
+
+  &:active {
+    background-color: #008abd;
+  }
+}
+
+
+
+.button--white {
   color: $lightBlack;
   font-family: $UbuntuMedium;
   background-color: $white;
+
   &:hover {
     background-color: #e0e4e6;
   }
@@ -143,11 +159,12 @@
   color: $white;
   text-transform: none;
   border: 1px solid $white;
-  &:hover{
+
+  &:hover {
     background-color: rgba(255, 255, 255, 0.24);
   }
 
-  &:active{
+  &:active {
     background-color: rgba(255, 255, 255, 0.48);
   }
 
@@ -176,7 +193,7 @@
   text-transform: uppercase;
 }
 
-.button--unique-blue{
+.button--unique-blue {
   position: relative;
   display: block;
   padding: 19px 24px;
@@ -186,11 +203,13 @@
   text-align: left;
   color: $lightBlue;
   border: 1px solid #d3dfeb;
-  &:hover{
+
+  &:hover {
     transform: scale(1.02);
-    box-shadow: 0 1px 5px 0 rgba(0,14,63,.25);
+    box-shadow: 0 1px 5px 0 rgba(0, 14, 63, .25);
   }
-  &:after{
+
+  &:after {
     @include pseudo;
     right: 0;
     top: 0;
@@ -202,7 +221,7 @@
 }
 
 
-.button--unique-red{
+.button--unique-red {
   position: relative;
   display: block;
   padding: 19px 24px;
@@ -212,11 +231,13 @@
   text-align: left;
   color: $red;
   border: 1px solid #d3dfeb;
-  &:hover{
+
+  &:hover {
     transform: scale(1.02);
-    box-shadow: 0 1px 5px 0 rgba(0,14,63,.25);
+    box-shadow: 0 1px 5px 0 rgba(0, 14, 63, .25);
   }
-  &:after{
+
+  &:after {
     @include pseudo;
     right: 0;
     top: 0;
@@ -579,6 +600,7 @@
     overflow-x: scroll;
     overflow-y: hidden;
   }
+
   @include breakpoint(lg) {
     overflow: visible;
   }
@@ -671,47 +693,15 @@
   }
 }
 
-.marker-red-icon{
+.marker-red-icon {
   position: absolute;
   fill: $red;
   fill-opacity: .9;
 }
 
-
-
-// для построение сетки
-
-// .fon1{
-//   background-color: rgba(49, 174, 49, 0.2);
-//   border: 1px solid rgb(49, 174, 49);
-// }
-
-// .fon2{
-//   background-color: rgba(201, 191, 55, 0.2);
-//   border: 1px solid rgb(201, 191, 55);
-// }
-
-// .fon3{
-//   background-color: rgba(231, 154, 72, 0.2);
-//   border: 1px solid rgb(231, 154, 72);
-// }
-
-// .fon4{
-//   background-color: rgba(125, 77, 77, 0.2);
-//   border: 1px solid rgb(125, 77, 77);
-// }
-
-// .fon5{
-//   background-color: rgba(138, 103, 226, 0.2);
-//   border: 1px solid rgb(138, 103, 226);
-// }
-
-// .fon6{
-//   background-color: rgba(119, 231, 122, 0.2);
-//   border: 1px solid rgb(119, 231, 122);
-// }
-
-// .fon7{
-//   background-color: rgba(208, 70, 166, 0.2);
-//   border: 1px solid rgb(208, 70, 166);
-// }
+.input {
+  padding: 13px 20px;
+  width: 100%;
+  border-radius: 4px;
+  border: 1px solid #d3dfeb;
+}
