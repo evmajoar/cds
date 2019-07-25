@@ -64,6 +64,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  border-radius: 4px;
 
   @include breakpoint(sm) {
     background-position: center bottom -400px;
