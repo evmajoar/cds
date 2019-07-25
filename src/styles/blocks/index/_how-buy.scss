@@ -1,7 +1,12 @@
 @import '../../helpers/variables';
 @import '../../helpers/mixins';
 
-.how-buy {}
+.how-buy {
+  padding-bottom: 35px;
+  @include breakpoint(md) {
+    padding-bottom: 70px;
+  }
+}
 
 .how-buy__title {
   @include titleH2;
@@ -84,12 +89,28 @@
   &:nth-child(1) {
     &:before {
       content: "1";
+      @include breakpoint(lg) {
+        top: 10px;
+      }
+    }
+    &:after{
+      @include breakpoint(lg) {
+        top: -8px;
+      }
     }
   }
 
   &:nth-child(2) {
     &:before {
       content: "2";
+      @include breakpoint(lg) {
+        top: 17px;
+      }
+    }
+    &:after{
+      @include breakpoint(lg) {
+        top: 0;
+      }
     }
   }
 

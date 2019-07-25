@@ -4,4 +4,100 @@
 .main-footer {
   // Прижимаем футер к низу экрана
   margin-top: auto;
+  color: $lightBlack;
+
+  @include breakpoint(lg) {
+    border-top: 1px solid #d3dfeb;
+  }
+
+  .container {
+    @include breakpoint(lg) {
+      padding-top: 25px;
+      padding-bottom: 25px;
+      flex-direction: row;
+      align-items: center;
+    }
+  }
+}
+
+.main-footer__list {
+  margin-bottom: 20px;
+
+  @include breakpoint(sm) {
+    display: flex;
+    justify-content: center;
+  }
+
+  @include breakpoint(lg) {
+    margin-bottom: 0;
+    margin-left: auto;
+  }
+}
+
+.main-footer__item {
+  text-align: center;
+
+  &:not(:last-child) {
+    margin-bottom: 20px;
+
+    @include breakpoint(sm) {
+      margin-bottom: 0;
+      margin-right: 50px;
+    }
+  }
+}
+
+.main-footer__phone-link {
+  display: block;
+  font-size: 20px;
+}
+
+.main-footer__phone-description {
+  display: block;
+  font-size: 13px;
+  @include breakpoint(sm) {
+    text-align: right;
+  }
+}
+
+.main-footer__button-callback {
+  margin-bottom: 15px;
+
+  @media only screen and (min-width: 360px) {
+    max-width: 180px;
+    margin: 0 auto 15px;
+  }
+
+  @include breakpoint(lg) {
+    margin: 0;
+    margin-left: 65px;
+  }
+}
+
+.main-footer__address {
+  margin-bottom: 35px;
+  text-align: center;
+  font-size: 13px;
+
+  @include breakpoint(lg) {
+    max-width: 150px;
+    margin: 0;
+    order: -1;
+    text-align: left;
+  }
+}
+
+.main-footer__email {
+  display: block;
+  color: $lightBlue;
+  line-height: 16px;
+}
+
+.main-footer__copyright {
+  padding: 20px 0;
+  color: $white;
+  font-size: 13px;
+  font-family: $UbuntuMedium;
+  text-align: center;
+  background-color: $lightBlue;
 }
