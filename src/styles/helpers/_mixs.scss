@@ -704,4 +704,13 @@
   width: 100%;
   border-radius: 4px;
   border: 1px solid #d3dfeb;
+  @include placeholder {
+    color: $lightBlack;
+  }
+}
+
+select{
+  @include placeholder {
+    color: $lightBlack;
+  }
 }
