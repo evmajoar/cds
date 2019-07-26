@@ -19,31 +19,49 @@
 }
 
 .modal__dialog {
-  padding: 40px 15px;
+  padding: 20px 15px;
+  // position: relative;
+  // top: 0;
+  // width: 100%;
+  // height: 100%;
+  // justify-content: center;
+  // align-items: center;
+  // background-color: #fff;
+  // box-sizing: border-box;
+  // overflow-y: auto;
+  // overflow-x: hidden;
   position: relative;
   top: 0;
-  width: 100%;
-
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #fff;
-  box-sizing: border-box;
   overflow-y: auto;
-  overflow-x: hidden;
+  display: flex;
+  height: 100%;
+  width: 100%;
+  background-color: #fff;
 
+  // @include breakpoint(md) {
+  //   padding: 50px 85px 65px;
+  //   max-width: 660px;
+  //   height: auto;
+  // }
   @include breakpoint(md) {
-    padding: 50px 85px 65px;
+    padding: 50px 85px;
     max-width: 660px;
     height: auto;
   }
 }
 
+// .modal__dialog--big {
+//     @include breakpoint(md) {
+//         width: auto;
+//         height: 480px;
+//     }
+//     @include breakpoint(lg) {
+//         height: 600px;
+//     }
+// }
 .modal__content {
   position: relative;
   width: 100%;
-  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -100,7 +118,6 @@
   animation: show .3s ease-in-out;
 }
 
-
 .hidden {
   overflow: hidden;
 }
@@ -109,7 +126,6 @@
   width: 100%;
   height: 100%;
 }
-
 
 // Подбор помещения
 .modal-options__content {
@@ -160,7 +176,6 @@
   }
 }
 
-
 // Обратный звонок
 .modal-callback__content {
   text-align: center;
@@ -186,11 +201,14 @@
   right: 16px;
 }
 
-
 // Нравится планировка
 .modal-like-layout__dialog {
   max-width: 830px;
   padding: 0;
+
+  @include breakpoint(md) {
+    height: auto;
+  }
 }
 
 .modal-like-layout__item {
@@ -303,11 +321,23 @@
 
 // Акции и скидки 
 .modal-discounts__dialog {
-  max-width: 830px;
+  padding-bottom: 0;
+  max-width: 100%;
   max-height: 100%;
+
   @include breakpoint(md) {
-    max-height: 630px;
+    max-width: 650px;
+    height: 430px;
   }
+
+  @include breakpoint(lg) {
+    max-width: 830px;
+    height: 632px;
+  }
+}
+
+.modal-discounts__content {
+  display: block;
 }
 
 .discounts__carousel-list--modal {
@@ -319,6 +349,7 @@
 
   @include breakpoint(md) {
     grid-template-columns: repeat(2, 220px);
+    margin-bottom: 80px;
   }
 
   @include breakpoint(lg) {
@@ -326,11 +357,88 @@
   }
 }
 
-.modal__scroll{
-  @include breakpoint(lg) {
-    padding-top: 80px;
+// Подбор помещения
+.modal-choose-apartment__dialog {
+	position: relative;
+	height: 100%;
+  color: $white;
+  background-image: url($imageDir + 'choose-apartment-bg-mobile.jpg');
+  background-color: #afa7a3;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @include breakpoint(md) {
+    max-width: 100%;
+    background-image: url($imageDir + 'choose-apartment-bg.jpg');
+    background-position: center;
   }
-  
-  height: auto;
-  overflow-y: auto;
+}
+
+.modal-choose-apartment__content {
+  max-width: 350px;
+  margin: 0 auto;
+
+  @include breakpoint(sm) {
+    max-width: 520px;
+    margin: 0 auto;
+  }
+}
+
+.modal-choose-apartment__heading {
+  margin-bottom: 25px;
+
+  @media only screen and (min-width : 360px) {
+    text-align: center;
+	}
+	@include breakpoint(sm) {
+    margin-bottom: 35px;
+  }
+}
+
+.modal-choose-apartment__row-buttons {
+  display: flex;
+	flex-direction: column;
+	align-items: center;
+  width: 100%;
+  margin-bottom: 25px;
+
+  @include breakpoint(sm) {
+    flex-direction: row;
+    align-items: center;
+		justify-content: center;
+		margin-bottom: 35px;
+  }
+}
+
+.modal-choose-apartment__button {
+  width: 100%;
+
+  // width: 100%;
+  @media only screen and (min-width : 360px) {
+		width: 100%;
+		max-width: 170px;
+  }
+  &:not(:last-child) {
+    margin-bottom: 8px;
+
+    @include breakpoint(sm) {
+      margin: 0;
+			margin-right: 15px;
+			max-width: 170px;
+    }
+  }
+}
+
+.modal-choose-apartment__steps {
+  width: 100%;
+
+  @media only screen and (min-width : 360px) {
+    width: auto;
+  }
+}
+
+.modal-choose-apartment__number-link {
+  &:not(.modal-choose-apartment__number-link--active) {
+    color: $white;
+  }
 }
