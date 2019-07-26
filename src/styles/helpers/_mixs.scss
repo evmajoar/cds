@@ -116,8 +116,6 @@
   }
 }
 
-
-
 .button--white {
   color: $lightBlack;
   font-family: $UbuntuMedium;
@@ -696,6 +694,15 @@
   border: 1px solid #d3dfeb;
   @include placeholder {
     color: $lightBlack;
+  }
+}
+
+.input--transparent{
+  color: $white;
+  background-color: transparent;
+  border: 1px solid $white;
+  @include placeholder {
+    color: $white;
   }
 }
 

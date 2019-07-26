@@ -8,8 +8,8 @@
   bottom: 0;
   left: 0;
   z-index: 5;
-  display: none;
-  // display: block;
+  // display: none;
+  display: block;
 }
 
 .modal--2 {
@@ -359,8 +359,8 @@
 
 // Подбор помещения
 .modal-choose-apartment__dialog {
-	position: relative;
-	height: 100%;
+  position: relative;
+  height: 100%;
   color: $white;
   background-image: url($imageDir + 'choose-apartment-bg-mobile.jpg');
   background-color: #afa7a3;
@@ -375,12 +375,18 @@
 }
 
 .modal-choose-apartment__content {
-  max-width: 350px;
-  margin: 0 auto;
+
+  @media only screen and (min-width : 360px) {
+    max-width: 350px;
+    margin: 0 auto;
+  }
 
   @include breakpoint(sm) {
-    max-width: 520px;
+    max-width: 450px;
     margin: 0 auto;
+  }
+  @include breakpoint(sm) {
+    max-width: 550px;
   }
 }
 
@@ -389,42 +395,43 @@
 
   @media only screen and (min-width : 360px) {
     text-align: center;
-	}
-	@include breakpoint(sm) {
+  }
+
+  @include breakpoint(sm) {
     margin-bottom: 35px;
   }
 }
 
 .modal-choose-apartment__row-buttons {
   display: flex;
-	flex-direction: column;
-	align-items: center;
+  flex-direction: column;
+  align-items: center;
   width: 100%;
   margin-bottom: 25px;
 
   @include breakpoint(sm) {
     flex-direction: row;
     align-items: center;
-		justify-content: center;
-		margin-bottom: 35px;
+    justify-content: center;
+    margin-bottom: 35px;
   }
 }
 
 .modal-choose-apartment__button {
   width: 100%;
 
-  // width: 100%;
   @media only screen and (min-width : 360px) {
-		width: 100%;
-		max-width: 170px;
+    width: 100%;
+    max-width: 170px;
   }
+
   &:not(:last-child) {
     margin-bottom: 8px;
 
     @include breakpoint(sm) {
       margin: 0;
-			margin-right: 15px;
-			max-width: 170px;
+      margin-right: 15px;
+      max-width: 170px;
     }
   }
 }
@@ -440,5 +447,43 @@
 .modal-choose-apartment__number-link {
   &:not(.modal-choose-apartment__number-link--active) {
     color: $white;
+  }
+}
+
+.modal-choose-apartment__form {
+  max-width: 100%;
+
+  @media only screen and (min-width : 360px) {
+    max-width: 320px;
+  }
+
+  @include breakpoint(md) {
+    display: grid;
+    grid-template-columns: 320px auto;
+    grid-gap: 12px;
+    align-content: center;
+    max-width: 505px;
+  }
+}
+
+.modal-choose-apartment__link {
+  width: 100%;
+
+  @media only screen and (min-width : 360px) {
+    width: 100%;
+    max-width: 320px;
+  }
+}
+
+.modal-choose-apartment__text{
+  @media only screen and (min-width : 360px) {
+    text-align: center;
+  }
+}
+
+.modal-choose-apartment__block-input{
+  margin-bottom: 15px;
+  @include breakpoint(md) {
+    margin: 0;
   }
 }
