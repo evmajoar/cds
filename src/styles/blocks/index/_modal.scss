@@ -8,8 +8,8 @@
   bottom: 0;
   left: 0;
   z-index: 5;
-  display: none;
-  // display: block;
+  // display: none;
+  display: block;
 }
 
 .modal--2 {
@@ -530,5 +530,59 @@
   @media only screen and (max-width : 567px) {
     padding-left: 30px;
     padding-right: 3px;
+  }
+}
+
+// Жилые комплексы
+.modal-residential-complexes__dialog{
+  padding: 0;
+  // padding-left: 0;
+  // padding-right: 0;
+  max-width: 100%;
+  height: 100%;
+}
+.modal-residential-complexes__content{
+  display: block;
+  max-width: 100%;
+}
+.modal-residential-complexes__link{
+  color: $lightBlue;
+  text-transform: uppercase;
+}
+.modal-residential-complexes__icon-arrow-big {
+  fill: $lightBlue;
+}
+
+.modal-residential-complexes__heading{
+  padding: 20px 15px 30px;
+  margin: 0 auto;
+  max-width: 1030px;
+  @include breakpoint(md) {
+    padding-top: 40px;
+  }
+}
+
+.modal-residential-complexes__title{
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.modal-residential-complexes__wrapper-map{
+  position: relative;
+  height: 100%;
+  background-image: url($imageDir + 'map-markers.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.place-card--polustrovo{
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  @include breakpoint(md) {
+    left: 65%;
+    right: auto;
   }
 }

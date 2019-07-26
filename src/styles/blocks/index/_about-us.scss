@@ -87,7 +87,6 @@
 }
 
 .about-us__table {
-  width: 240px;
   margin-bottom: 20px;
 
   @media only screen and (max-width: 576px) {
@@ -103,15 +102,6 @@
   font-size: 13px;
   color: #999999;
   text-align: left;
-}
-
-.about-us__table-value {
-  font-weight: normal;
-  text-align: left;
-}
-
-.about-us__table-option {
-  padding-left: 50px;
 }
 
 .about-us__place {

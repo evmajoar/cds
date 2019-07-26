@@ -692,30 +692,88 @@
   width: 100%;
   border-radius: 4px;
   border: 1px solid #d3dfeb;
+
   @include placeholder {
     color: $lightBlack;
   }
 }
 
-.input--transparent{
+.input--transparent {
   color: $white;
   background-color: transparent;
   border: 1px solid $white;
+
   @include placeholder {
     color: $white;
   }
 }
 
-select{
+select {
   @include placeholder {
     color: $lightBlack;
   }
 }
 
-.button-arrow{
+.button-arrow {
   position: relative;
   width: 51px;
   height: 32px;
   background-color: $white;
   border-radius: 4px;
+}
+
+.place-card {
+  display: grid;
+  grid-template-columns: auto auto;
+  max-width: 280px;
+  padding: 15px 20px;
+  background-color: #fff;
+  border-radius: 4px;
+}
+
+.place-card__title {
+  grid-column: 1 / 2;
+}
+
+.place-card__badges {
+  justify-self: flex-end;
+}
+
+.place-card__description-block {
+  grid-column: 1 / -1;
+}
+
+.place-card__address {
+  grid-column: 1 / -1;
+  margin-bottom: 15px;
+  color: $grey;
+}
+
+.place-card__icon-roller {
+  fill: $lightBlue;
+}
+
+.place-card__icon-car {
+  fill: $lightBlue;
+}
+
+.description-block {
+  width: 240px;
+}
+
+.description-block__value {
+  font-weight: normal;
+  text-align: left;
+}
+
+.description-block__option {
+  padding-left: 50px;
+}
+
+.description-block__option--right {
+  text-align: right;
+}
+
+.description-block__value--grey {
+  color: $grey;
 }
