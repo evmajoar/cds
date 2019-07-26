@@ -71,12 +71,105 @@
   }
 
   @include breakpoint(lg) {
-    padding: 32px 20px 20px 24px;
-    background-position: center;
-    background-image: url($imageDir + 'terms-payment-desktop.jpg');
     display: grid;
     grid-template-columns: 400px auto;
+    padding: 32px 20px 20px 24px;
+    background-position: left;
+    background-image: url($imageDir + 'terms-payment-desktop.jpg');
   }
+  .terms-payment__form-button{
+    @media only screen and (min-width : 360px) {
+      width: auto;
+    }
+  }
+}
+
+.terms-payment__wrapper--tab2{
+  @include breakpoint(lg) {
+    background-image: url($imageDir + 'terms-payment-tab2-desktop.jpg');
+  }
+  .terms-payment__description{
+    @include breakpoint(lg) {
+      max-width: 265px;
+      margin-bottom: 0;
+    }
+  }
+}
+.terms-payment__wrapper--tab3{
+  @include breakpoint(lg) {
+    background-image: url($imageDir + 'terms-payment-tab3-desktop.jpg');
+  }
+  .terms-payment__description{
+    @include breakpoint(lg) {
+      max-width: 265px;
+      margin-bottom: 0;
+    }
+  }
+}
+.terms-payment__wrapper--tab4{
+  @include breakpoint(lg) {
+    background-image: url($imageDir + 'terms-payment-tab4-desktop.jpg');
+  }
+  .terms-payment__description{
+    @include breakpoint(lg) {
+      max-width: 265px;
+      margin-bottom: 0;
+    }
+  }
+}
+.terms-payment__wrapper--tab5{
+  @include breakpoint(lg) {
+    background-image: url($imageDir + 'terms-payment-tab5-desktop.jpg');
+  }
+  .terms-payment__description{
+    @include breakpoint(lg) {
+      max-width: 265px;
+      margin-bottom: 0;
+    }
+  }
+}
+.terms-payment__wrapper--tab6{
+  @include breakpoint(lg) {
+    background-image: url($imageDir + 'terms-payment-tab6-desktop.jpg');
+  }
+  .terms-payment__description{
+    @include breakpoint(lg) {
+      max-width: 265px;
+      margin-bottom: 0;
+    }
+  }
+}
+.terms-payment__wrapper--tab7{
+  @include breakpoint(lg) {
+    background-image: url($imageDir + 'terms-payment-tab7-desktop.jpg');
+  }
+  .terms-payment__description{
+    @include breakpoint(lg) {
+      max-width: 265px;
+      margin-bottom: 0;
+    }
+  }
+}
+
+.terms-payment__box--row{
+  grid-row: 1 / 3;
+}
+
+.terms-payment__form{
+  grid-column: 2 / -1;
+  @media only screen and (min-width : 360px) {
+    margin: 0 auto;
+  }
+  @include breakpoint(lg) {
+    margin: 0;
+  }
+}
+
+.terms-payment__text{
+  max-width: 535px;
+  margin-bottom: 20px;
+  font-size: 17px;
+  font-family: $UbuntuMedium;
 }
 
 .terms-payment__box {
@@ -129,6 +222,9 @@
   font-family: $UbuntuMedium;
   font-weight: normal;
   font-size: 17px;
+  @include breakpoint(lg) {
+    max-width: 315px;
+  }
 }
 
 .terms-payment__description {
@@ -142,6 +238,9 @@
   @include breakpoint(lg) {
     padding-bottom: 0;
     max-width: 175px;
+  }
+  &:not(:last-child){
+    margin-bottom: 20px;
   }
 }
 
