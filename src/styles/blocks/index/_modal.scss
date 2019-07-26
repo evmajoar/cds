@@ -534,40 +534,44 @@
 }
 
 // Жилые комплексы
-.modal-residential-complexes__dialog{
+.modal-residential-complexes__dialog {
   padding: 0;
   // padding-left: 0;
   // padding-right: 0;
   max-width: 100%;
   height: 100%;
 }
-.modal-residential-complexes__content{
+
+.modal-residential-complexes__content {
   display: block;
   max-width: 100%;
 }
-.modal-residential-complexes__link{
+
+.modal-residential-complexes__link {
   color: $lightBlue;
   text-transform: uppercase;
 }
+
 .modal-residential-complexes__icon-arrow-big {
   fill: $lightBlue;
 }
 
-.modal-residential-complexes__heading{
+.modal-residential-complexes__heading {
   padding: 20px 15px 30px;
   margin: 0 auto;
   max-width: 1030px;
+
   @include breakpoint(md) {
     padding-top: 40px;
   }
 }
 
-.modal-residential-complexes__title{
+.modal-residential-complexes__title {
   margin-bottom: 10px;
   text-align: left;
 }
 
-.modal-residential-complexes__wrapper-map{
+.modal-residential-complexes__wrapper-map {
   position: relative;
   height: 100%;
   background-image: url($imageDir + 'map-markers.jpg');
@@ -576,13 +580,198 @@
   background-size: cover;
 }
 
-.place-card--polustrovo{
+.place-card--polustrovo {
   position: absolute;
   right: 0;
   top: 50%;
   transform: translateY(-50%);
+
   @include breakpoint(md) {
     left: 65%;
     right: auto;
   }
+}
+
+
+
+
+// Студия
+.modal-studio__dialog {
+  max-width: 830px;
+  padding: 0;
+
+  @include breakpoint(md) {
+    height: auto;
+  }
+}
+
+.modal-studio__item {
+  padding-bottom: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
+  border-radius: 4px;
+
+  @include breakpoint(md) {
+    display: grid;
+    grid-column-gap: 15px;
+    grid-template-columns: 1fr 1fr;
+    padding: 0;
+  }
+
+  @include breakpoint(lg) {
+    grid-column-gap: 30px;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.modal-studio__box {
+  margin-bottom: 25px;
+  margin-left: -15px;
+  margin-right: -15px;
+  position: relative;
+  padding: 35px 0 50px;
+  text-align: center;
+  background-color: rgba(#77888f8e, .08);
+
+  @include breakpoint(md) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-row: 1 / 6;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.modal-studio__img {
+  margin: 0 auto;
+  width: 205px;
+}
+
+.modal-studio__zoom-button {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  right: 10px;
+  bottom: 10px;
+  background-image: url($imageDir + 'scale.svg');
+
+  @include breakpoint(md) {
+    right: 25px;
+    top: 25px;
+    bottom: 0;
+  }
+}
+
+.modal-studio__info {
+  display: grid;
+  margin: 0 auto;
+  max-width: 320px;
+
+  @include breakpoint(md) {
+    padding: 35px 15px 25px 0;
+    margin: 0;
+    max-width: 100%;
+  }
+
+  @include breakpoint(lg) {
+    padding: 50px 32px 65px 0;
+  }
+}
+
+.modal-studio__modal-content {
+  align-items: stretch;
+  justify-content: flex-start;
+}
+
+.modal-studio__button {
+  display: block;
+
+  @media (min-width: 360px) and(max-width: 576px) {
+    align-self: center;
+  }
+
+  @include breakpoint(md) {
+    align-self: flex-start;
+  }
+}
+
+.modal-studio__form {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-studio__title {
+  margin-bottom: 5px;
+  text-align: left;
+}
+
+.modal-studio__description {
+  text-align: left;
+}
+
+.modal-studio__table {
+  max-width: 260px;
+  margin-bottom: 20px;
+
+  @include breakpoint(md) {
+    margin-bottom: 35px;
+    height: 50px;
+  }
+
+  tbody {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+
+    &:after {
+      @include pseudo;
+      top: 0;
+      left: 50%;
+      transform: translateX(10px);
+      display: block;
+      width: 2px;
+      height: 100%;
+      background-color: #d2deec;
+    }
+  }
+}
+
+.modal-studio__table-row {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-studio__table-value {
+  font-size: 20px;
+}
+
+.modal-studio__table-options {
+  color: #999999;
+  font-size: 13px;
+}
+
+.modal-studio__new-price {
+  color: $lightBlue;
+}
+
+.modal-studio__old-price {
+  display: block;
+  margin-bottom: 25px;
+  text-decoration: line-through;
+  color: #b2c0cd;
+}
+
+.modal-studio__present {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  font-family: $UbuntuMedium;
+}
+
+.modal-studio__present__icon-present {
+  margin-right: 8px;
+  fill: $red;
 }

@@ -355,7 +355,7 @@
 </div>
 
 
-<!-- room-catalog Каталог помещений -->
+<!-- Каталог помещений -->
 <div id="room-catalog" class="modal modal-room-catalog">
 	<div class="modal__dialog">
 		<button class="modal__close close close--grey" type="button">
@@ -577,6 +577,55 @@
 							</tr>
 						</tbody>
 					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- Студия -->
+<div id="studio" class="modal modal-studio">
+	<div class="modal__dialog modal-studio__dialog">
+		<button class="modal__close close close--grey" type="button">
+			<span class="visually-hidden">Закрыть модальное окно</span>
+		</button>
+		<div class="modal__content modal-studio__modal-content">
+			<div class="modal-studio__item">
+				<p class="modal-studio__box">
+					<img class="modal-studio__img" src="images/flat.svg" alt="Планировка квартиры">
+					<button class="modal-studio__zoom-button js-popup" data-id="flat" type="button"><span
+							class="visually-hidden">Увеличить изображение</span></button>
+				</p>
+				<div class="modal-studio__info">
+					<h3 class="modal__title modal-studio__title">Студия<br>
+						<span class="modal-studio__new-price">3 139 863 руб.</span>
+					</h3>
+					<span class="modal-studio__old-price">3,8 млн</span>
+					<table class="modal-studio__table">
+						<tr class="modal-studio__table-row">
+							<td class="modal-studio__table-value">25,45 кв. м</td>
+							<td class="modal-studio__table-options">Общая площадь</td>
+						</tr>
+						<tr class="modal-studio__table-row">
+							<td class="modal-studio__table-value">Корпус 1</td>
+							<td class="modal-studio__table-options">3 этаж</td>
+						</tr>
+					</table>
+
+					<p class="modal-studio__present">
+						<svg class="modal-studio__present__icon-present" width="24" height="24" viewBox="0 0 24 24">
+							<use xlink:href="icons/sprite.svg#icon-present"></use>
+						</svg>
+						Отделка в подарок!</p>
+					
+					<form class="modal__form modal-studio__form" action="#">
+						<p class="modal__block-input">
+							<label class="visually-hidden" for="number-input">Номер телефона</label>
+							<input class="modal-callback__input input" id="number-input" type="number"
+								placeholder="+7 (910) 123-45-67">
+						</p>
+						<button class="modal-studio__button button button--red" type="submit">Записаться на просмотр</button>
+					</form>
 				</div>
 			</div>
 		</div>
