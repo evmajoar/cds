@@ -126,7 +126,6 @@ $(function () {
 
   $('.main-header__advertising-close').click(function () {
     $('.main-header__advertising-banner').addClass('main-header__advertising-banner--close')
-    // $(this).closest('.modal').removeClass('show');
   });
 
 });
