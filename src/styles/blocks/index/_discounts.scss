@@ -92,6 +92,10 @@
   @include breakpoint(lg) {
     background-position: center;
   }
+
+  .discounts__item-button{
+    background-color: #d2deec;
+  }
 }
 
 .discounts__item--3 {
@@ -151,4 +155,19 @@
   padding: 3px 20px;
   width: 100%;
   text-transform: none;
+}
+
+.discounts__item-button{
+  display: none;
+  @include breakpoint(lg) {
+    display: block;
+  }
+}
+
+.discounts__item-info{
+  @include breakpoint(lg) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 }

@@ -8,8 +8,8 @@
   bottom: 0;
   left: 0;
   z-index: 5;
-  // display: none;
-  display: block;
+  display: none;
+  // display: block;
 }
 
 .modal--2 {
@@ -78,6 +78,11 @@
   height: 20px;
   background-color: transparent;
   border: none;
+
+  @include breakpoint(md) {
+    top: 17px;
+    right: 17px;
+  }
 }
 
 .modal__description {
@@ -320,7 +325,8 @@
 }
 
 // Акции и скидки 
-.modal-discounts__dialog {
+.modal-discounts__dialog,
+.modal-promo-list__dialog {
   padding-bottom: 0;
   max-width: 100%;
   max-height: 100%;
@@ -336,7 +342,8 @@
   }
 }
 
-.modal-discounts__content {
+.modal-discounts__content,
+.modal-promo-list__content {
   display: block;
 }
 
@@ -385,6 +392,7 @@
     max-width: 450px;
     margin: 0 auto;
   }
+
   @include breakpoint(sm) {
     max-width: 550px;
   }
@@ -475,15 +483,52 @@
   }
 }
 
-.modal-choose-apartment__text{
+.modal-choose-apartment__text {
   @media only screen and (min-width : 360px) {
     text-align: center;
   }
 }
 
-.modal-choose-apartment__block-input{
+.modal-choose-apartment__block-input {
   margin-bottom: 15px;
+
   @include breakpoint(md) {
     margin: 0;
+  }
+}
+
+// Скидка на паркинг до 300 000 руб.
+.modal-promo-list__heading {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+
+  @include breakpoint(lg) {
+    justify-content: space-between;
+    flex-direction: row;
+  }
+}
+
+.modal-promo-list__img {
+  margin-bottom: 20px;
+
+  @include breakpoint(lg) {
+    margin-bottom: 0;
+    margin-right: 20px;
+  }
+}
+
+.modal-promo-list__text {
+  margin-bottom: 20px;
+}
+
+.modal-promo-list__advantages-list {
+  margin-bottom: 20px;
+}
+
+.modal-promo-list__dialog {
+  @media only screen and (max-width : 567px) {
+    padding-left: 30px;
+    padding-right: 3px;
   }
 }

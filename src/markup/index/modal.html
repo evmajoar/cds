@@ -231,8 +231,8 @@
 			<div class="modal-like-layout__item">
 				<p class="modal-like-layout__box">
 					<img class="modal-like-layout__img" src="images/flat.svg" alt="Планировка квартиры">
-					<button class="modal-like-layout__zoom-button" tabindex="0"><span class="visually-hidden">Увеличить
-							изображение</span></button>
+					<button class="modal-like-layout__zoom-button js-popup" data-id="flat" type="button"><span
+							class="visually-hidden">Увеличить изображение</span></button>
 				</p>
 				<div class="modal-like-layout__info">
 					<h3 class="modal__title modal-like-layout__title">Нравится планировка?</h3>
@@ -453,7 +453,7 @@
 
 
 <!-- Нашли 10 квартир  -->
-<div id="found-apartments" class="modal modal-choose-apartment">
+<div id="found-apartments" class="modal found-apartments">
 	<div class="modal__dialog modal-choose-apartment__dialog">
 		<button class="modal__close close close--grey" type="button">
 			<span class="visually-hidden">Закрыть модальное окно</span>
@@ -473,11 +473,62 @@
 			<form class="modal-choose-apartment__form modal__form" action="#">
 				<p class="modal-choose-apartment__block-input">
 					<label class="visually-hidden" for="number-input">Номер телефона</label>
-					<input class="modal-callback__input input input--transparent" id="number-input" type="number" placeholder="+7 (910) 123-45-67">
+					<input class="modal-callback__input input input--transparent" id="number-input" type="number"
+						placeholder="+7 (910) 123-45-67">
 				</p>
 				<button class="modal-choose-apartment__link button button--transparent-white js-popup"
 					data-id="choose-apartment" type="button">Оставить заявку</button>
 			</form>
+		</div>
+	</div>
+</div>
+
+
+<!-- Скидка на паркинг до 300 000 руб.  -->
+<div id="promo-list" class="modal modal-promo-list">
+	<div class="modal__dialog modal-promo-list__dialog">
+		<button class="modal__close close close--grey" type="button">
+			<span class="visually-hidden">Закрыть модальное окно</span>
+		</button>
+		<div class="modal__content modal-promo-list__content">
+			<h2 class="modal__title">Скидка на паркинг до 300 000 руб.</h2>
+			<div class="modal-promo-list__heading">
+				<img class="modal-promo-list__img" src="images/promo-img.jpg" alt="Парковка">
+				<div class="modal-promo-list__description">
+					<p class="modal-promo-list__text">С 1 по 30 июня 2019 года на покупку машиномест в подземном паркинге ЖК
+						«Чёрная речка» действует акция: при единовременной оплате 100% – скидка 300 000 руб.!</p>
+					<ul class="modal-promo-list__list">
+						<li class="modal-promo-list__item">— Базовая стоимость машиноместа —<br>
+							700 000 руб.;</li>
+						<li class="modal-promo-list__item">— По акции стоимость любого машиноместа<br> — 600 000 руб.</li>
+					</ul>
+				</div>
+			</div>
+			<ul class="modal-promo-list__advantages-list">
+				<li class="modal-promo-list__advantages-item">А также:</li>
+				<li class="modal-promo-list__advantages-item">— Предоставляется беспроцентная рассрочка на оплату машиноместа до
+					декабря 2019 года (на 6 мес.)</li>
+				<li class="modal-promo-list__advantages-item">— Первоначальный взнос — от 25% от стоимости машиноместа (от 175
+					000 руб.)</li>
+				<li class="modal-promo-list__advantages-item">— Оплата ежемесячно равными платежами</li>
+				<li class="modal-promo-list__advantages-item">— Передача машиноместа по акту в пользование возможна после оплаты
+					первоначального взноса</li>
+			</ul>
+			<p class="modal-promo-list__text">ЖК «Черная речка» — многоэтажный кирпично-монолитный дом комфорт-класса, сдан
+			</p>
+		</div>
+	</div>
+</div>
+
+<!-- Схема планировки -->
+<div id="flat" class="modal modal-flat">
+	<div class="modal__dialog modal-flat__dialog">
+		<button class="modal__close close close--grey" type="button">
+			<span class="visually-hidden">Закрыть модальное окно</span>
+		</button>
+		<div class="modal__content">
+			<h2 class="visually-hidden">Схема планировки</h2>
+			<img src="images/flat-big.png" alt="Схема планировки">
 		</div>
 	</div>
 </div>
