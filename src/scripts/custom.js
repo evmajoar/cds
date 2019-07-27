@@ -67,36 +67,84 @@ $(function () {
       }
     }
   });
+  // // попап окна
+  // $('.js-popup').click(function (event) {
+  //   var $that = $(this),
+  //     $thatDataId = $that.data('id'),
+  //     $modalBox = $('#' + $thatDataId),
+  //     $modalBoxAttr = $modalBox.attr('id'),
+  //     inpName = $that.parent().find('input[type=text]'),
+  //     inpEmail = $that.parent().find('input[type=email]'),
+  //     inpPass = $that.parent().find('input[type=password]'),
+  //     inpNameVal = inpName.val(),
+  //     inpEmailVal = inpEmail.val(),
+  //     inpPassVal = inpPass.val();
+  //   var addClasses = function () {
+  //     $('body').addClass('hidden');
+  //     $modalBox.addClass('show');
+  //   };
+  //   var validationInputs = function () {
+  //     if (inpNameVal === '') {
+  //       inpName.addClass('has-error');
+  //     } else {
+  //       inpName.removeClass('has-error');
+  //     }
+  //     if (inpEmailVal === '') {
+  //       inpEmail.addClass('has-error');
+  //     } else {
+  //       inpEmail.removeClass('has-error');
+  //     }
+  //     if (inpPassVal === '') {
+  //       inpPass.addClass('has-error');
+  //     } else {
+  //       inpPass.removeClass('has-error');
+  //     }
+  //   };
+  //   if ($thatDataId === $modalBoxAttr) {
+  //     if ($that.is('button[type=submit]')) {
+  //       event.preventDefault();
+  //       validationInputs();
+  //       if (inpNameVal !== '' && inpEmailVal !== '' && inpPassVal) {
+  //         addClasses();
+  //       }
+  //     } else {
+  //       addClasses();
+  //     }
+  //   }
+  // });
+
   $('.modal__close').click(function () {
     $('body').removeClass('hidden');
     $(this).closest('.modal').removeClass('show');
   });
 
+  /* 
+    LAYOUTS
+  */
+  var $layuotsCarousel = $( '.layouts__carousel-list' );
+      $layuotsPrev = $( '.layouts__carousel-prev' ),
+      $layuotsNext = $( '.layouts__carousel-next' ),
+      $layuotsPrevT = $( '.carousel-switch__prev' ),
+      $layuotsNextT = $( '.carousel-switch__next' ),
+      $layuotsActive = $( '.carousel-switch__number-slide-item:first-of-type' ),
+      $layuotsTotal = $( '.carousel-switch__number-slide-item:last-of-type' );
 
-  $('.layouts__carousel-list').slick({
+  $layuotsCarousel.on('init afterChange', function(event, slick){
+    $layuotsActive.text(slick.currentSlide + 1);
+    $layuotsTotal.text(slick.slideCount);
+  }).slick({
     dots: false,
-    arrows: false
-    // appendArrows: $('.layouts__buttons2'),
-    // prevArrow: ' <button type="button" class="btn-prev layouts__carousel-prev"><span class="visually-hidden">Листать назад</span></button>',
-    // nextArrow: '<button type="button" class="btn-next layouts__carousel-next"><span class="visually-hidden">Листать вперед</span></button>'
-    // responsive: [{
-    //   breakpoint: 768,
-    //   settings: {
-    //     dots: false,
-    //     appendArrows: $('.layouts__buttons'),
-    //     prevArrow: ' <button type="button" class="btn-prev carousel-switch__prev"><span class="visually-hidden">Листать назад</span></button>',
-    //     nextArrow: '<button type="button" class="btn-next carousel-switch__next"><span class="visually-hidden">Листать вперед</span></button>'
-    //   }
-    // }]
+    prevArrow: $layuotsPrev,
+    nextArrow: $layuotsNext,
+    responsive: [{
+      breakpoint: 768,
+      settings: {
+        prevArrow: $layuotsPrevT,
+        nextArrow: $layuotsNextT
+      }
+    }]
   });
 
-
-  $(".layouts__carousel-list").on('afterChange', function (event, slick, currentSlide) {
-    $("#number-slide").text(currentSlide + 1);
-  });
-  $(".layouts__carousel-list").on('afterChange', function (event, slick, currentSlide) {
-    $("#number-slide2").text(currentSlide + 1);
-  });
 
   $('.about-us__carousel-list').slick({
     dots: false,
