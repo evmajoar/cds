@@ -1,18 +1,24 @@
 <header class="main-header">
-	<div class="main-header__advertising-banner">
+	<!-- <div class="main-header__advertising-banner">
 		<p class="main-header__advertising-text main-header__advertising-text--mobile">Летние скидки до 16%</p>
 		<p class="main-header__advertising-text main-header__advertising-text--desktop">Летние скидки до 16%: как сэкономить
 			1,2 млн рублей</p>
 		<button class="main-header__advertising-close close close--white" type="button">
 			<span class="visually-hidden">Закрыть</span>
 		</button>
-	</div>
+	</div> -->
+	<button class="main-header__advertising-banner" type="button">
+		<p class="main-header__advertising-text main-header__advertising-text--mobile">Летние скидки до 16%</p>
+		<p class="main-header__advertising-text main-header__advertising-text--desktop">Летние скидки до 16%: как сэкономить
+			1,2 млн рублей</p>
+		<p class="main-header__advertising-close close close--white">
+			<span class="visually-hidden">Закрыть</span>
+		</p>
+	</button>
 	<div class="container">
 		<nav class="main-header__navigation">
-			<picture class="main-header__picture-logo">
-				<source srcset="images/logo-desc.svg" media="(min-width: 768px)">
-				<img class="main-header__logo" src="images/logo-mobile.svg" alt="ЦДС">
-			</picture>
+			<img class="main-header__logo" src="images/logo-mobile.svg" alt="ЦДС">
+			<!-- <img class="main-header__logo" src="images/logo-mobile.svg" srcset="images/logo-mobile.svg 120w, images/logo-desc.svg 214w" alt="ЦДС"> -->
 			<p class="main-header__block-phone block-phone">
 				<a href="tel:+78124544545"
 					class="main-header__block-phone-link main-header__block-phone-link--desktop block-phone__link">+7 (812) 454 45
@@ -21,7 +27,7 @@
 					class="main-header__block-phone-link main-header__block-phone-link--mobile block-phone__link">(812) 454 45
 					45</a>
 				<span class="main-header__block-phone-description block-phone__description">мы на связи</span>
-				<button class="main-header__button-callback button-callback js-popup" type="button">Заказать
+				<button class="main-header__button-callback button-callback js-popup" type="button" data-id="callback">Заказать
 					звонок</button>
 			</p>
 			<button class="main-header__burger-button burger-button" type="button">
@@ -89,7 +95,7 @@
 					<use xlink:href="icons/sprite.svg#icon-play"></use>
 				</svg>
 				Фильм о комплексе<br>
-				<span class="main-header__film-complex-duration">7 мин</span>
+				<span class="main-header__film-complex-duration">3 мин</span>
 			</button>
 			<ul class="main-header__sales-list">
 				<li class="main-header__sales-item">

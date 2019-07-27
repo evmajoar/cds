@@ -13,9 +13,16 @@
 
 .main-header__advertising-banner {
   position: relative;
+  display: block;
+  width: 100%;
   color: $white;
   text-align: center;
+  bottom: none;
   background-color: $lightBlue;
+}
+
+.main-header__advertising-banner--close{
+  display: none;
 }
 
 .main-header__advertising-text {
@@ -131,11 +138,19 @@
   color: $lightBlue;
   text-transform: uppercase;
   &:hover {
-    background-color: #d6251f;
+    color: #009ed8;
+    @include breakpoint(lg) {
+      color: $white;
+      background-color: #d6251f;
+    }
   }
 
   &:active {
-    background-color: #bb211b;
+    color: #008abd;
+    @include breakpoint(lg) {
+      color: $white;
+      background-color: #d6251f;
+    }
   }
 
   @include breakpoint(lg) {
@@ -259,11 +274,12 @@
   &:after {
     @include pseudo;
     content: 'Старт продаж';
-    top: -19px;
+    top: -10px;
     right: 120px;
     font-family: $UbuntuMedium;
     text-transform: uppercase;
     font-size: 10px;
+    line-height: 10px;
     z-index: 3;
   }
 
@@ -343,4 +359,10 @@
 .main-header__menu-close{
   top: 20px;
   right: 20px;
+}
+
+.main-header__logo{
+  @include breakpoint(lg) {
+    margin-left: 25px;
+  }
 }

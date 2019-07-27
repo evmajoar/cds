@@ -28,7 +28,7 @@
       margin-right: 56px;
       &:before{
         @include pseudo;
-        top: -5px;
+        top: 0;
         right: -50%;
         transform: rotate(180deg) translateX(50%);
         width: 8px;

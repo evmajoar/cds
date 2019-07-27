@@ -1,0 +1,144 @@
+@import '../../helpers/variables';
+@import '../../helpers/mixins';
+
+.architecture {
+  padding-bottom: 30px;
+
+  @include breakpoint(md) {
+    padding-bottom: 70px;
+  }
+  .container{
+    @include breakpoint(md) {
+      display: grid;
+      grid-template-columns: 300px auto;
+    }
+    @include breakpoint(lg) {
+      grid-template-columns: 405px auto;
+      grid-column-gap: 20px;
+    }
+  }
+}
+
+.architecture__title {
+  @include titleH2;
+  margin-bottom: 15px;
+  @include breakpoint(md) {
+    grid-column: 1 / -1;
+    justify-self: center;
+  }
+  @include breakpoint(lg) {
+    margin-bottom: 40px;
+  }
+}
+
+.architecture__description {
+  margin-bottom: 20px;
+  @include breakpoint(lg) {
+    margin-bottom: 35px;
+  }
+}
+
+.architecture__list {
+  margin-bottom: 20px;
+  @include breakpoint(lg) {
+    display: flex;
+    margin-bottom: 75px;
+  }
+}
+
+.architecture__item {
+  position: relative;
+  padding-left: 20px;
+  @include breakpoint(lg) {
+    flex-basis: 100%;
+    padding-left: 0;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 5px;
+    @include breakpoint(lg) {
+      flex-basis: 100%;
+      margin-bottom: 0;
+      margin-right: 35px;
+    }
+  }
+
+  &:after {
+    @include pseudo;
+    top: 6px;
+    left: 0;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    border: 3px solid #00adef;
+    @include breakpoint(lg) {
+      display: none;
+    }
+  }
+
+  &:last-child {
+    display: flex;
+    @include breakpoint(lg) {
+      flex-direction: column;
+    }
+
+    .architecture__item-description {
+      margin-left: 5px;
+      color: $colorSite;
+      @include breakpoint(lg) {
+        margin: 0;
+        color: $grey;
+      }
+    }
+  }
+}
+
+.architecture__item-description {
+  color: $grey;
+  font-size: 13px;
+}
+
+.architecture__view {
+  @include breakpoint(sm) {
+    display: flex;
+    justify-content: center;
+  }
+  @include breakpoint(md) {
+    grid-column: 1 / -1;
+  }
+}
+
+.architecture__button-queue-plan {
+  margin: 0 auto;
+  margin-bottom: 12px;
+  max-height: 64px;
+  overflow: hidden;
+  @include breakpoint(sm) {
+    margin: 0;
+    margin-right: 10px;
+  }
+}
+
+.architecture__button-model-3D {
+  margin: 0 auto;
+  max-height: 64px;
+  overflow: hidden;
+  @include breakpoint(sm) {
+    margin: 0;
+  }
+}
+
+.architecture__icon-plan-queue {
+  background-color: red;
+
+  path {
+    fill: #fff;
+  }
+}
+
+.architecture__img {
+  @include breakpoint(md) {
+    grid-column: 1 / 2;
+    grid-row: 2 / 5;
+  }
+}

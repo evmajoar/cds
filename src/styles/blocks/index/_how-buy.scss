@@ -1,0 +1,126 @@
+@import '../../helpers/variables';
+@import '../../helpers/mixins';
+
+.how-buy {
+  padding-bottom: 35px;
+  @include breakpoint(md) {
+    padding-bottom: 70px;
+  }
+}
+
+.how-buy__title {
+  @include titleH2;
+  margin-bottom: 25px;
+
+  @include breakpoint(md) {
+    text-align: center;
+  }
+
+  @include breakpoint(lg) {
+    margin-bottom: 45px;
+  }
+}
+
+.how-buy__list {
+  position: relative;
+  
+  @include breakpoint(lg) {
+    padding-left: 430px;
+    &:after {
+      @include pseudo;
+      top: 0;
+      left: 0;
+      width: 375px;
+      height: 256px;
+      background-image: url($imageDir + 'how-buy-img.png');
+      background-repeat: no-repeat;
+    }
+  }
+
+  
+}
+
+.how-buy__item {
+  position: relative;
+  padding-left: 50px;
+
+  @include breakpoint(lg) {
+    padding-left: 85px;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 12px;
+    @include breakpoint(lg) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &:after {
+    @include pseudo;
+    left: 0;
+    top: 0;
+    width: 32px;
+    height: 32px;
+    background-color: #d2deec;
+    border-radius: 50%;
+
+    @include breakpoint(lg) {
+      top: -15px;
+      width: 64px;
+      height: 64px;
+    }
+  }
+
+  &:before {
+    @include pseudo;
+    top: 3px;
+    left: 12px;
+    z-index: 1;
+    color: $lightBlack;
+    font-size: 16px;
+
+    @include breakpoint(lg) {
+      top: 5px;
+      left: 26px;
+      font-size: 20px;
+    }
+  }
+
+  &:nth-child(1) {
+    &:before {
+      content: "1";
+      @include breakpoint(lg) {
+        top: 10px;
+      }
+    }
+    &:after{
+      @include breakpoint(lg) {
+        top: -8px;
+      }
+    }
+  }
+
+  &:nth-child(2) {
+    &:before {
+      content: "2";
+      @include breakpoint(lg) {
+        top: 17px;
+      }
+    }
+    &:after{
+      @include breakpoint(lg) {
+        top: 0;
+      }
+    }
+  }
+
+  &:nth-child(3) {
+    &:before {
+      content: "3";
+    }
+  }
+}
+
+.how-buy__link {
+  color: $lightBlue;
+}

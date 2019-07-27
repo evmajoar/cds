@@ -1,0 +1,95 @@
+@import '../../helpers/variables';
+@import '../../helpers/mixins';
+
+
+.sales-manager {
+  padding-bottom: 55px;
+
+  @include breakpoint(md) {
+    padding-bottom: 75px;
+  }
+
+  .container {
+    background-color: $white;
+
+    @include breakpoint(md) {
+      display: grid;
+      grid-template-columns: auto auto;
+      grid-column-gap: 15px;
+    }
+    @include breakpoint(lg) {
+      grid-column-gap: 40px;
+    }
+  }
+}
+
+.sales-manager__wrapper-info {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  margin-bottom: 10px;
+
+  @include breakpoint(md) {
+    align-items: flex-start;
+    margin-bottom: 0;
+  }
+}
+
+.sales-manager__foto {
+  @include breakpoint(md) {
+    width: 234px;
+    height: 220px;
+  }
+}
+
+.sales-manager__description {
+  position: relative;
+  margin: 0;
+  padding-top: 50px;
+  color: #222434;
+  font-size: 13px;
+
+  &:after {
+    @include pseudo;
+    left: 0;
+    top: 0;
+    width: 68px;
+    height: 68px;
+    background-image: url($imageDir + 'signature.png');
+    background-repeat: no-repeat;
+
+    @include breakpoint(md) {
+      top: 0;
+    }
+  }
+}
+
+.sales-manager__position {
+  display: block;
+}
+
+.sales-manager__text {
+  margin: 0;
+
+  @include breakpoint(md) {
+    margin-bottom: 15px;
+    padding-top: 45px;
+  }
+}
+
+.sales-manager__description--mobile {
+  @include breakpoint(md) {
+    display: none;
+  }
+}
+
+.sales-manager__description--desktop {
+  display: none;
+
+  @include breakpoint(md) {
+    padding-left: 85px;
+    max-width: 230px;
+    display: block;
+    padding: 0;
+  }
+}

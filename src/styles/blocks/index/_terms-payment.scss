@@ -1,0 +1,261 @@
+@import '../../helpers/variables';
+@import '../../helpers/mixins';
+
+.terms-payment {
+  padding-bottom: 35px;
+
+  @include breakpoint(md) {
+    padding-bottom: 70px;
+  }
+}
+
+.terms-payment__container-tabs {
+  margin-bottom: 20px;
+
+  @media only screen and (max-width: 768px) {
+    padding-right: 0;
+  }
+  @include breakpoint(md) {
+    margin-bottom: 40px;
+  }
+}
+
+.terms-payment__title {
+  @include titleH2;
+  margin-bottom: 20px;
+
+  @include breakpoint(sm) {
+    text-align: center;
+  }
+
+  @include breakpoint(lg) {
+    margin-bottom: 24px;
+  }
+}
+
+.terms-payment__list {
+  width: 100%;
+  @include breakpoint(lg) {
+    justify-content: center;
+  }
+}
+
+.terms-payment__item {
+  position: relative;
+
+  &:not(:last-child) {
+    margin-right: 15px;
+
+    @include breakpoint(md) {
+      margin-right: 25px;
+    }
+  }
+}
+
+.terms-payment__link {
+  display: block;
+}
+
+.terms-payment__wrapper {
+  padding: 24px;
+  color: $white;
+  background-image: url($imageDir + 'terms-payment-mobile.jpg');
+  background-color: #2a2722;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 4px;
+
+  @include breakpoint(sm) {
+    background-position: center bottom -400px;
+  }
+
+  @include breakpoint(lg) {
+    display: grid;
+    grid-template-columns: 400px auto;
+    padding: 32px 20px 20px 24px;
+    background-position: left;
+    background-image: url($imageDir + 'terms-payment-desktop.jpg');
+  }
+  .terms-payment__form-button{
+    @media only screen and (min-width : 360px) {
+      width: auto;
+    }
+  }
+}
+
+.terms-payment__wrapper--tab2{
+  @include breakpoint(lg) {
+    background-image: url($imageDir + 'terms-payment-tab2-desktop.jpg');
+  }
+  .terms-payment__description{
+    @include breakpoint(lg) {
+      max-width: 265px;
+      margin-bottom: 0;
+    }
+  }
+}
+.terms-payment__wrapper--tab3{
+  @include breakpoint(lg) {
+    background-image: url($imageDir + 'terms-payment-tab3-desktop.jpg');
+  }
+  .terms-payment__description{
+    @include breakpoint(lg) {
+      max-width: 265px;
+      margin-bottom: 0;
+    }
+  }
+}
+.terms-payment__wrapper--tab4{
+  @include breakpoint(lg) {
+    background-image: url($imageDir + 'terms-payment-tab4-desktop.jpg');
+  }
+  .terms-payment__description{
+    @include breakpoint(lg) {
+      max-width: 265px;
+      margin-bottom: 0;
+    }
+  }
+}
+.terms-payment__wrapper--tab5{
+  @include breakpoint(lg) {
+    background-image: url($imageDir + 'terms-payment-tab5-desktop.jpg');
+  }
+  .terms-payment__description{
+    @include breakpoint(lg) {
+      max-width: 265px;
+      margin-bottom: 0;
+    }
+  }
+}
+.terms-payment__wrapper--tab6{
+  @include breakpoint(lg) {
+    background-image: url($imageDir + 'terms-payment-tab6-desktop.jpg');
+  }
+  .terms-payment__description{
+    @include breakpoint(lg) {
+      max-width: 265px;
+      margin-bottom: 0;
+    }
+  }
+}
+.terms-payment__wrapper--tab7{
+  @include breakpoint(lg) {
+    background-image: url($imageDir + 'terms-payment-tab7-desktop.jpg');
+  }
+  .terms-payment__description{
+    @include breakpoint(lg) {
+      max-width: 265px;
+      margin-bottom: 0;
+    }
+  }
+}
+
+.terms-payment__box--row{
+  grid-row: 1 / 3;
+}
+
+.terms-payment__form{
+  grid-column: 2 / -1;
+  @media only screen and (min-width : 360px) {
+    margin: 0 auto;
+  }
+  @include breakpoint(lg) {
+    margin: 0;
+  }
+}
+
+.terms-payment__text{
+  max-width: 535px;
+  margin-bottom: 20px;
+  font-size: 17px;
+  font-family: $UbuntuMedium;
+}
+
+.terms-payment__box {
+  @include breakpoint(lg) {
+    max-width: 640px;
+    width: 100%;
+  }
+}
+
+.terms-payment__simplified-mortgage-list {
+  margin-bottom: 30px;
+
+  @include breakpoint(md) {
+    display: flex;
+  }
+
+  @include breakpoint(lg) {
+    margin-top: 30px;
+  }
+}
+
+.terms-payment__simplified-mortgage-item {
+  &:not(:last-child) {
+    margin-bottom: 12px;
+
+    @include breakpoint(md) {
+      margin-right: 35px;
+      margin-bottom: 0;
+    }
+
+    @include breakpoint(lg) {
+      margin-right: 50px;
+    }
+  }
+}
+
+.terms-payment__simplified-mortgage-heading {
+  font-family: $UbuntuReg;
+  font-weight: normal;
+}
+
+.terms-payment__simplified-mortgage-text {
+  font-size: 13px;
+  opacity: .7;
+}
+
+.terms-payment__heading {
+  margin-bottom: 10px;
+  display: block;
+  font-family: $UbuntuMedium;
+  font-weight: normal;
+  font-size: 17px;
+  @include breakpoint(lg) {
+    max-width: 315px;
+  }
+}
+
+.terms-payment__description {
+  position: relative;
+  margin-bottom: 145px;
+
+  @include breakpoint(md) {
+    margin-bottom: 40px;
+  }
+
+  @include breakpoint(lg) {
+    padding-bottom: 0;
+    max-width: 175px;
+  }
+  &:not(:last-child){
+    margin-bottom: 20px;
+  }
+}
+
+.terms-payment__link {
+  display: block;
+  width: 100%;
+  text-align: center;
+
+  @media only screen and (min-width: 360px) {
+    margin: 0 auto;
+    max-width: 200px;
+  }
+
+  @include breakpoint(lg) {
+    grid-column-start: 2;
+    margin: 0;
+  }
+}

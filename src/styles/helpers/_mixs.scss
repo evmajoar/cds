@@ -81,11 +81,15 @@
 }
 
 .button {
-  padding: 14px 25px;
+  padding: 9px 25px;
   color: #fff;
   font-size: 13px;
   text-transform: uppercase;
   border-radius: 4px;
+
+  &:disabled {
+    opacity: .5;
+  }
 }
 
 .button--red {
@@ -98,9 +102,31 @@
   &:active {
     background-color: #bb211b;
   }
+}
 
-  &:disabled {
-    opacity: .5;
+.button--blue {
+  background-color: $lightBlue;
+
+  &:hover {
+    background-color: #009ed8;
+  }
+
+  &:active {
+    background-color: #008abd;
+  }
+}
+
+.button--white {
+  color: $lightBlack;
+  font-family: $UbuntuMedium;
+  background-color: $white;
+
+  &:hover {
+    background-color: #e0e4e6;
+  }
+
+  &:active {
+    background-color: #c2cbce;
   }
 }
 
@@ -119,10 +145,6 @@
     border: 1px solid #bb211b;
     background-color: rgba($color: #bb211b, $alpha: .2);
   }
-
-  &:disabled {
-    opacity: .5;
-  }
 }
 
 .button--transparent-grey {
@@ -130,27 +152,136 @@
   border: 1px solid #d3dfeb;
 }
 
+.button--transparent-white {
+  padding: 8px 20px;
+  color: $white;
+  border: 1px solid $white;
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.24);
+  }
+
+  &:active {
+    background-color: rgba(255, 255, 255, 0.48);
+  }
+}
+
+.button--transparent-white-blue {
+  &:hover {
+    background-color: $lightBlue;
+    border: 1px solid $lightBlue;
+  }
+
+  &:active {
+    background-color: #008abd;
+    border: 1px solid #008abd;
+  }
+}
+
+.button--unique-blue {
+  position: relative;
+  display: block;
+  padding: 19px 24px;
+  max-width: 300px;
+  width: 100%;
+  font-family: $UbuntuMedium;
+  text-align: left;
+  color: $lightBlue;
+  border: 1px solid #d3dfeb;
+
+  &:hover {
+    transform: scale(1.02);
+    box-shadow: 0 1px 5px 0 rgba(0, 14, 63, .25);
+  }
+
+  &:after {
+    @include pseudo;
+    right: 0;
+    top: 0;
+    width: 88px;
+    height: 64px;
+    background-image: url($imageDir + 'plan-queue.svg');
+    background-repeat: no-repeat;
+  }
+}
+
+
+.button--unique-red {
+  position: relative;
+  display: block;
+  padding: 19px 24px;
+  max-width: 300px;
+  width: 100%;
+  font-family: $UbuntuMedium;
+  text-align: left;
+  color: $red;
+  border: 1px solid #d3dfeb;
+
+  &:hover {
+    transform: scale(1.02);
+    box-shadow: 0 1px 5px 0 rgba(0, 14, 63, .25);
+  }
+
+  &:after {
+    @include pseudo;
+    right: 0;
+    top: 0;
+    width: 88px;
+    height: 64px;
+    background-image: url($imageDir + '3d.svg');
+    background-repeat: no-repeat;
+  }
+}
+
+// .button--unique-blue-big{
+//   overflow: hidden;
+//   height: 172px;
+//   &:after{
+//     @include pseudo;
+//     right: -50px;
+//     top: 0;
+//     transform: skew(-25deg,0deg);
+//     z-index: -2;
+//     width: 150px;
+//     height: 100%;
+//     background-image: none;
+//     background-color: $lightBlue;
+//     border: none;
+//   }
+//   &:hover{
+//     transform: none;
+//     box-shadow: none;
+//   }
+// }
+
 .btn-prev {
+  top: 50%;
+  transform: translateY(-50%);
   padding: 10px;
-  // width: 8px;
-  // height: 20px;
+  height: 26px;
   background-color: transparent;
   border: none;
   background-image: url($imageDir + 'arrow-left.svg');
   background-repeat: no-repeat;
   background-position: center;
+  &:hover{
+    transform: translateX(-5px) translateY(-50%);
+  }
 }
 
 .btn-next {
+  top: 50%;
+  transform: translateY(-50%) rotate(-180deg);
   padding: 10px;
-  transform: rotate(-180deg);
-  // width: 8px;
-  // height: 20px;
+  height: 26px;
   background-color: transparent;
   border: none;
   background-image: url($imageDir + 'arrow-left.svg');
   background-repeat: no-repeat;
   background-position: center;
+  &:hover{
+    transform: rotate(-180deg) translateX(-5px) translateY(50%);
+  }
 }
 
 .carousel-switch__number-slide--active {
@@ -465,7 +596,8 @@
     overflow-x: scroll;
     overflow-y: hidden;
   }
-  @include breakpoint(md) {
+
+  @include breakpoint(lg) {
     overflow: visible;
   }
 }
@@ -512,6 +644,8 @@
 
 .tabs-number__item {
   position: relative;
+  line-height: 18px;
+  z-index: 1;
 
   &:not(:last-child) {
     margin-right: 5px;
@@ -536,6 +670,7 @@
 .tabs-number__button {
   padding: 4px 9px;
   font-size: 13px;
+  z-index: 2;
 }
 
 .tabs-description__title {
@@ -557,41 +692,99 @@
   }
 }
 
+.marker-red-icon {
+  position: absolute;
+  fill: $red;
+  fill-opacity: .9;
+}
 
+.input {
+  padding: 13px 20px;
+  width: 100%;
+  border-radius: 4px;
+  border: 1px solid #d3dfeb;
 
-// для построение сетки
+  @include placeholder {
+    color: $lightBlack;
+  }
+}
 
-// .fon1{
-//   background-color: rgba(49, 174, 49, 0.2);
-//   border: 1px solid rgb(49, 174, 49);
-// }
+.input--transparent {
+  color: $white;
+  background-color: transparent;
+  border: 1px solid $white;
 
-// .fon2{
-//   background-color: rgba(201, 191, 55, 0.2);
-//   border: 1px solid rgb(201, 191, 55);
-// }
+  @include placeholder {
+    color: $white;
+  }
+}
 
-// .fon3{
-//   background-color: rgba(231, 154, 72, 0.2);
-//   border: 1px solid rgb(231, 154, 72);
-// }
+select {
+  @include placeholder {
+    color: $lightBlack;
+  }
+}
 
-// .fon4{
-//   background-color: rgba(125, 77, 77, 0.2);
-//   border: 1px solid rgb(125, 77, 77);
-// }
+.button-arrow {
+  position: relative;
+  width: 51px;
+  height: 32px;
+  background-color: $white;
+  border-radius: 4px;
+}
 
-// .fon5{
-//   background-color: rgba(138, 103, 226, 0.2);
-//   border: 1px solid rgb(138, 103, 226);
-// }
+.place-card {
+  display: grid;
+  grid-template-columns: auto auto;
+  max-width: 280px;
+  padding: 15px 20px;
+  background-color: #fff;
+  border-radius: 4px;
+}
 
-// .fon6{
-//   background-color: rgba(119, 231, 122, 0.2);
-//   border: 1px solid rgb(119, 231, 122);
-// }
+.place-card__title {
+  grid-column: 1 / 2;
+}
 
-// .fon7{
-//   background-color: rgba(208, 70, 166, 0.2);
-//   border: 1px solid rgb(208, 70, 166);
-// }
+.place-card__badges {
+  justify-self: flex-end;
+}
+
+.place-card__description-block {
+  grid-column: 1 / -1;
+}
+
+.place-card__address {
+  grid-column: 1 / -1;
+  margin-bottom: 15px;
+  color: $grey;
+}
+
+.place-card__icon-roller {
+  fill: $lightBlue;
+}
+
+.place-card__icon-car {
+  fill: $lightBlue;
+}
+
+.description-block {
+  width: 240px;
+}
+
+.description-block__value {
+  font-weight: normal;
+  text-align: left;
+}
+
+.description-block__option {
+  padding-left: 50px;
+}
+
+.description-block__option--right {
+  text-align: right;
+}
+
+.description-block__value--grey {
+  color: $grey;
+}

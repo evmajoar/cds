@@ -7,8 +7,9 @@
   right: 0;
   bottom: 0;
   left: 0;
-  z-index: 2;
+  z-index: 5;
   display: none;
+  // display: block;
 }
 
 .modal--2 {
@@ -18,24 +19,30 @@
 }
 
 .modal__dialog {
-  padding: 40px 15px;
+  padding: 20px 15px;
   position: relative;
   top: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #fff;
-  box-sizing: border-box;
   overflow-y: auto;
-  overflow-x: hidden;
+  display: flex;
+  height: 100%;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 4px;
+
+  @include breakpoint(md) {
+    padding: 50px 80px;
+    max-width: 660px;
+    height: auto;
+  }
 }
 
 .modal__content {
   position: relative;
   width: 100%;
-  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .modal__close {
@@ -50,18 +57,35 @@
   border: none;
 
   @include breakpoint(md) {
-    top: 50px;
-    right: 50px;
+    top: 17px;
+    right: 17px;
   }
+}
 
-  &:after {
-    @include pseudo;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url($imageDir + 'close.png');
-  }
+.modal__description {
+  margin-bottom: 25px;
+  font-size: 17px;
+  text-align: center;
+}
+
+.modal__title {
+  @include titleH2;
+  margin-bottom: 20px;
+  line-height: 36px;
+  text-align: center;
+}
+
+.modal__button {
+  width: 100%;
+}
+
+.modal__form {
+  width: 100%;
+  max-width: 320px;
+}
+
+.modal__block-input {
+  margin-bottom: 15px;
 }
 
 .show {
@@ -72,20 +96,25 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  background-color: rgba(0, 36, 50, .56);
+  animation: show .3s ease-in-out;
 }
-
 
 .hidden {
   overflow: hidden;
 }
 
-// .modal__title {
-//   font-weight: 400;
-//   margin-bottom: 20px;
-// }
+.modal-options__dialog {
+  width: 100%;
+  height: 100%;
+}
 
+// Подбор помещения
 .modal-options__content {
+  flex-direction: column;
+  justify-content: flex-start;
   max-width: 320px;
+  margin: 0 auto;
 }
 
 .modal-options__fieldset-block {
@@ -128,4 +157,599 @@
       margin-bottom: 10px;
     }
   }
+}
+
+// Обратный звонок
+.modal-callback__content {
+  text-align: center;
+}
+
+// Запись в шоурум
+.modal-showroom__list {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.modal-showroom__item {
+  position: relative;
+  width: 100%;
+  max-width: 150px;
+}
+
+.modal-showroom__icon-arrow-down {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 16px;
+}
+
+// Нравится планировка
+.modal-like-layout__dialog {
+  max-width: 830px;
+  padding: 0;
+
+  @include breakpoint(md) {
+    height: auto;
+  }
+}
+
+.modal-like-layout__item {
+  padding-bottom: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
+  border-radius: 4px;
+
+  @include breakpoint(md) {
+    display: grid !important;
+    grid-column-gap: 15px;
+    grid-template-columns: 250px auto;
+    padding: 0;
+  }
+
+  @include breakpoint(lg) {
+    grid-column-gap: 30px;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.modal-like-layout__box {
+  margin-bottom: 25px;
+  margin-left: -15px;
+  margin-right: -15px;
+  position: relative;
+  padding: 35px 0 50px;
+  text-align: center;
+  background-color: rgba(#77888f8e, .08);
+
+  @include breakpoint(md) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-row: 1 / 6;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.modal-like-layout__img {
+  margin: 0 auto;
+  width: 205px;
+}
+
+.modal-like-layout__zoom-button {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  right: 10px;
+  bottom: 10px;
+  background-image: url($imageDir + 'scale.svg');
+
+  @include breakpoint(md) {
+    right: 25px;
+    top: 25px;
+    bottom: 0;
+  }
+}
+
+.modal-like-layout__info {
+  display: grid;
+  margin: 0 auto;
+  max-width: 320px;
+
+  @include breakpoint(md) {
+    padding: 35px 15px 25px 0;
+    margin: 0;
+    max-width: 100%;
+  }
+
+  @include breakpoint(lg) {
+    padding: 50px 32px 65px 0;
+  }
+}
+
+.modal-like-layout__modal-content {
+  align-items: stretch;
+  justify-content: flex-start;
+}
+
+.modal-like-layout__button {
+  display: block;
+  width: 100%;
+
+  @media (min-width: 360px) and(max-width: 576px) {
+    width: 100%;
+    max-width: 155px;
+    margin: 0 auto;
+  }
+
+  @include breakpoint(sm) {
+    margin: 0 auto;
+    width: auto;
+  }
+
+  @include breakpoint(md) {
+    justify-self: flex-start;
+    margin: 0;
+  }
+}
+
+.modal-like-layout__title {
+  text-align: left;
+}
+
+.modal-like-layout__description {
+  text-align: left;
+}
+
+// Акции и скидки 
+.modal-discounts__dialog,
+.modal-promo-list__dialog {
+  padding-bottom: 0;
+  max-width: 100%;
+  max-height: 100%;
+
+  @include breakpoint(md) {
+    max-width: 650px;
+    height: 430px;
+  }
+
+  @include breakpoint(lg) {
+    max-width: 830px;
+    height: 632px;
+  }
+}
+
+.modal-discounts__content,
+.modal-promo-list__content {
+  display: block;
+}
+
+.discounts__carousel-list--modal {
+  display: grid;
+  grid-template-columns: repeat(2, 190px);
+  grid-gap: 20px;
+  justify-content: center;
+  margin: 0;
+
+  @include breakpoint(md) {
+    grid-template-columns: repeat(2, 220px);
+    margin-bottom: 80px;
+  }
+
+  @include breakpoint(lg) {
+    grid-template-columns: repeat(2, 320px);
+  }
+}
+
+// Подбор помещения
+.modal-choose-apartment__dialog {
+  position: relative;
+  height: 100%;
+  color: $white;
+  background-image: url($imageDir + 'choose-apartment-bg-mobile.jpg');
+  background-color: #afa7a3;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @include breakpoint(md) {
+    max-width: 100%;
+    background-image: url($imageDir + 'choose-apartment-bg.jpg');
+    background-position: center;
+  }
+}
+
+.modal-choose-apartment__content {
+
+  @media only screen and (min-width : 360px) {
+    max-width: 350px;
+    margin: 0 auto;
+  }
+
+  @include breakpoint(sm) {
+    max-width: 450px;
+    margin: 0 auto;
+  }
+
+  @include breakpoint(sm) {
+    max-width: 550px;
+  }
+}
+
+.modal-choose-apartment__heading {
+  margin-bottom: 25px;
+
+  @media only screen and (min-width : 360px) {
+    text-align: center;
+  }
+
+  @include breakpoint(sm) {
+    margin-bottom: 35px;
+  }
+}
+
+.modal-choose-apartment__row-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 25px;
+
+  @include breakpoint(sm) {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 35px;
+  }
+}
+
+.modal-choose-apartment__button {
+  width: 100%;
+
+  @media only screen and (min-width : 360px) {
+    width: 100%;
+    max-width: 170px;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 8px;
+
+    @include breakpoint(sm) {
+      margin: 0;
+      margin-right: 15px;
+      max-width: 170px;
+    }
+  }
+}
+
+.modal-choose-apartment__steps {
+  width: 100%;
+
+  @media only screen and (min-width : 360px) {
+    width: auto;
+  }
+}
+
+.modal-choose-apartment__number-link {
+  &:not(.modal-choose-apartment__number-link--active) {
+    color: $white;
+  }
+}
+
+.modal-choose-apartment__form {
+  max-width: 100%;
+
+  @media only screen and (min-width : 360px) {
+    max-width: 320px;
+  }
+
+  @include breakpoint(md) {
+    display: grid;
+    grid-template-columns: 320px auto;
+    grid-gap: 12px;
+    align-content: center;
+    max-width: 505px;
+  }
+}
+
+.modal-choose-apartment__link {
+  width: 100%;
+
+  @media only screen and (min-width : 360px) {
+    width: 100%;
+    max-width: 320px;
+  }
+}
+
+.modal-choose-apartment__text {
+  @media only screen and (min-width : 360px) {
+    text-align: center;
+  }
+}
+
+.modal-choose-apartment__block-input {
+  margin-bottom: 15px;
+
+  @include breakpoint(md) {
+    margin: 0;
+  }
+}
+
+// Скидка на паркинг до 300 000 руб.
+.modal-promo-list__heading {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+
+  @include breakpoint(lg) {
+    justify-content: space-between;
+    flex-direction: row;
+  }
+}
+
+.modal-promo-list__img {
+  margin-bottom: 20px;
+
+  @include breakpoint(lg) {
+    margin-bottom: 0;
+    margin-right: 20px;
+  }
+}
+
+.modal-promo-list__text {
+  margin-bottom: 20px;
+}
+
+.modal-promo-list__advantages-list {
+  margin-bottom: 20px;
+}
+
+.modal-promo-list__dialog {
+  @media only screen and (max-width : 567px) {
+    padding-left: 30px;
+    padding-right: 3px;
+  }
+}
+
+// Жилые комплексы
+.modal-residential-complexes__dialog {
+  padding: 0;
+  // padding-left: 0;
+  // padding-right: 0;
+  max-width: 100%;
+  height: 100%;
+}
+
+.modal-residential-complexes__content {
+  display: block;
+  max-width: 100%;
+}
+
+.modal-residential-complexes__link {
+  color: $lightBlue;
+  text-transform: uppercase;
+}
+
+.modal-residential-complexes__icon-arrow-big {
+  fill: $lightBlue;
+}
+
+.modal-residential-complexes__heading {
+  padding: 20px 15px 30px;
+  margin: 0 auto;
+  max-width: 1030px;
+
+  @include breakpoint(md) {
+    padding-top: 40px;
+  }
+}
+
+.modal-residential-complexes__title {
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.modal-residential-complexes__wrapper-map {
+  position: relative;
+  height: 100%;
+  background-image: url($imageDir + 'map-markers.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.place-card--polustrovo {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+
+  @include breakpoint(md) {
+    left: 65%;
+    right: auto;
+  }
+}
+
+
+
+
+// Студия
+.modal-studio__dialog {
+  max-width: 830px;
+  padding: 0;
+
+  @include breakpoint(md) {
+    height: auto;
+  }
+}
+
+.modal-studio__item {
+  padding-bottom: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
+  border-radius: 4px;
+
+  @include breakpoint(md) {
+    display: grid;
+    grid-column-gap: 15px;
+    grid-template-columns: 1fr 1fr;
+    padding: 0;
+  }
+
+  @include breakpoint(lg) {
+    grid-column-gap: 30px;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.modal-studio__box {
+  margin-bottom: 25px;
+  margin-left: -15px;
+  margin-right: -15px;
+  position: relative;
+  padding: 35px 0 50px;
+  text-align: center;
+  background-color: rgba(#77888f8e, .08);
+
+  @include breakpoint(md) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-row: 1 / 6;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.modal-studio__img {
+  margin: 0 auto;
+  width: 205px;
+}
+
+.modal-studio__zoom-button {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  right: 10px;
+  bottom: 10px;
+  background-image: url($imageDir + 'scale.svg');
+
+  @include breakpoint(md) {
+    right: 25px;
+    top: 25px;
+    bottom: 0;
+  }
+}
+
+.modal-studio__info {
+  display: grid;
+  margin: 0 auto;
+  max-width: 320px;
+
+  @include breakpoint(md) {
+    padding: 35px 15px 25px 0;
+    margin: 0;
+    max-width: 100%;
+  }
+
+  @include breakpoint(lg) {
+    padding: 50px 32px 65px 0;
+  }
+}
+
+.modal-studio__modal-content {
+  align-items: stretch;
+  justify-content: flex-start;
+}
+
+.modal-studio__button {
+  display: block;
+
+  @media (min-width: 360px) and(max-width: 576px) {
+    align-self: center;
+  }
+
+  @include breakpoint(md) {
+    align-self: flex-start;
+  }
+}
+
+.modal-studio__form {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-studio__title {
+  margin-bottom: 5px;
+  text-align: left;
+}
+
+.modal-studio__description {
+  text-align: left;
+}
+
+.modal-studio__table {
+  max-width: 260px;
+  margin-bottom: 20px;
+
+  @include breakpoint(md) {
+    margin-bottom: 35px;
+    height: 50px;
+  }
+
+  tbody {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+
+    &:after {
+      @include pseudo;
+      top: 0;
+      left: 50%;
+      transform: translateX(10px);
+      display: block;
+      width: 2px;
+      height: 100%;
+      background-color: #d2deec;
+    }
+  }
+}
+
+.modal-studio__table-row {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-studio__table-value {
+  font-size: 20px;
+}
+
+.modal-studio__table-options {
+  color: #999999;
+  font-size: 13px;
+}
+
+.modal-studio__new-price {
+  color: $lightBlue;
+}
+
+.modal-studio__old-price {
+  display: block;
+  margin-bottom: 25px;
+  text-decoration: line-through;
+  color: #b2c0cd;
+}
+
+.modal-studio__present {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  font-family: $UbuntuMedium;
+}
+
+.modal-studio__present__icon-present {
+  margin-right: 8px;
+  fill: $red;
 }
