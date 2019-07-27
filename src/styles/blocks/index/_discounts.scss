@@ -27,6 +27,11 @@
     margin: 0 -5px 20px 0;
   }
 
+  @include breakpoint(lg) {
+    display: flex;
+    justify-content: space-between;
+  }
+
   .slick-slide {
     width: 190px;
     margin-left: 10px;
@@ -53,14 +58,34 @@
   }
 }
 
-.discounts__item {
+.discounts__link{
   position: relative;
-  display: flex !important;
+  display: flex;
   flex-direction: column;
   justify-content: space-between;
   padding: 16px 25px 14px 25px;
   min-height: 190px;
   font-size: 20px;
+  border-radius: 10px;
+  transition: .3s ease-out;
+  @include breakpoint(lg) {
+    height: 280px;
+    padding: 32px 25px 25px;
+  }
+  &:hover{
+    // box-shadow: 0 1px 8px 3px rgba(0,14,63,.25);
+    .icon-arrow-big{
+      animation: arrowAnimation .5s ease-out;
+      fill: $white;
+    }
+    .discounts__item-button{
+      background-color: $red;
+    }
+  }
+}
+
+.discounts__item {
+  min-height: 190px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -73,7 +98,7 @@
   }
 
   @include breakpoint(lg) {
-    padding: 32px 25px 25px;
+    width: 320px;
     height: 280px;
   }
 }
@@ -159,8 +184,12 @@
 
 .discounts__item-button{
   display: none;
+  transition: 0.3s ease-out;
   @include breakpoint(lg) {
-    display: block;
+    // display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
 
@@ -171,3 +200,7 @@
     align-items: center;
   }
 }
+
+
+
+

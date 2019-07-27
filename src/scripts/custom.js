@@ -23,6 +23,7 @@ $(function () {
 
   // попап окна
   $('.js-popup').click(function (event) {
+    event.preventDefault();
     var $that = $(this),
       $thatDataId = $that.data('id'),
       $modalBox = $('#' + $thatDataId),
@@ -111,7 +112,16 @@ $(function () {
     slidesToShow: 3,
     // slidesToScroll: 1,
     variableWidth: true,
-    responsive: [{
+    responsive: [
+      // {
+      //   breakpoint: 2000,
+      //   settings: "unslick"
+      // },
+      // {
+      //   breakpoint: 1080,
+      //   settings: "slick"
+      // },
+      {
       breakpoint: 767,
       settings: {
         dots: false,
@@ -125,7 +135,8 @@ $(function () {
 
 
   $('.main-header__advertising-close').click(function () {
-    $('.main-header__advertising-banner').addClass('main-header__advertising-banner--close')
+    $('.main-header__advertising-banner').addClass('main-header__advertising-banner--close');
   });
+
 
 });
