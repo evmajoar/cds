@@ -169,6 +169,8 @@
 .about-us__img {
   transition: .3s ease-out;
   cursor: pointer;
+  height: 100%;
+  vertical-align: bottom;
 
   &:hover {
     transform: scale(1.1);
