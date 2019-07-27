@@ -73,9 +73,9 @@
     padding: 32px 25px 25px;
   }
   &:hover{
-    // box-shadow: 0 1px 8px 3px rgba(0,14,63,.25);
+    box-shadow: 0 1px 8px 3px rgba(0,14,63,.25);
     .icon-arrow-big{
-      animation: arrowAnimation .5s ease-out;
+      animation: arrow .5s ease-out;
       fill: $white;
     }
     .discounts__item-button{
@@ -186,7 +186,6 @@
   display: none;
   transition: 0.3s ease-out;
   @include breakpoint(lg) {
-    // display: block;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -198,6 +197,27 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+  }
+}
+
+.discounts__carousel-wrapper{
+  position: relative;
+  width: 100%;
+}
+
+.discounts__carousel-prev {
+  position: absolute;
+  left: -25px;
+  @include breakpoint(lg) {
+    left: -55px;
+  }
+}
+
+.discounts__carousel-next {
+  position: absolute;
+  right: -25px;
+  @include breakpoint(lg) {
+    right: -55px;
   }
 }
 

@@ -255,22 +255,33 @@
 // }
 
 .btn-prev {
+  top: 50%;
+  transform: translateY(-50%);
   padding: 10px;
+  height: 26px;
   background-color: transparent;
   border: none;
   background-image: url($imageDir + 'arrow-left.svg');
   background-repeat: no-repeat;
   background-position: center;
+  &:hover{
+    transform: translateX(-5px) translateY(-50%);
+  }
 }
 
 .btn-next {
+  top: 50%;
+  transform: translateY(-50%) rotate(-180deg);
   padding: 10px;
-  transform: rotate(-180deg);
+  height: 26px;
   background-color: transparent;
   border: none;
   background-image: url($imageDir + 'arrow-left.svg');
   background-repeat: no-repeat;
   background-position: center;
+  &:hover{
+    transform: rotate(-180deg) translateX(-5px) translateY(50%);
+  }
 }
 
 .carousel-switch__number-slide--active {

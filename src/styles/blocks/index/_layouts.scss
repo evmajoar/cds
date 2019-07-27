@@ -290,15 +290,21 @@
 .layouts__carousel-prev {
   position: absolute;
   left: 0;
-  top: 50%;
-  transform: translateY(-50%);
+  // top: 50%;
+  // transform: translateY(-50%);
+  // &:hover{
+  //   transform: translateX(-5px) translateY(-50%);
+  // }
 }
 
 .layouts__carousel-next {
   position: absolute;
   right: 0;
-  top: 50%;
-  transform: translateY(-50%) rotate(-180deg);
+  // top: 50%;
+  // transform: translateY(-50%) rotate(-180deg);
+  // &:hover{
+  //   transform: rotate(-180deg) translateX(-5px) translateY(50%);
+  // }
 }
 
 .carousel__item {
