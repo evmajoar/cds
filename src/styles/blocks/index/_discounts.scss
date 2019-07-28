@@ -209,7 +209,7 @@
   position: absolute;
   left: -25px;
   @include breakpoint(lg) {
-    left: -55px;
+    left: -40px;
   }
 }
 
@@ -217,7 +217,7 @@
   position: absolute;
   right: -25px;
   @include breakpoint(lg) {
-    right: -55px;
+    right: -40px;
   }
 }
 
