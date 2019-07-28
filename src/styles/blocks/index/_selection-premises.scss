@@ -319,3 +319,9 @@
     display: block;
   }
 }
+
+.filter-result__button{
+  &:hover{
+    color: $red;
+  }
+}
