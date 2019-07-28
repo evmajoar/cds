@@ -17,7 +17,6 @@
   width: 100%;
   color: $white;
   text-align: center;
-  bottom: none;
   background-color: $lightBlue;
 }
 
@@ -123,7 +122,7 @@
 
   &:after {
     @include pseudo;
-    top: 45%;
+    top: 31%;
     right: 47%;
     width: 6px;
     height: 6px;
