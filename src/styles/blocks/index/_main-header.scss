@@ -55,8 +55,6 @@
   display: grid;
   align-items: center;
   grid-template-columns: 120px auto 35px;
-  // display: flex;
-  // align-items: center;
   padding: 15px 0 25px;
 
   @include breakpoint(sm) {
@@ -246,8 +244,6 @@
   }
 
   @include breakpoint(sm) {
-    // width: auto;
-    // align-self: flex-start;
     justify-self: flex-start;
     padding: 12px 75px 10px 75px;
   }

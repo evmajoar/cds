@@ -9,6 +9,7 @@
   display: grid;
   grid-row-gap: 12px;
   margin-bottom: 20px;
+  overflow: hidden;
 
   @include breakpoint(sm) {
     margin-bottom: 100px;
@@ -50,6 +51,7 @@
 
     .conveniences__wrapper-description {
       transform: translateY(0);
+       -webkit-transform: translateY(0);
     }
   }
 }
@@ -93,6 +95,7 @@
   .conveniences__wrapper-description {
     @media (min-width: 768px) and(max-width: 1079px) {
       transform: translateY(78%);
+       -webkit-transform: translateY(78%);
     }
   }
 }
@@ -111,10 +114,12 @@
   .conveniences__wrapper-description {
     @include breakpoint(md) {
       transform: translateY(82%);
+      -webkit-transform: translateY(82%);
     }
 
     @include breakpoint(lg) {
       transform: translateY(76%);
+      -webkit-transform: translateY(76%);
     }
   }
 }
@@ -151,6 +156,7 @@
   left: 0;
   bottom: 0;
   transform: translateY(70%);
+  -webkit-transform:  translateY(70%);
   transition: .3s ease-out;
 }
 

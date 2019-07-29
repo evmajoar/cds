@@ -39,32 +39,8 @@
 .layouts__carousel-switch--mobile {
   @include breakpoint(md) {
     display: none;
-    // width: 120px;
-    // margin: 0 auto 20px;
   }
-
-  // @include breakpoint(lg) {
-  //   display: none;
-  //   position: absolute;
-  //   right: 0;
-  //   bottom: 0;
-  // }
 }
-
-// .layouts__carousel-switch--desktop {
-//   display: none;
-
-//   @include breakpoint(md) {
-//     position: absolute;
-//     right: -20px;
-//     bottom: 0;
-//     display: block;
-//     margin-bottom: 0;
-//   }
-//   @include breakpoint(lg) {
-//     right: -25px;
-//   }
-// }
 
 .carousel-switch__number-slide--desktop {
   display: none;
@@ -292,21 +268,11 @@
 .layouts__carousel-prev {
   position: absolute;
   left: 0;
-  // top: 50%;
-  // transform: translateY(-50%);
-  // &:hover{
-  //   transform: translateX(-5px) translateY(-50%);
-  // }
 }
 
 .layouts__carousel-next {
   position: absolute;
   right: 0;
-  // top: 50%;
-  // transform: translateY(-50%) rotate(-180deg);
-  // &:hover{
-  //   transform: rotate(-180deg) translateX(-5px) translateY(50%);
-  // }
 }
 
 .carousel__item {
@@ -369,50 +335,6 @@
   font-weight: normal;
   font-size: 17px;
 }
-
-.layout-dowload__description-wrapper {
-  // position: relative;
-  // padding-bottom: 235px;
-  // margin-bottom: 30px;
-
-  // @include breakpoint(lg) {
-  //   margin-bottom: 0;
-  //   padding-bottom: 0;
-  //   padding-right: 350px;
-  // }
-}
-
-// .layout-dowload__description {
-//   position: relative;
-//   padding-bottom: 235px;
-//   margin-bottom: 30px;
-
-//   @include breakpoint(lg) {
-//     margin-bottom: 0;
-//     padding-bottom: 0;
-//     padding-right: 350px;
-//   }
-
-//   // &:after {
-//   //   @include pseudo;
-//   //   bottom: 0;
-//   //   left: 50%;
-//   //   transform: translateX(-50%);
-//   //   width: 255px;
-//   //   height: 205px;
-//   //   background-image: url($imageDir + 'preview-layout.png');
-
-//   //   @include breakpoint(lg) {
-//   //     top: -45%;
-//   //     right: 0;
-//   //     left: auto;
-//   //     transform: translateX(0);
-//   //     width: 320px;
-//   //     height: 180px;
-//   //     background-image: url($imageDir + 'preview-layout-desktop.png');
-//   //   }
-//   // }
-// }
 
 .layout-dowload__text {
   margin-bottom: 30px;
