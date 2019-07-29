@@ -618,6 +618,9 @@
 .tabs-words__item {
   position: relative;
   flex-shrink: 0;
+  &:last-child{
+    padding-right: 15px;
+  }
 }
 
 .tabs-words__item--active {
