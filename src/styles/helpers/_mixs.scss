@@ -10,21 +10,6 @@
   padding: 0 $gutter;
   width: 100%;
 
-  // брейпоинты для десктопной верстки
-
-  // @include breakpoint(el) {
-  //   max-width: 992px;
-  // }
-  // @include breakpoint(lg) {
-  //   max-width: 768px;
-  // }
-  // @include breakpoint(md) {
-  //   max-width: 576px;
-  // }
-  // @include breakpoint(sm) {
-  //   max-width: 480px;
-  // }
-
   // брейпоинты для mobile first
 
   @include breakpoint(xs) {
@@ -232,27 +217,6 @@
     background-repeat: no-repeat;
   }
 }
-
-// .button--unique-blue-big{
-//   overflow: hidden;
-//   height: 172px;
-//   &:after{
-//     @include pseudo;
-//     right: -50px;
-//     top: 0;
-//     transform: skew(-25deg,0deg);
-//     z-index: -2;
-//     width: 150px;
-//     height: 100%;
-//     background-image: none;
-//     background-color: $lightBlue;
-//     border: none;
-//   }
-//   &:hover{
-//     transform: none;
-//     box-shadow: none;
-//   }
-// }
 
 .btn-prev {
   padding: 10px;
@@ -522,7 +486,6 @@
 }
 
 .checkbox-square__checkmark {
-  // position: absolute;
   top: 0;
   left: 0;
   margin: 0;
@@ -540,13 +503,6 @@
   background-color: #f8f9fb;
   border: 1px solid #c6d1db;
 }
-
-
-// .checkbox-square__checkbox input:disabled~.checkbox-square__checkmark {
-//   background: #e6e6e6;
-//   opacity: 0.6;
-//   pointer-events: none;
-// }
 
 .checkbox-square__checkmark:after {
   box-sizing: unset;
