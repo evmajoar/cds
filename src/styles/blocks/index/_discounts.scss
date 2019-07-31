@@ -36,6 +36,7 @@
     width: 190px;
     margin-left: 10px;
     margin-right: 10px;
+    padding: 5px;
 
     @include breakpoint(md) {
       margin-left: 0;
@@ -44,7 +45,6 @@
     }
     @include breakpoint(lg) {
       width: 320px;
-      padding: 5px;
     }
 
     &:not(:last-child) {
