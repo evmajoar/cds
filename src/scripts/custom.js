@@ -14,10 +14,16 @@ $(function () {
   // MENU
   $('.burger-button').click(function () {
     $('.menu').addClass('menu--opened').find('.menu__content').addClass('menu__content--slide');
+    $('.overlay').addClass('overlay--open');
   });
 
   $('.main-header__menu-close').click(function () {
-    $('.menu').removeClass('menu--opened').find('.menu__content').removeClass('menu__content--slide');;
+    $('.menu').removeClass('menu--opened').find('.menu__content').removeClass('menu__content--slide');
+    $('.overlay').removeClass('overlay--open');
+  });
+
+  $('.overlay--open').click(function () {
+    $('.menu').removeClass('menu--opened').find('.menu__content').removeClass('menu__content--slide');
   });
 
 
@@ -36,7 +42,7 @@ $(function () {
       inpPassVal = inpPass.val();
     var addClasses = function () {
       $('body').addClass('hidden');
-      $modalBox.addClass('show');
+      $modalBox.addClass('modals--opened');
     };
     var validationInputs = function () {
       if (inpNameVal === '') {
@@ -115,7 +121,7 @@ $(function () {
 
   $('.modal__close').click(function () {
     $('body').removeClass('hidden');
-    $(this).closest('.modal').removeClass('show');
+    $(this).closest('.modals').removeClass('modals--opened');
   });
 
   /* 

@@ -32,7 +32,6 @@
 .conveniences__item {
   position: relative;
   display: block;
-  // height: 190px;
   color: $white;
   border-radius: 4px;
   background-repeat: no-repeat;
@@ -41,10 +40,6 @@
   transition: .3s ease-out;
   overflow: hidden;
   cursor: pointer;
-
-  @include breakpoint(md) {
-    // height: 240px;
-  }
 
   &:hover {
     .conveniences__item-title {

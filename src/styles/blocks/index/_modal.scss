@@ -1,24 +1,79 @@
 @import '../../helpers/variables';
 @import '../../helpers/mixins';
 
-.modal {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 5;
-  display: none;
+.modals {
+  // position: fixed;
+  // top: 0;
+  // right: 0;
+  // bottom: 0;
+  // left: 0;
+  // z-index: 5;
+  // display: none;
   // display: block;
 }
 
-.modal--2 {
-  .modal__content {
-    background: rgb(5, 48, 65);
+.modals--opened {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  // background-color: rgba(0, 36, 50, .56);
+  animation: show .3s ease-in-out;
+  height: 100%;
+  width: 100%;
+}
+
+.popup {
+  display: none;
+  position: relative;
+  // width: 100%;
+  // margin: 0 auto;
+  // background-color: #fff;
+}
+
+.popup--opened {
+  display: block;
+  margin: auto;
+  overflow-x: hidden;
+  overflow-y: auto;
+  z-index: 7;
+  width: 100%;
+  height: 100%;
+
+  // right: 0;
+  // bottom: 0;
+  // display: flex;
+  // overflow-x: hidden;
+  // overflow-y: auto;
+  // justify-content: center;
+  // align-items: center;
+  // z-index: 5;
+  @include breakpoint(md) {
+    width: auto;
+    height: auto;
   }
 }
 
-.modal__dialog {
+.modals__overlay{
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 6;
+}
+
+.modals__overlay--opened{
+  background-color: rgba(0, 36, 50, .56);
+}
+
+.modals__dialog {
   padding: 20px 15px;
   position: relative;
   top: 0;
@@ -36,7 +91,7 @@
   }
 }
 
-.modal__content {
+.modals__content {
   position: relative;
   width: 100%;
   display: flex;
@@ -45,7 +100,7 @@
   align-items: center;
 }
 
-.modal__close {
+.modals__close {
   position: absolute;
   padding: 0;
   top: 12px;
@@ -62,99 +117,100 @@
   }
 }
 
-.modal__description {
+.modals__description {
   margin-bottom: 25px;
   font-size: 17px;
   text-align: center;
 }
 
-.modal__title {
+.modals__title {
   @include titleH2;
   margin-bottom: 20px;
   line-height: 36px;
   text-align: center;
 }
 
-.modal__button {
+.modals__button {
   width: 100%;
 }
 
-.modal__form {
+.modals__form {
   width: 100%;
   max-width: 320px;
 }
 
-.modal__block-input {
+.modals__block-input {
   margin-bottom: 15px;
 }
 
-.show {
-  top: 0;
-  left: 0;
-  z-index: 5;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  background-color: rgba(0, 36, 50, .56);
-  animation: show .3s ease-in-out;
-}
+// .modal--opened {
+//   top: 0;
+//   left: 0;
+//   z-index: 5;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   flex-direction: column;
+//   background-color: rgba(0, 36, 50, .56);
+//   animation: show .3s ease-in-out;
+// }
 
 .hidden {
   overflow: hidden;
 }
 
-.modal-options__dialog {
+.modals-options__dialog {
   width: 100%;
   height: 100%;
 }
 
 // Подбор помещения
-.modal-options__content {
+.modals-options__content {
   flex-direction: column;
   justify-content: flex-start;
   max-width: 286px;
   margin: 0 auto;
 }
 
-.modal-options__fieldset-block {
+.modals-options__fieldset-block {
   flex-wrap: wrap;
 }
 
-.modal-options__room-list {
+.modals-options__room-list {
   flex-wrap: wrap;
 }
 
-.modal-options__title {
+.modals-options__title {
   margin-bottom: 20px;
   text-align: left;
   font-size: 20px;
 }
 
-.modal-options__form {
+.modals-options__form {
   margin-bottom: 20px;
+
   fieldset {
     margin-bottom: 20px;
   }
 }
 
-.modal-options__room-item {
+.modals-options__room-item {
   &:not(:last-child) {
     margin-bottom: 7px;
   }
 }
 
-.modal-options__choose-button {
+.modals-options__choose-button {
   width: 100%;
 }
 
-.modal-options__type-list {
+.modals-options__type-list {
   @include breakpoint(sm) {
     flex-direction: column;
   }
 }
 
-.modal-options__type-item {
+.modals-options__type-item {
   @include breakpoint(sm) {
     &:not(:last-child) {
       margin-bottom: 10px;
@@ -162,29 +218,29 @@
   }
 }
 
-.modal-options__description{
+.modals-options__description {
   font-family: $UbuntuMedium;
 }
 
 // Обратный звонок
-.modal-callback__content {
+.modals-callback__content {
   text-align: center;
 }
 
 // Запись в шоурум
-.modal-showroom__list {
+.modals-showroom__list {
   display: flex;
   justify-content: space-between;
   margin-bottom: 15px;
 }
 
-.modal-showroom__item {
+.modals-showroom__item {
   position: relative;
   width: 100%;
   max-width: 150px;
 }
 
-.modal-showroom__icon-arrow-down {
+.modals-showroom__icon-arrow-down {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -192,7 +248,7 @@
 }
 
 // Нравится планировка
-.modal-like-layout__dialog {
+.modals-like-layout__dialog {
   max-width: 830px;
   padding: 0;
 
@@ -201,7 +257,7 @@
   }
 }
 
-.modal-like-layout__item {
+.modals-like-layout__item {
   padding-bottom: 15px;
   padding-left: 15px;
   padding-right: 15px;
@@ -220,7 +276,7 @@
   }
 }
 
-.modal-like-layout__box {
+.modals-like-layout__box {
   margin-bottom: 25px;
   margin-left: -15px;
   margin-right: -15px;
@@ -239,12 +295,12 @@
   }
 }
 
-.modal-like-layout__img {
+.modals-like-layout__img {
   margin: 0 auto;
   width: 205px;
 }
 
-.modal-like-layout__zoom-button {
+.modals-like-layout__zoom-button {
   position: absolute;
   width: 18px;
   height: 18px;
@@ -259,7 +315,7 @@
   }
 }
 
-.modal-like-layout__info {
+.modals-like-layout__info {
   display: grid;
   margin: 0 auto;
   max-width: 320px;
@@ -275,12 +331,12 @@
   }
 }
 
-.modal-like-layout__modal-content {
+.modals-like-layout__modals-content {
   align-items: stretch;
   justify-content: flex-start;
 }
 
-.modal-like-layout__button {
+.modals-like-layout__button {
   display: block;
   width: 100%;
 
@@ -301,17 +357,17 @@
   }
 }
 
-.modal-like-layout__title {
+.modals-like-layout__title {
   text-align: left;
 }
 
-.modal-like-layout__description {
+.modals-like-layout__description {
   text-align: left;
 }
 
 // Акции и скидки 
-.modal-discounts__dialog,
-.modal-promo-list__dialog {
+.modals-discounts__dialog,
+.modals-promo-list__dialog {
   padding-bottom: 0;
   max-width: 100%;
   max-height: 100%;
@@ -327,8 +383,8 @@
   }
 }
 
-.modal-discounts__content,
-.modal-promo-list__content {
+.modals-discounts__content,
+.modals-promo-list__content {
   display: block;
 }
 
@@ -350,7 +406,7 @@
 }
 
 // Подбор помещения
-.modal-choose-apartment__dialog {
+.modals-choose-apartment__dialog {
   position: relative;
   height: 100%;
   color: $white;
@@ -366,7 +422,7 @@
   }
 }
 
-.modal-choose-apartment__content {
+.modals-choose-apartment__content {
 
   @media only screen and (min-width : 360px) {
     max-width: 350px;
@@ -383,7 +439,7 @@
   }
 }
 
-.modal-choose-apartment__heading {
+.modals-choose-apartment__heading {
   margin-bottom: 25px;
 
   @media only screen and (min-width : 360px) {
@@ -395,7 +451,7 @@
   }
 }
 
-.modal-choose-apartment__row-buttons {
+.modals-choose-apartment__row-buttons {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -410,7 +466,7 @@
   }
 }
 
-.modal-choose-apartment__button {
+.modals-choose-apartment__button {
   width: 100%;
 
   @media only screen and (min-width : 360px) {
@@ -429,7 +485,7 @@
   }
 }
 
-.modal-choose-apartment__steps {
+.modals-choose-apartment__steps {
   width: 100%;
 
   @media only screen and (min-width : 360px) {
@@ -437,13 +493,13 @@
   }
 }
 
-.modal-choose-apartment__number-link {
-  &:not(.modal-choose-apartment__number-link--active) {
+.modals-choose-apartment__number-link {
+  &:not(.modals-choose-apartment__number-link--active) {
     color: $white;
   }
 }
 
-.modal-choose-apartment__form {
+.modals-choose-apartment__form {
   max-width: 100%;
 
   @media only screen and (min-width : 360px) {
@@ -459,7 +515,7 @@
   }
 }
 
-.modal-choose-apartment__link {
+.modals-choose-apartment__link {
   width: 100%;
 
   @media only screen and (min-width : 360px) {
@@ -468,13 +524,13 @@
   }
 }
 
-.modal-choose-apartment__text {
+.modals-choose-apartment__text {
   @media only screen and (min-width : 360px) {
     text-align: center;
   }
 }
 
-.modal-choose-apartment__block-input {
+.modals-choose-apartment__block-input {
   margin-bottom: 15px;
 
   @include breakpoint(md) {
@@ -483,7 +539,7 @@
 }
 
 // Скидка на паркинг до 300 000 руб.
-.modal-promo-list__heading {
+.modals-promo-list__heading {
   display: flex;
   flex-direction: column;
   margin-bottom: 20px;
@@ -494,7 +550,7 @@
   }
 }
 
-.modal-promo-list__img {
+.modals-promo-list__img {
   margin-bottom: 20px;
 
   @include breakpoint(lg) {
@@ -503,15 +559,15 @@
   }
 }
 
-.modal-promo-list__text {
+.modals-promo-list__text {
   margin-bottom: 20px;
 }
 
-.modal-promo-list__advantages-list {
+.modals-promo-list__advantages-list {
   margin-bottom: 20px;
 }
 
-.modal-promo-list__dialog {
+.modals-promo-list__dialog {
   @media only screen and (max-width : 567px) {
     padding-left: 30px;
     padding-right: 3px;
@@ -519,27 +575,32 @@
 }
 
 // Жилые комплексы
-.modal-residential-complexes__dialog {
+
+.modals__residential-complexes{
+  width: 100%;
+  height: 100%;
+}
+.modals-residential-complexes__dialog {
   padding: 0;
   max-width: 100%;
   height: 100%;
 }
 
-.modal-residential-complexes__content {
+.modals-residential-complexes__content {
   display: block;
   max-width: 100%;
 }
 
-.modal-residential-complexes__link {
+.modals-residential-complexes__link {
   color: $lightBlue;
   text-transform: uppercase;
 }
 
-.modal-residential-complexes__icon-arrow-big {
+.modals-residential-complexes__icon-arrow-big {
   fill: $lightBlue;
 }
 
-.modal-residential-complexes__heading {
+.modals-residential-complexes__heading {
   padding: 20px 15px 30px;
   margin: 0 auto;
   max-width: 1030px;
@@ -549,12 +610,12 @@
   }
 }
 
-.modal-residential-complexes__title {
+.modals-residential-complexes__title {
   margin-bottom: 10px;
   text-align: left;
 }
 
-.modal-residential-complexes__wrapper-map {
+.modals-residential-complexes__wrapper-map {
   position: relative;
   height: 100%;
   background-image: url($imageDir + 'map-markers.jpg');
@@ -576,10 +637,8 @@
 }
 
 
-
-
 // Студия
-.modal-studio__dialog {
+.modals-studio__dialog {
   max-width: 830px;
   padding: 0;
 
@@ -588,7 +647,7 @@
   }
 }
 
-.modal-studio__item {
+.modals-studio__item {
   padding-bottom: 15px;
   padding-left: 15px;
   padding-right: 15px;
@@ -607,7 +666,7 @@
   }
 }
 
-.modal-studio__box {
+.modals-studio__box {
   margin-bottom: 25px;
   margin-left: -15px;
   margin-right: -15px;
@@ -626,12 +685,12 @@
   }
 }
 
-.modal-studio__img {
+.modals-studio__img {
   margin: 0 auto;
   width: 205px;
 }
 
-.modal-studio__zoom-button {
+.modals-studio__zoom-button {
   position: absolute;
   width: 18px;
   height: 18px;
@@ -646,7 +705,7 @@
   }
 }
 
-.modal-studio__info {
+.modals-studio__info {
   display: grid;
   margin: 0 auto;
   max-width: 320px;
@@ -662,12 +721,12 @@
   }
 }
 
-.modal-studio__modal-content {
+.modals-studio__modals-content {
   align-items: stretch;
   justify-content: flex-start;
 }
 
-.modal-studio__button {
+.modals-studio__button {
   display: block;
 
   @media (min-width: 360px) and(max-width: 576px) {
@@ -679,21 +738,22 @@
   }
 }
 
-.modal-studio__form {
+.modals-studio__form {
   display: flex;
   flex-direction: column;
 }
 
-.modal-studio__title {
+.modals-studio__title {
   margin-bottom: 5px;
   text-align: left;
 }
 
-.modal-studio__description {
+.modals-studio__description {
   text-align: left;
 }
 
-.modal-studio__table {
+.modals-studio__table {
+  width: 100%;
   max-width: 260px;
   margin-bottom: 20px;
 
@@ -720,33 +780,33 @@
   }
 }
 
-.modal-studio__table-row {
+.modals-studio__table-row {
   position: relative;
   display: flex;
   flex-direction: column;
 }
 
-.modal-studio__table-value {
+.modals-studio__table-value {
   font-size: 20px;
 }
 
-.modal-studio__table-options {
+.modals-studio__table-options {
   color: #999999;
   font-size: 13px;
 }
 
-.modal-studio__new-price {
+.modals-studio__new-price {
   color: $lightBlue;
 }
 
-.modal-studio__old-price {
+.modals-studio__old-price {
   display: block;
   margin-bottom: 25px;
   text-decoration: line-through;
   color: #b2c0cd;
 }
 
-.modal-studio__present {
+.modals-studio__present {
   position: relative;
   display: flex;
   align-items: center;
@@ -754,7 +814,7 @@
   font-family: $UbuntuMedium;
 }
 
-.modal-studio__present__icon-present {
+.modals-studio__present__icon-present {
   margin-right: 8px;
   fill: $red;
 }
