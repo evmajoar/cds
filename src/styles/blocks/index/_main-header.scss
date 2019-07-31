@@ -12,12 +12,17 @@
 }
 
 .main-header__advertising-banner {
-  position: relative;
   display: block;
   width: 100%;
   color: $white;
   text-align: center;
   background-color: $lightBlue;
+  .container{
+    position: relative;
+    @include breakpoint(lg) {
+      max-width: 1360px;
+    }
+  }
 }
 
 .main-header__advertising-banner--close {
@@ -29,19 +34,13 @@
   line-height: 20px;
 }
 
-.main-header__advertising-text--mobile {
-  @include breakpoint(md) {
-    display: none;
-  }
-}
-
-.main-header__advertising-text--desktop {
+.main-header__advertising-text-part2{
   display: none;
-
   @include breakpoint(md) {
-    display: block;
+    display: inline-block;
   }
 }
+
 
 .main-header__advertising-close {
   right: 15px;

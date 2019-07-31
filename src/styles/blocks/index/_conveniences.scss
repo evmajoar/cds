@@ -8,6 +8,7 @@
 .conveniences__list {
   display: grid;
   grid-row-gap: 12px;
+  grid-template-rows: repeat(6, 190px);
   margin-bottom: 20px;
   overflow: hidden;
 
@@ -18,18 +19,19 @@
   @include breakpoint(md) {
     grid-gap: 20px;
     grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(3, 240px);
     margin-bottom: 120px;
   }
 
   @include breakpoint(lg) {
     grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(2, 240px);
   }
 }
 
 .conveniences__item {
   position: relative;
   display: block;
-  height: 190px;
   color: $white;
   border-radius: 4px;
   background-repeat: no-repeat;
@@ -38,10 +40,6 @@
   transition: .3s ease-out;
   overflow: hidden;
   cursor: pointer;
-
-  @include breakpoint(md) {
-    height: 240px;
-  }
 
   &:hover {
     .conveniences__item-title {

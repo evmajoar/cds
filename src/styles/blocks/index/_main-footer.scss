@@ -74,17 +74,21 @@
   }
 }
 
-.main-footer__address {
+.main-footer__contacts{
   margin-bottom: 35px;
   text-align: center;
-  font-size: 13px;
-
   @include breakpoint(lg) {
     max-width: 150px;
     margin: 0;
     order: -1;
     text-align: left;
+    line-height: 17px;
   }
+}
+
+.main-footer__address {
+  text-align: center;
+  font-size: 13px;
 }
 
 .main-footer__email {

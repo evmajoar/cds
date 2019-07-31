@@ -1,626 +1,594 @@
-<div id="options" class="modal modal-options">
-	<div class="modal__dialog modal-options__dialog">
-		<button class="modal__close modal-options__close close close--grey" type="button">
-			<span class="visually-hidden">Закрыть модальное окно</span>
-		</button>
-		<div class="modal__content modal-options__content">
-			<h2 class="selection-premises__title modal-options__title">Подбор помещения по параметрам</h2>
-			<form class="selection-premises__form modal-options__form" action="#">
-				<!-- <fieldset class="selection-premises__type type">
-					<legend class="visually-hidden">Тип помещения</legend>
-					<ul class="selection-premises__type-list type__list modal-options__type-list">
-						<li class="selection-premises__type-item type__item modal-options__type-item">
-							<label class="container-checkboxes type__checkbox">
-								<input class="type__checkbox-input" type="checkbox">
-								<span class="type__checkbox-checkmark"></span>
-								<span class="type__checkbox-name">Жилое</span>
-							</label>
+<section class="modals">
+	<div id="options" class="popup modals__options">
+		<div class="modals__dialog modals-options__dialog">
+			<button class="modals__close modals-options__close close close--grey" type="button">
+				<span class="visually-hidden">Закрыть модальное окно</span>
+			</button>
+			<div class="modals__content modals-options__content">
+				<h2 class="selection-premises__title modals-options__title">Подбор помещения по параметрам</h2>
+				<form class="selection-premises__form modals-options__form" action="#">
+					<div class="selection-premises__fieldset-block modals-options__fieldset-block">
+						<fieldset class="selection-premises__housing checkbox-square">
+							<legend class="selection-premises__housing-title checkbox-square__title legend">Корпус</legend>
+							<ul class="selection-premises__housing-list checkbox-square__list">
+								<li class="selection-premises__housing-item checkbox-square__item">
+									<label
+										class="selection-premises__housing-container checkbox-square__checkbox checkbox-square__checkbox--big">
+										<input class="checkbox-square__input" type="checkbox">
+										<span class="checkbox-square__checkmark checkbox-square__checkmark--big">1</span>
+									</label>
+								</li>
+								<li class="selection-premises__housing-item checkbox-square__item">
+									<label
+										class="selection-premises__housing-container checkbox-square__checkbox checkbox-square__checkbox--big">
+										<input class="checkbox-square__input" type="checkbox" checked="checked">
+										<span class="checkbox-square__checkmark checkbox-square__checkmark--big">2</span>
+									</label>
+								</li>
+							</ul>
+						</fieldset>
+
+						<fieldset class="selection-premises__room checkbox-square">
+							<legend class="selection-premises__room-title checkbox-square__title legend">Количество комнат
+							</legend>
+							<ul class="selection-premises__room-list checkbox-square__list modals-options__room-list">
+								<li class="selection-premises__room-item checkbox-square__item modals-options__room-item">
+									<label
+										class="selection-premises__room-container checkbox-square__checkbox checkbox-square__checkbox--big">
+										<input class="checkbox-square__input" type="checkbox">
+										<span class="checkbox-square__checkmark checkbox-square__checkmark--big">Студия</span>
+									</label>
+								</li>
+								<li class="selection-premises__room-item checkbox-square__item">
+									<label
+										class="selection-premises__room-container checkbox-square__checkbox checkbox-square__checkbox--big">
+										<input class="checkbox-square__input" type="checkbox">
+										<span class="checkbox-square__checkmark checkbox-square__checkmark--big">1</span>
+									</label>
+								</li>
+								<li class="selection-premises__room-item checkbox-square__item">
+									<label
+										class="selection-premises__room-container checkbox-square__checkbox checkbox-square__checkbox--big">
+										<input class="checkbox-square__input" type="checkbox" checked="checked">
+										<span class="checkbox-square__checkmark checkbox-square__checkmark--big">2</span>
+									</label>
+								</li>
+								<li class="selection-premises__room-item checkbox-square__item">
+									<label
+										class="selection-premises__room-container checkbox-square__checkbox checkbox-square__checkbox--big">
+										<input class="checkbox-square__input" type="checkbox" checked="checked">
+										<span class="checkbox-square__checkmark checkbox-square__checkmark--big">2 евро</span>
+									</label>
+								</li>
+								<li class="selection-premises__room-item checkbox-square__item">
+									<label
+										class="selection-premises__room-container checkbox-square__checkbox checkbox-square__checkbox--big">
+										<input class="checkbox-square__input" type="checkbox">
+										<span class="checkbox-square__checkmark checkbox-square__checkmark--big">3</span>
+									</label>
+								</li>
+								<li class="selection-premises__room-item checkbox-square__item">
+									<label
+										class="selection-premises__room-container checkbox-square__checkbox checkbox-square__checkbox--big">
+										<input class="checkbox-square__input" type="checkbox">
+										<span class="checkbox-square__checkmark checkbox-square__checkmark--big">3 евро</span>
+									</label>
+								</li>
+								<li class="selection-premises__room-item checkbox-square__item">
+									<label
+										class="selection-premises__room-container checkbox-square__checkbox checkbox-square__checkbox--big">
+										<input class="checkbox-square__input" type="checkbox">
+										<span class="checkbox-square__checkmark checkbox-square__checkmark--big">4</span>
+									</label>
+								</li>
+							</ul>
+						</fieldset>
+					</div>
+					<button class="modals-options__choose-button button button--red" type="button">Подобрать</button>
+				</form>
+				<p class="modals-options__description">Актуальную информацию по наличию и стоимости коммерческих помещений,
+					кладовок и машиномест вы можете получить напрямую в отделе продаж - 954-00-10</p>
+			</div>
+		</div>
+	</div>
+
+	<!-- Обратный звонок -->
+	<div id="callback" class="popup modals__callback">
+		<div class="modals__dialog">
+			<button class="modals__close close close--grey" type="button">
+				<span class="visually-hidden">Закрыть модальное окно</span>
+			</button>
+			<div class="modals__content modals-callback__content">
+				<h2 class="modals__title">Хотите купить квартиру, паркинг или коммерческое помещение?</h2>
+				<p class="modals__description">Оставьте свой телефон — мы перезвоним через 10 минут, ответим на все ваши
+					вопросы и расскажем об актуальных скидках и предложениях!</p>
+				<form class="modals__form" action="#">
+					<p class="modals__block-input">
+						<label class="visually-hidden" for="callback-number-input">Номер телефона</label>
+						<input class="modals-callback__input input" id="callback-number-input" type="tel"
+							placeholder="+7 (910) 123-45-67">
+					</p>
+					<button class="modals__button button--blue button js-popup" type="submit">Заказать
+						звонок</button>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<!-- Запись в шоурум -->
+	<div id="showroom" class="popup modals__showroom">
+		<div class="modals__dialog">
+			<button class="modals__close close close--grey" type="button">
+				<span class="visually-hidden">Закрыть модальное окно</span>
+			</button>
+			<div class="modals__content modals-showroom__content">
+				<h2 class="modals__title">Запись в шоу-рум</h2>
+				<p class="modals__description">В нашем шоу-руме постоянно проводятся различные мастер-классы, поэтому,
+					приходя к нам в гости, вы сможете получить массу полезной и интересной информации</p>
+				<form class="modals__form" action="#">
+					<ul class="modals-showroom__list">
+						<li class="modals-showroom__item">
+							<svg class="modals-showroom__icon-arrow-down arrow-down" width="10" height="5" viewBox="0 0 10 5">
+								<use xlink:href="icons/sprite.svg#icon-arrow-down"></use>
+							</svg>
+							<select class="modals-showroom__item-list input">
+								<option>27 июня</option>
+								<option>27 июня</option>
+								<option>27 июня</option>
+								<option>27 июня</option>
+								<option>27 июня</option>
+								<option>27 июня</option>
+							</select>
 						</li>
-						<li class="selection-premises__type-item type__item modal-options__type-item">
-							<label class="container-checkboxes type__checkbox">
-								<input class="type__checkbox-input" type="checkbox" checked="checked">
-								<span class="type__checkbox-checkmark"></span>
-								<span class="type__checkbox-name">Коммерческое</span>
-							</label>
-						</li>
-						<li class="selection-premises__type-item type__item modal-options__type-item">
-							<label class="container-checkboxes type__checkbox">
-								<input class="type__checkbox-input" type="checkbox">
-								<span class="type__checkbox-checkmark"></span>
-								<span class="type__checkbox-name">Паркинг</span>
-							</label>
-						</li>
-						<li class="selection-premises__type-item type__item modal-options__type-item">
-							<label class="container-checkboxes type__checkbox">
-								<input class="type__checkbox-input" type="checkbox">
-								<span class="type__checkbox-checkmark"></span>
-								<span class="type__checkbox-name">Кладовка</span>
-							</label>
+						<li class="modals-showroom__item">
+							<svg class="modals-showroom__icon-arrow-down arrow-down" width="10" height="5" viewBox="0 0 10 5">
+								<use xlink:href="icons/sprite.svg#icon-arrow-down"></use>
+							</svg>
+							<select class="modals-showroom__item-list input">
+								<option>12:00</option>
+								<option>12:00</option>
+								<option>12:00</option>
+								<option>12:00</option>
+								<option>12:00</option>
+								<option>12:00</option>
+							</select>
 						</li>
 					</ul>
-				</fieldset> -->
-
-				<div class="selection-premises__fieldset-block modal-options__fieldset-block">
-					<fieldset class="selection-premises__housing checkbox-square">
-						<legend class="selection-premises__housing-title checkbox-square__title legend">Корпус</legend>
-						<ul class="selection-premises__housing-list checkbox-square__list">
-							<li class="selection-premises__housing-item checkbox-square__item">
-								<label
-									class="selection-premises__housing-container checkbox-square__checkbox checkbox-square__checkbox--big">
-									<input class="checkbox-square__input" type="checkbox">
-									<span class="checkbox-square__checkmark checkbox-square__checkmark--big">1</span>
-								</label>
-							</li>
-							<li class="selection-premises__housing-item checkbox-square__item">
-								<label
-									class="selection-premises__housing-container checkbox-square__checkbox checkbox-square__checkbox--big">
-									<input class="checkbox-square__input" type="checkbox" checked="checked">
-									<span class="checkbox-square__checkmark checkbox-square__checkmark--big">2</span>
-								</label>
-							</li>
-						</ul>
-					</fieldset>
-
-					<fieldset class="selection-premises__room checkbox-square">
-						<legend class="selection-premises__room-title checkbox-square__title legend">Количество комнат
-						</legend>
-						<ul class="selection-premises__room-list checkbox-square__list modal-options__room-list">
-							<li class="selection-premises__room-item checkbox-square__item modal-options__room-item">
-								<label
-									class="selection-premises__room-container checkbox-square__checkbox checkbox-square__checkbox--big">
-									<input class="checkbox-square__input" type="checkbox">
-									<span class="checkbox-square__checkmark checkbox-square__checkmark--big">Студия</span>
-								</label>
-							</li>
-							<li class="selection-premises__room-item checkbox-square__item">
-								<label
-									class="selection-premises__room-container checkbox-square__checkbox checkbox-square__checkbox--big">
-									<input class="checkbox-square__input" type="checkbox">
-									<span class="checkbox-square__checkmark checkbox-square__checkmark--big">1</span>
-								</label>
-							</li>
-							<li class="selection-premises__room-item checkbox-square__item">
-								<label
-									class="selection-premises__room-container checkbox-square__checkbox checkbox-square__checkbox--big">
-									<input class="checkbox-square__input" type="checkbox" checked="checked">
-									<span class="checkbox-square__checkmark checkbox-square__checkmark--big">2</span>
-								</label>
-							</li>
-							<li class="selection-premises__room-item checkbox-square__item">
-								<label
-									class="selection-premises__room-container checkbox-square__checkbox checkbox-square__checkbox--big">
-									<input class="checkbox-square__input" type="checkbox" checked="checked">
-									<span class="checkbox-square__checkmark checkbox-square__checkmark--big">2 евро</span>
-								</label>
-							</li>
-							<li class="selection-premises__room-item checkbox-square__item">
-								<label
-									class="selection-premises__room-container checkbox-square__checkbox checkbox-square__checkbox--big">
-									<input class="checkbox-square__input" type="checkbox">
-									<span class="checkbox-square__checkmark checkbox-square__checkmark--big">3</span>
-								</label>
-							</li>
-							<li class="selection-premises__room-item checkbox-square__item">
-								<label
-									class="selection-premises__room-container checkbox-square__checkbox checkbox-square__checkbox--big">
-									<input class="checkbox-square__input" type="checkbox">
-									<span class="checkbox-square__checkmark checkbox-square__checkmark--big">3 евро</span>
-								</label>
-							</li>
-							<li class="selection-premises__room-item checkbox-square__item">
-								<label
-									class="selection-premises__room-container checkbox-square__checkbox checkbox-square__checkbox--big">
-									<input class="checkbox-square__input" type="checkbox">
-									<span class="checkbox-square__checkmark checkbox-square__checkmark--big">4</span>
-								</label>
-							</li>
-						</ul>
-					</fieldset>
-				</div>
-				<button class="modal-options__choose-button button button--red" type="button">Подобрать</button>
-			</form>
-			<p class="modal-options__description">Актуальную информацию по наличию и стоимости коммерческих помещений,
-				кладовок и машиномест вы можете получить напрямую в отделе продаж - 954-00-10</p>
+					<p class="modals__block-input modals-showroom__block">
+						<label class="visually-hidden" for="showroom-number-input">Номер телефона</label>
+						<input class="modals-showroom__input input" id="showroom-number-input" type="tel"
+							placeholder="+7 (910) 123-45-67">
+					</p>
+					<button class="modals__button button--blue button js-popup" type="submit">Заказать
+						звонок</button>
+				</form>
+			</div>
 		</div>
 	</div>
-</div>
 
-<!-- Обратный звонок -->
-<div id="callback" class="modal modal-callback">
-	<div class="modal__dialog">
-		<button class="modal__close close close--grey" type="button">
-			<span class="visually-hidden">Закрыть модальное окно</span>
-		</button>
-		<div class="modal__content modal-callback__content">
-			<h2 class="modal__title">Хотите купить квартиру, паркинг или коммерческое помещение?</h2>
-			<p class="modal__description">Оставьте свой телефон — мы перезвоним через 10 минут, ответим на все ваши
-				вопросы и расскажем об актуальных скидках и предложениях!</p>
-			<form class="modal__form" action="#">
-				<p class="modal__block-input">
-					<label class="visually-hidden" for="callback-number-input">Номер телефона</label>
-					<input class="modal-callback__input input" id="callback-number-input" type="tel"
-						placeholder="+7 (910) 123-45-67">
+	<!-- Премиальная отделка -->
+	<div id="premium-finish" class="popup modals__premium-finish">
+		<div class="modals__dialog">
+			<button class="modals__close close close--grey" type="button">
+				<span class="visually-hidden">Закрыть модальное окно</span>
+			</button>
+			<div class="modals__content">
+				<h2 class="modals__title">Расчет премиальной отделки</h2>
+				<p class="modals__description">Оставьте заявку — и ваш личный менеджер сделает расчет стоимости, сроков и
+					проведет презентацию
 				</p>
-				<button class="modal__button button--blue button js-popup" type="submit">Заказать
-					звонок</button>
-			</form>
+				<form class="modals__form" action="#">
+					<p class="modals__block-input">
+						<label class="visually-hidden" for="premium-finish-number-input">Номер телефона</label>
+						<input class="modals-callback__input input" id="premium-finish-number-input" type="tel"
+							placeholder="+7 (910) 123-45-67">
+					</p>
+					<button class="modals__button button--blue button js-popup" type="submit">Заказать
+						звонок</button>
+				</form>
+			</div>
 		</div>
 	</div>
-</div>
 
-<!-- Запись в шоурум -->
-<div id="showroom" class="modal modal-showroom">
-	<div class="modal__dialog">
-		<button class="modal__close close close--grey" type="button">
-			<span class="visually-hidden">Закрыть модальное окно</span>
-		</button>
-		<div class="modal__content modal-showroom__content">
-			<h2 class="modal__title">Запись в шоу-рум</h2>
-			<p class="modal__description">В нашем шоу-руме постоянно проводятся различные мастер-классы, поэтому,
-				приходя к нам в гости, вы сможете получить массу полезной и интересной информации</p>
-			<form class="modal__form" action="#">
-				<ul class="modal-showroom__list">
-					<li class="modal-showroom__item">
-						<svg class="modal-showroom__icon-arrow-down arrow-down" width="10" height="5" viewBox="0 0 10 5">
-							<use xlink:href="icons/sprite.svg#icon-arrow-down"></use>
-						</svg>
-						<select class="modal-showroom__item-list input">
-							<option>27 июня</option>
-							<option>27 июня</option>
-							<option>27 июня</option>
-							<option>27 июня</option>
-							<option>27 июня</option>
-							<option>27 июня</option>
-						</select>
+	<!-- Нравится планировка -->
+	<div id="like-layout" class="popup modals__like-layout">
+		<div class="modals__dialog modals-like-layout__dialog">
+			<button class="modals__close close close--grey" type="button">
+				<span class="visually-hidden">Закрыть модальное окно</span>
+			</button>
+			<div class="modals__content modals-like-layout__modals-content">
+				<div class="modals-like-layout__item">
+					<p class="modals-like-layout__box">
+						<img class="modals-like-layout__img" src="images/flat.jpg" alt="Планировка квартиры">
+						<button class="modals-like-layout__zoom-button js-popup" data-id="flat" type="button"><span
+								class="visually-hidden">Увеличить изображение</span></button>
+					</p>
+					<div class="modals-like-layout__info">
+						<h3 class="modals__title modals-like-layout__title">Нравится планировка?</h3>
+						<p class="modals__description modals-like-layout__description">Оставьте заявку — и ваш личный менеджер
+							покажет все квартиры с такой планировкой, а также расскажет об альтернативах, скидках и акциях
+						</p>
+						<form class="modals__form modals-callback__form" action="#">
+							<p class="modals__block-input">
+								<label class="visually-hidden" for="like-layout-number-input">Номер телефона</label>
+								<input class="modals-callback__input input" id="like-layout-number-input" type="tel"
+									placeholder="+7 (910) 123-45-67">
+							</p>
+							<button class="modals-like-layout__button button button--red" type="submit">Отдел
+								продаж</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Заполнить анкету -->
+	<div id="fill-form" class="popup modals__fill-form">
+		<div class="modals__dialog">
+			<button class="modals__close close close--grey" type="button">
+				<span class="visually-hidden">Закрыть модальное окно</span>
+			</button>
+			<div class="modals__content">
+				<h2 class="modals__title">Один запрос во все банки сразу</h2>
+				<p class="modals__description">Оставьте заявку — и ваш личный менеджер расскажет обо всех текущих акциях и
+					поможет с оформлением ипотеки на лучших условиях через нашего представителя в нужном банке</p>
+				<form class="modals__form" action="#">
+					<p class="modals__block-input">
+						<label class="visually-hidden" for="fill-form-number-input">Номер телефона</label>
+						<input class="modals-callback__input input" id="fill-form-number-input" type="tel"
+							placeholder="+7 (910) 123-45-67">
+					</p>
+					<button class="modals__button button--blue button js-popup" type="submit">Оставить заявку</button>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<!-- Предварительное одобрение -->
+	<div id="approval" class="popup modals__approval">
+		<div class="modals__dialog">
+			<button class="modals__close close close--grey" type="button">
+				<span class="visually-hidden">Закрыть модальное окно</span>
+			</button>
+			<div class="modals__content">
+				<h2 class="modals__title">Предварительное одобрение</h2>
+				<p class="modals__description">Оставьте заявку — и ваш личный менеджер рассчитает выгодные условия по
+					ипотеке, направит запрос в банк и получит предварительное одобрение для вас</p>
+				<form class="modals__form" action="#">
+					<p class="modals__block-input">
+						<label class="visually-hidden" for="approval-number-input">Номер телефона</label>
+						<input class="modals-callback__input input" id="approval-number-input" type="tel"
+							placeholder="+7 (910) 123-45-67">
+					</p>
+					<button class="modals__button button--blue button js-popup" type="submit">Оставить заявку</button>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<!-- Акции и скидки -->
+	<div id="discounts" class="popup modals__discounts">
+		<div class="modals__dialog modals-discounts__dialog">
+			<button class="modals__close close close--grey" type="button">
+				<span class="visually-hidden">Закрыть модальное окно</span>
+			</button>
+			<div class="modals__content modals-discounts__content">
+				<h2 class="modals__title">Акции и скидки</h2>
+				<ul class="discounts__carousel-list discounts__carousel-list--modal">
+					<li class="discounts__item discounts__item--1">
+						<a class="discounts__item-popup" href="#">
+							<h3 class="discounts__item-title">Скидки на паркинг<br>до 300 000 руб.</h3>
+							<p class="discounts__item-info">
+								<span class="discounts__item-date">до <time datetime="06-30">30 июня</time></span>
+							</p>
+						</a>
 					</li>
-					<li class="modal-showroom__item">
-						<svg class="modal-showroom__icon-arrow-down arrow-down" width="10" height="5" viewBox="0 0 10 5">
-							<use xlink:href="icons/sprite.svg#icon-arrow-down"></use>
-						</svg>
-						<select class="modal-showroom__item-list input">
-							<option>12:00</option>
-							<option>12:00</option>
-							<option>12:00</option>
-							<option>12:00</option>
-							<option>12:00</option>
-							<option>12:00</option>
-						</select>
+					<li class="discounts__item discounts__item--2">
+						<a class="discounts__item-popup" href="#">
+							<h3 class="discounts__item-title">Удваиваем скидку<br>за повторную покупку</h3>
+							<p class="discounts__item-info">
+								<span class="discounts__item-date">до <time datetime="06-18">18 июня</time></span>
+							</p>
+						</a>
+					</li>
+					<li class="discounts__item discounts__item--3">
+						<a class="discounts__item-popup" href="#">
+							<h3 class="discounts__item-title">Суперцены на старте<br>продаж!</h3>
+							<p class="discounts__item-info">
+								<span class="discounts__item-date">до <time datetime="09-01">1 сентября</time></span>
+							</p>
+						</a>
+					</li>
+					<li class="discounts__item discounts__item--4">
+						<a class="discounts__item-popup" href="#">
+							<h3 class="discounts__item-title">Суперцены на старте<br>продаж!</h3>
+							<p class="discounts__item-info">
+								<span class="discounts__item-date">до <time datetime="09-01">1 сентября</time></span>
+							</p>
+						</a>
 					</li>
 				</ul>
-				<p class="modal__block-input modal-showroom__block">
-					<label class="visually-hidden" for="showroom-number-input">Номер телефона</label>
-					<input class="modal-showroom__input input" id="showroom-number-input" type="tel"
-						placeholder="+7 (910) 123-45-67">
-				</p>
-				<button class="modal__button button--blue button js-popup" type="submit">Заказать
-					звонок</button>
-			</form>
+			</div>
 		</div>
 	</div>
-</div>
 
-<!-- Премиальная отделка -->
-<div id="premium-finish" class="modal modal-premium-finish">
-	<div class="modal__dialog">
-		<button class="modal__close close close--grey" type="button">
-			<span class="visually-hidden">Закрыть модальное окно</span>
-		</button>
-		<div class="modal__content">
-			<h2 class="modal__title">Расчет премиальной отделки</h2>
-			<p class="modal__description">Оставьте заявку — и ваш личный менеджер сделает расчет стоимости, сроков и
-				проведет презентацию
-			</p>
-			<form class="modal__form" action="#">
-				<p class="modal__block-input">
-					<label class="visually-hidden" for="premium-finish-number-input">Номер телефона</label>
-					<input class="modal-callback__input input" id="premium-finish-number-input" type="tel"
-						placeholder="+7 (910) 123-45-67">
-				</p>
-				<button class="modal__button button--blue button js-popup" type="submit">Заказать
-					звонок</button>
-			</form>
-		</div>
-	</div>
-</div>
-
-<!-- Нравится планировка -->
-<div id="like-layout" class="modal modal-like-layout">
-	<div class="modal__dialog modal-like-layout__dialog">
-		<button class="modal__close close close--grey" type="button">
-			<span class="visually-hidden">Закрыть модальное окно</span>
-		</button>
-		<div class="modal__content modal-like-layout__modal-content">
-			<div class="modal-like-layout__item">
-				<p class="modal-like-layout__box">
-					<img class="modal-like-layout__img" src="images/flat.jpg" alt="Планировка квартиры">
-					<button class="modal-like-layout__zoom-button js-popup" data-id="flat" type="button"><span
-							class="visually-hidden">Увеличить изображение</span></button>
-				</p>
-				<div class="modal-like-layout__info">
-					<h3 class="modal__title modal-like-layout__title">Нравится планировка?</h3>
-					<p class="modal__description modal-like-layout__description">Оставьте заявку — и ваш личный менеджер
-						покажет все квартиры с такой планировкой, а также расскажет об альтернативах, скидках и акциях
+	<!-- Каталог помещений -->
+	<div id="room-catalog" class="popup modals__room-catalog">
+		<div class="modals__dialog">
+			<button class="modals__close close close--grey" type="button">
+				<span class="visually-hidden">Закрыть модальное окно</span>
+			</button>
+			<div class="modals__content">
+				<h2 class="modals__title">Каталог помещений</h2>
+				<p class="modals__description">Оставьте свой телефон — мы пришлем ссылку на скачивание каталога со всеми
+					квартирами, машиноместами, кладовками и коммерческими помещениями в продаже</p>
+				<form class="modals__form" action="#">
+					<p class="modals__block-input">
+						<label class="visually-hidden" for="number-input">Номер телефона</label>
+						<input class="modals-callback__input input" id="number-input" type="tel" placeholder="+7 (910) 123-45-67">
 					</p>
-					<form class="modal__form modal-callback__form" action="#">
-						<p class="modal__block-input">
-							<label class="visually-hidden" for="like-layout-number-input">Номер телефона</label>
-							<input class="modal-callback__input input" id="like-layout-number-input" type="tel"
-								placeholder="+7 (910) 123-45-67">
-						</p>
-						<button class="modal-like-layout__button button button--red" type="submit">Отдел
-							продаж</button>
-					</form>
-				</div>
+					<button class="modals__button button--blue button js-popup" type="submit">Скачать каталог</button>
+				</form>
 			</div>
 		</div>
 	</div>
-</div>
 
-<!-- Заполнить анкету -->
-<div id="fill-form" class="modal modal-fill-form">
-	<div class="modal__dialog">
-		<button class="modal__close close close--grey" type="button">
-			<span class="visually-hidden">Закрыть модальное окно</span>
-		</button>
-		<div class="modal__content">
-			<h2 class="modal__title">Один запрос во все банки сразу</h2>
-			<p class="modal__description">Оставьте заявку — и ваш личный менеджер расскажет обо всех текущих акциях и
-				поможет с оформлением ипотеки на лучших условиях через нашего представителя в нужном банке</p>
-			<form class="modal__form" action="#">
-				<p class="modal__block-input">
-					<label class="visually-hidden" for="fill-form-number-input">Номер телефона</label>
-					<input class="modal-callback__input input" id="fill-form-number-input" type="tel"
-						placeholder="+7 (910) 123-45-67">
-				</p>
-				<button class="modal__button button--blue button js-popup" type="submit">Оставить заявку</button>
-			</form>
-		</div>
-	</div>
-</div>
-
-<!-- Предварительное одобрение -->
-<div id="approval" class="modal modal-approval">
-	<div class="modal__dialog">
-		<button class="modal__close close close--grey" type="button">
-			<span class="visually-hidden">Закрыть модальное окно</span>
-		</button>
-		<div class="modal__content">
-			<h2 class="modal__title">Предварительное одобрение</h2>
-			<p class="modal__description">Оставьте заявку — и ваш личный менеджер рассчитает выгодные условия по
-				ипотеке, направит запрос в банк и получит предварительное одобрение для вас</p>
-			<form class="modal__form" action="#">
-				<p class="modal__block-input">
-					<label class="visually-hidden" for="approval-number-input">Номер телефона</label>
-					<input class="modal-callback__input input" id="approval-number-input" type="tel"
-						placeholder="+7 (910) 123-45-67">
-				</p>
-				<button class="modal__button button--blue button js-popup" type="submit">Оставить заявку</button>
-			</form>
-		</div>
-	</div>
-</div>
-
-<!-- Акции и скидки -->
-<div id="discounts" class="modal modal-discounts">
-	<div class="modal__dialog modal-discounts__dialog">
-		<button class="modal__close close close--grey" type="button">
-			<span class="visually-hidden">Закрыть модальное окно</span>
-		</button>
-		<div class="modal__content modal-discounts__content">
-			<h2 class="modal__title">Акции и скидки</h2>
-			<ul class="discounts__carousel-list discounts__carousel-list--modal">
-				<li class="discounts__item discounts__item--1">
-					<a class="discounts__item-popup" href="#">
-						<h3 class="discounts__item-title">Скидки на паркинг<br>до 300 000 руб.</h3>
-						<p class="discounts__item-info">
-							<span class="discounts__item-date">до <time datetime="06-30">30 июня</time></span>
-						</p>
-					</a>
-				</li>
-				<li class="discounts__item discounts__item--2">
-					<a class="discounts__item-popup" href="#">
-						<h3 class="discounts__item-title">Удваиваем скидку<br>за повторную покупку</h3>
-						<p class="discounts__item-info">
-							<span class="discounts__item-date">до <time datetime="06-18">18 июня</time></span>
-						</p>
-					</a>
-				</li>
-				<li class="discounts__item discounts__item--3">
-					<a class="discounts__item-popup" href="#">
-						<h3 class="discounts__item-title">Суперцены на старте<br>продаж!</h3>
-						<p class="discounts__item-info">
-							<span class="discounts__item-date">до <time datetime="09-01">1 сентября</time></span>
-						</p>
-					</a>
-				</li>
-				<li class="discounts__item discounts__item--4">
-					<a class="discounts__item-popup" href="#">
-						<h3 class="discounts__item-title">Суперцены на старте<br>продаж!</h3>
-						<p class="discounts__item-info">
-							<span class="discounts__item-date">до <time datetime="09-01">1 сентября</time></span>
-						</p>
-					</a>
-				</li>
-			</ul>
-		</div>
-	</div>
-</div>
-
-
-<!-- Каталог помещений -->
-<div id="room-catalog" class="modal modal-room-catalog">
-	<div class="modal__dialog">
-		<button class="modal__close close close--grey" type="button">
-			<span class="visually-hidden">Закрыть модальное окно</span>
-		</button>
-		<div class="modal__content">
-			<h2 class="modal__title">Каталог помещений</h2>
-			<p class="modal__description">Оставьте свой телефон — мы пришлем ссылку на скачивание каталога со всеми
-				квартирами, машиноместами, кладовками и коммерческими помещениями в продаже</p>
-			<form class="modal__form" action="#">
-				<p class="modal__block-input">
-					<label class="visually-hidden" for="number-input">Номер телефона</label>
-					<input class="modal-callback__input input" id="number-input" type="tel" placeholder="+7 (910) 123-45-67">
-				</p>
-				<button class="modal__button button--blue button js-popup" type="submit">Скачать каталог</button>
-			</form>
-		</div>
-	</div>
-</div>
-
-
-<!-- Акции  -->
-<div id="promotions" class="modal modal-promotions">
-	<div class="modal__dialog">
-		<button class="modal__close close close--grey" type="button">
-			<span class="visually-hidden">Закрыть модальное окно</span>
-		</button>
-		<div class="modal__content">
-			<h2 class="modal__title">Акции</h2>
-			<p class="modal__description">Ежемесячно в жилых комплексах ЦДС действуют акции и скидки: машиноместа со
-				скидками, метры или чистовая отделка в подарок и многие другие. Оставьте заявку — и узнайте о текущих
-				выгодных предложениях напрямую</p>
-			<form class="modal__form" action="#">
-				<p class="modal__block-input">
-					<label class="visually-hidden" for="promotions-number-input">Номер телефона</label>
-					<input class="modal-callback__input input" id="promotions-number-input" type="tel"
-						placeholder="+7 (910) 123-45-67">
-				</p>
-				<button class="modal__button button--blue button js-popup" type="submit">Оставить заявку</button>
-			</form>
-		</div>
-	</div>
-</div>
-
-<!-- Подбор помещения  -->
-<div id="choose-apartment" class="modal modal-choose-apartment">
-	<div class="modal__dialog modal-choose-apartment__dialog">
-		<button class="modal__close close close--grey" type="button">
-			<span class="visually-hidden">Закрыть модальное окно</span>
-		</button>
-		<div class="modal__content modal-choose-apartment__content">
-			<h2 class="visually-hidden">Подбор помещения</h2>
-			<b class="modal-choose-apartment__heading choose-apartment__heading">Вы планируете приобрести квартиру
-				для жизни или инвестиций?
-				<svg class="choose-apartment__marker-red-icon marker-red-icon" width="70" height="50" viewBox="0 0 70 50">
-					<use xlink:href="icons/sprite.svg#icon-marker-red"></use>
-				</svg>
-			</b>
-
-			<p class="modal-choose-apartment__row-buttons">
-				<button
-					class="modal-choose-apartment__button button button--transparent-white button--transparent-white-blue js-popup"
-					data-id="choose-apartment" type="button">Для жизни</button>
-				<button
-					class="modal-choose-apartment__button button button--transparent-white button--transparent-white-blue js-popup"
-					data-id="choose-apartment" type="button">Для инвестиций</button>
-			</p>
-
-			<ul class="modal-choose-apartment__steps tabs-number">
-				<li
-					class="modal-choose-apartment__number-link tabs-number__item modal-choose-apartment__number-link--active tabs-number__item--active">
-					<button class="tabs-number__button">1</button>
-				</li>
-				<li class="modal-choose-apartment__number-link tabs-number__item">
-					<button class="tabs-number__button">2</button>
-				</li>
-				<li class="modal-choose-apartment__number-link tabs-number__item">
-					<button class="tabs-number__button">3</button>
-				</li>
-				<li class="modal-choose-apartment__number-link tabs-number__item">
-					<button class="tabs-number__button">4</button>
-				</li>
-				<li class="modal-choose-apartment__number-link tabs-number__item">
-					<button class="tabs-number__button">5</button>
-				</li>
-				<li class="modal-choose-apartment__number-link tabs-number__item">
-					<button class="tabs-number__button">6</button>
-				</li>
-				<li class="modal-choose-apartment__number-link tabs-number__item">
-					<button class="tabs-number__button">7</button>
-				</li>
-			</ul>
-		</div>
-	</div>
-</div>
-
-
-<!-- Нашли 10 квартир  -->
-<div id="found-apartments" class="modal found-apartments">
-	<div class="modal__dialog modal-choose-apartment__dialog">
-		<button class="modal__close close close--grey" type="button">
-			<span class="visually-hidden">Закрыть модальное окно</span>
-		</button>
-		<div class="modal__content modal-choose-apartment__content">
-			<h2 class="visually-hidden">Нашли 10 квартир</h2>
-			<b class="modal-choose-apartment__heading choose-apartment__heading">Мы нашли более 10 квартир,
-				которые наверняка вам понравятся!
-				<svg class="choose-apartment__marker-red-icon marker-red-icon" width="70" height="50" viewBox="0 0 70 50">
-					<use xlink:href="icons/sprite.svg#icon-marker-red"></use>
-				</svg>
-			</b>
-
-			<p class="modal-choose-apartment__text choose-apartment__text">Оставьте заявку — и ваш личный менеджер расскажет
-				об актуальных акциях,
-				стоимости со скидкой при 100% оплате и индивидуальных условиях покупки</p>
-			<form class="modal-choose-apartment__form modal__form" action="#">
-				<p class="modal-choose-apartment__block-input">
-					<label class="visually-hidden" for="found-apartments-number-input">Номер телефона</label>
-					<input class="modal-callback__input input input--transparent" id="found-apartments-number-input" type="tel"
-						placeholder="+7 (910) 123-45-67">
-				</p>
-				<button class="modal-choose-apartment__link button button--transparent-white js-popup"
-					data-id="choose-apartment" type="button">Оставить заявку</button>
-			</form>
-		</div>
-	</div>
-</div>
-
-
-<!-- Скидка на паркинг до 300 000 руб.  -->
-<div id="promo-list" class="modal modal-promo-list">
-	<div class="modal__dialog modal-promo-list__dialog">
-		<button class="modal__close close close--grey" type="button">
-			<span class="visually-hidden">Закрыть модальное окно</span>
-		</button>
-		<div class="modal__content modal-promo-list__content">
-			<h2 class="modal__title">Скидка на паркинг до 300 000 руб.</h2>
-			<div class="modal-promo-list__heading">
-				<img class="modal-promo-list__img" src="images/promo-img.jpg" alt="Парковка">
-				<div class="modal-promo-list__description">
-					<p class="modal-promo-list__text">С 1 по 30 июня 2019 года на покупку машиномест в подземном паркинге ЖК
-						«Чёрная речка» действует акция: при единовременной оплате 100% – скидка 300 000 руб.!</p>
-					<ul class="modal-promo-list__list">
-						<li class="modal-promo-list__item">— Базовая стоимость машиноместа —<br>
-							700 000 руб.;</li>
-						<li class="modal-promo-list__item">— По акции стоимость любого машиноместа<br> — 600 000 руб.</li>
-					</ul>
-				</div>
+	<!-- Акции  -->
+	<div id="promotions" class="popup modals__promotions">
+		<div class="modals__dialog">
+			<button class="modals__close close close--grey" type="button">
+				<span class="visually-hidden">Закрыть модальное окно</span>
+			</button>
+			<div class="modals__content">
+				<h2 class="modals__title">Акции</h2>
+				<p class="modals__description">Ежемесячно в жилых комплексах ЦДС действуют акции и скидки: машиноместа со
+					скидками, метры или чистовая отделка в подарок и многие другие. Оставьте заявку — и узнайте о текущих
+					выгодных предложениях напрямую</p>
+				<form class="modals__form" action="#">
+					<p class="modals__block-input">
+						<label class="visually-hidden" for="promotions-number-input">Номер телефона</label>
+						<input class="modals-callback__input input" id="promotions-number-input" type="tel"
+							placeholder="+7 (910) 123-45-67">
+					</p>
+					<button class="modals__button button--blue button js-popup" type="submit">Оставить заявку</button>
+				</form>
 			</div>
-			<ul class="modal-promo-list__advantages-list">
-				<li class="modal-promo-list__advantages-item">А также:</li>
-				<li class="modal-promo-list__advantages-item">— Предоставляется беспроцентная рассрочка на оплату машиноместа до
-					декабря 2019 года (на 6 мес.)</li>
-				<li class="modal-promo-list__advantages-item">— Первоначальный взнос — от 25% от стоимости машиноместа (от 175
-					000 руб.)</li>
-				<li class="modal-promo-list__advantages-item">— Оплата ежемесячно равными платежами</li>
-				<li class="modal-promo-list__advantages-item">— Передача машиноместа по акту в пользование возможна после оплаты
-					первоначального взноса</li>
-			</ul>
-			<p class="modal-promo-list__text">ЖК «Черная речка» — многоэтажный кирпично-монолитный дом комфорт-класса, сдан
-			</p>
 		</div>
 	</div>
-</div>
 
-<!-- Жилые комплексы -->
-<div id="residential-complexes" class="modal modal-residential-complexes">
-	<div class="modal__dialog modal-residential-complexes__dialog">
-		<button class="modal__close close close--grey" type="button">
-			<span class="visually-hidden">Закрыть модальное окно</span>
-		</button>
-		<div class="modal__content modal-residential-complexes__content">
-			<div class="modal-residential-complexes__heading">
-				<h2 class="modal__title modal-residential-complexes__title">Жилые комплексы</h2>
-				<a class="modal-residential-complexes__link" href="#">Показать списком
-					<svg class="modal-residential-complexes__icon-arrow-big" width="22" height="14" viewBox="0 0 22 14">
-						<use xlink:href="icons/sprite.svg#icon-arrow-big"></use>
+	<!-- Подбор помещения  -->
+	<div id="choose-apartment" class="popup modals__choose-apartment">
+		<div class="modals__dialog modals-choose-apartment__dialog">
+			<button class="modals__close close close--grey" type="button">
+				<span class="visually-hidden">Закрыть модальное окно</span>
+			</button>
+			<div class="modals__content modals-choose-apartment__content">
+				<h2 class="visually-hidden">Подбор помещения</h2>
+				<b class="modals-choose-apartment__heading choose-apartment__heading">Вы планируете приобрести квартиру
+					для жизни или инвестиций?
+					<svg class="choose-apartment__marker-red-icon marker-red-icon" width="70" height="50" viewBox="0 0 70 50">
+						<use xlink:href="icons/sprite.svg#icon-marker-red"></use>
 					</svg>
-				</a>
-			</div>
-			<div class="modal-residential-complexes__wrapper-map">
-				<div class="place-card place-card--polustrovo">
-					<h3 class="place-card__title">ЦДС «Полюстрово»</h3>
-					<p class="place-card__badges">
-						<svg class="place-card__icon-roller" width="20" height="20" viewBox="0 0 20 20">
-							<use xlink:href="icons/sprite.svg#icon-roller"></use>
-						</svg>
-						<svg class="place-card__icon-car" width="20" height="20" viewBox="0 0 20 20">
-							<use xlink:href="icons/sprite.svg#icon-car"></use>
-						</svg>
-					</p>
-					<p class="place-card__address">Пискаревский пр., м. Пл. Ленина</p>
-					<table class="place-card__description-block description-block">
-						<caption class="visually-hidden">Описания здания</caption>
-						<tbody>
-							<tr>
-								<th class="description-block__value description-block__value--grey">Срок ввода</th>
-								<td class="description-block__option description-block__option--right">IV кв. 2021</td>
-							</tr>
-							<tr>
-								<th class="description-block__value description-block__value--grey">Квартиры</th>
-								<td class="description-block__option description-block__option--right">от 4,4 млн</td>
-							</tr>
-							<tr>
-								<th class="description-block__value description-block__value--grey">Коммерция</th>
-								<td class="description-block__option description-block__option--right">от 6,1 млн</td>
-							</tr>
-						</tbody>
-					</table>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
+				</b>
 
-<!-- Студия -->
-<div id="studio" class="modal modal-studio">
-	<div class="modal__dialog modal-studio__dialog">
-		<button class="modal__close close close--grey" type="button">
-			<span class="visually-hidden">Закрыть модальное окно</span>
-		</button>
-		<div class="modal__content modal-studio__modal-content">
-			<div class="modal-studio__item">
-				<p class="modal-studio__box">
-					<img class="modal-studio__img" src="images/flat.jpg" alt="Планировка квартиры">
-					<button class="modal-studio__zoom-button js-popup" data-id="flat" type="button"><span
-							class="visually-hidden">Увеличить изображение</span></button>
+				<p class="modals-choose-apartment__row-buttons">
+					<button
+						class="modals-choose-apartment__button button button--transparent-white button--transparent-white-blue js-popup"
+						data-id="choose-apartment" type="button">Для жизни</button>
+					<button
+						class="modals-choose-apartment__button button button--transparent-white button--transparent-white-blue js-popup"
+						data-id="choose-apartment" type="button">Для инвестиций</button>
 				</p>
-				<div class="modal-studio__info">
-					<h3 class="modal__title modal-studio__title">Студия<br>
-						<span class="modal-studio__new-price">3 139 863 руб.</span>
-					</h3>
-					<span class="modal-studio__old-price">3,8 млн</span>
-					<table class="modal-studio__table">
-						<tr class="modal-studio__table-row">
-							<td class="modal-studio__table-value">25,45 кв. м</td>
-							<td class="modal-studio__table-options">Общая площадь</td>
-						</tr>
-						<tr class="modal-studio__table-row">
-							<td class="modal-studio__table-value">Корпус 1</td>
-							<td class="modal-studio__table-options">3 этаж</td>
-						</tr>
-					</table>
 
-					<p class="modal-studio__present">
-						<svg class="modal-studio__present__icon-present" width="24" height="24" viewBox="0 0 24 24">
-							<use xlink:href="icons/sprite.svg#icon-present"></use>
+				<ul class="modals-choose-apartment__steps tabs-number">
+					<li
+						class="modals-choose-apartment__number-link tabs-number__item modals-choose-apartment__number-link--active tabs-number__item--active">
+						<button class="tabs-number__button">1</button>
+					</li>
+					<li class="modals-choose-apartment__number-link tabs-number__item">
+						<button class="tabs-number__button">2</button>
+					</li>
+					<li class="modals-choose-apartment__number-link tabs-number__item">
+						<button class="tabs-number__button">3</button>
+					</li>
+					<li class="modals-choose-apartment__number-link tabs-number__item">
+						<button class="tabs-number__button">4</button>
+					</li>
+					<li class="modals-choose-apartment__number-link tabs-number__item">
+						<button class="tabs-number__button">5</button>
+					</li>
+					<li class="modals-choose-apartment__number-link tabs-number__item">
+						<button class="tabs-number__button">6</button>
+					</li>
+					<li class="modals-choose-apartment__number-link tabs-number__item">
+						<button class="tabs-number__button">7</button>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<!-- Нашли 10 квартир  -->
+	<div id="found-apartments" class="popup modals__found-apartments">
+		<div class="modals__dialog modals-choose-apartment__dialog">
+			<button class="modals__close close close--grey" type="button">
+				<span class="visually-hidden">Закрыть модальное окно</span>
+			</button>
+			<div class="modals__content modals-choose-apartment__content">
+				<h2 class="visually-hidden">Нашли 10 квартир</h2>
+				<b class="modals-choose-apartment__heading choose-apartment__heading">Мы нашли более 10 квартир,
+					которые наверняка вам понравятся!
+					<svg class="choose-apartment__marker-red-icon marker-red-icon" width="70" height="50" viewBox="0 0 70 50">
+						<use xlink:href="icons/sprite.svg#icon-marker-red"></use>
+					</svg>
+				</b>
+
+				<p class="modals-choose-apartment__text choose-apartment__text">Оставьте заявку — и ваш личный менеджер расскажет
+					об актуальных акциях,
+					стоимости со скидкой при 100% оплате и индивидуальных условиях покупки</p>
+				<form class="modals-choose-apartment__form modals__form" action="#">
+					<p class="modals-choose-apartment__block-input">
+						<label class="visually-hidden" for="found-apartments-number-input">Номер телефона</label>
+						<input class="modals-callback__input input input--transparent" id="found-apartments-number-input" type="tel"
+							placeholder="+7 (910) 123-45-67">
+					</p>
+					<button class="modals-choose-apartment__link button button--transparent-white js-popup"
+						data-id="choose-apartment" type="button">Оставить заявку</button>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<!-- Скидка на паркинг до 300 000 руб.  -->
+	<div id="promo-list" class="popup modals__promo-list">
+		<div class="modals__dialog modals-promo-list__dialog">
+			<button class="modals__close close close--grey" type="button">
+				<span class="visually-hidden">Закрыть модальное окно</span>
+			</button>
+			<div class="modals__content modals-promo-list__content">
+				<h2 class="modals__title">Скидка на паркинг до 300 000 руб.</h2>
+				<div class="modals-promo-list__heading">
+					<img class="modals-promo-list__img" src="images/promo-img.jpg" alt="Парковка">
+					<div class="modals-promo-list__description">
+						<p class="modals-promo-list__text">С 1 по 30 июня 2019 года на покупку машиномест в подземном паркинге ЖК
+							«Чёрная речка» действует акция: при единовременной оплате 100% – скидка 300 000 руб.!</p>
+						<ul class="modals-promo-list__list">
+							<li class="modals-promo-list__item">— Базовая стоимость машиноместа —<br>
+								700 000 руб.;</li>
+							<li class="modals-promo-list__item">— По акции стоимость любого машиноместа<br> — 600 000 руб.</li>
+						</ul>
+					</div>
+				</div>
+				<ul class="modals-promo-list__advantages-list">
+					<li class="modals-promo-list__advantages-item">А также:</li>
+					<li class="modals-promo-list__advantages-item">— Предоставляется беспроцентная рассрочка на оплату машиноместа
+						до
+						декабря 2019 года (на 6 мес.)</li>
+					<li class="modals-promo-list__advantages-item">— Первоначальный взнос — от 25% от стоимости машиноместа (от 175
+						000 руб.)</li>
+					<li class="modals-promo-list__advantages-item">— Оплата ежемесячно равными платежами</li>
+					<li class="modals-promo-list__advantages-item">— Передача машиноместа по акту в пользование возможна после
+						оплаты
+						первоначального взноса</li>
+				</ul>
+				<p class="modals-promo-list__text">ЖК «Черная речка» — многоэтажный кирпично-монолитный дом комфорт-класса, сдан
+				</p>
+			</div>
+		</div>
+	</div>
+
+	<!-- Жилые комплексы -->
+	<div id="residential-complexes" class="popup modals__residential-complexes">
+		<div class="modals__dialog modals-residential-complexes__dialog">
+			<button class="modals__close close close--grey" type="button">
+				<span class="visually-hidden">Закрыть модальное окно</span>
+			</button>
+			<div class="modals__content modals-residential-complexes__content">
+				<div class="modals-residential-complexes__heading">
+					<h2 class="modals__title modals-residential-complexes__title">Жилые комплексы</h2>
+					<a class="modals-residential-complexes__link" href="#">Показать списком
+						<svg class="modals-residential-complexes__icon-arrow-big" width="22" height="14" viewBox="0 0 22 14">
+							<use xlink:href="icons/sprite.svg#icon-arrow-big"></use>
 						</svg>
-						Отделка в подарок!</p>
-
-					<form class="modal__form modal-studio__form" action="#">
-						<p class="modal__block-input">
-							<label class="visually-hidden" for="studio-number-input">Номер телефона</label>
-							<input class="modal-callback__input input" id="studio-number-input" type="tel"
-								placeholder="+7 (910) 123-45-67">
+					</a>
+				</div>
+				<div class="modals-residential-complexes__wrapper-map">
+					<div class="place-card place-card--polustrovo">
+						<h3 class="place-card__title">ЦДС «Полюстрово»</h3>
+						<p class="place-card__badges">
+							<svg class="place-card__icon-roller" width="20" height="20" viewBox="0 0 20 20">
+								<use xlink:href="icons/sprite.svg#icon-roller"></use>
+							</svg>
+							<svg class="place-card__icon-car" width="20" height="20" viewBox="0 0 20 20">
+								<use xlink:href="icons/sprite.svg#icon-car"></use>
+							</svg>
 						</p>
-						<button class="modal-studio__button button button--red" type="submit">Записаться на просмотр</button>
-					</form>
+						<p class="place-card__address">Пискаревский пр., м. Пл. Ленина</p>
+						<table class="place-card__description-block description-block">
+							<caption class="visually-hidden">Описания здания</caption>
+							<tbody>
+								<tr>
+									<th class="description-block__value description-block__value--grey">Срок ввода</th>
+									<td class="description-block__option description-block__option--right">IV кв. 2021</td>
+								</tr>
+								<tr>
+									<th class="description-block__value description-block__value--grey">Квартиры</th>
+									<td class="description-block__option description-block__option--right">от 4,4 млн</td>
+								</tr>
+								<tr>
+									<th class="description-block__value description-block__value--grey">Коммерция</th>
+									<td class="description-block__option description-block__option--right">от 6,1 млн</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-</div>
 
-<!-- Схема планировки -->
-<div id="flat" class="modal modal-flat">
-	<div class="modal__dialog modal-flat__dialog">
-		<button class="modal__close close close--grey" type="button">
-			<span class="visually-hidden">Закрыть модальное окно</span>
-		</button>
-		<div class="modal__content">
-			<h2 class="visually-hidden">Схема планировки</h2>
-			<img src="images/flat-big.jpg" alt="Схема планировки">
+	<!-- Студия -->
+	<div id="studio" class="popup modals__studio">
+		<div class="modals__dialog modals-studio__dialog">
+			<button class="modals__close close close--grey" type="button">
+				<span class="visually-hidden">Закрыть модальное окно</span>
+			</button>
+			<div class="modals__content modals-studio__modals-content">
+				<div class="modals-studio__item">
+					<p class="modals-studio__box">
+						<img class="modals-studio__img" src="images/flat.jpg" alt="Планировка квартиры">
+						<button class="modals-studio__zoom-button js-popup" data-id="flat" type="button"><span
+								class="visually-hidden">Увеличить изображение</span></button>
+					</p>
+					<div class="modals-studio__info">
+						<h3 class="modals__title modals-studio__title">Студия<br>
+							<span class="modals-studio__new-price">3 139 863 руб.</span>
+						</h3>
+						<span class="modals-studio__old-price">3,8 млн</span>
+						<table class="modals-studio__table">
+							<tr class="modals-studio__table-row">
+								<td class="modals-studio__table-value">25,45 кв. м</td>
+								<td class="modals-studio__table-options">Общая площадь</td>
+							</tr>
+							<tr class="modals-studio__table-row">
+								<td class="modals-studio__table-value">Корпус 1</td>
+								<td class="modals-studio__table-options">3 этаж</td>
+							</tr>
+						</table>
+
+						<p class="modals-studio__present">
+							<svg class="modals-studio__present__icon-present" width="24" height="24" viewBox="0 0 24 24">
+								<use xlink:href="icons/sprite.svg#icon-present"></use>
+							</svg>
+							Отделка в подарок!</p>
+
+						<form class="modals__form modals-studio__form" action="#">
+							<p class="modals__block-input">
+								<label class="visually-hidden" for="studio-number-input">Номер телефона</label>
+								<input class="modals-callback__input input" id="studio-number-input" type="tel"
+									placeholder="+7 (910) 123-45-67">
+							</p>
+							<button class="modals-studio__button button button--red" type="submit">Записаться на просмотр</button>
+						</form>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
-</div>
+
+	<!-- Схема планировки -->
+	<div id="flat" class="popup modals__flat">
+		<div class="modals__dialog modals-flat__dialog">
+			<button class="modals__close close close--grey" type="button">
+				<span class="visually-hidden">Закрыть модальное окно</span>
+			</button>
+			<div class="modals__content">
+				<h2 class="visually-hidden">Схема планировки</h2>
+				<img src="images/flat-big.jpg" alt="Схема планировки">
+			</div>
+		</div>
+	</div>
+
+	<div class="modals__overlay"></div>
+</section>
