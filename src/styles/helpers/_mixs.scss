@@ -10,21 +10,6 @@
   padding: 0 $gutter;
   width: 100%;
 
-  // брейпоинты для десктопной верстки
-
-  // @include breakpoint(el) {
-  //   max-width: 992px;
-  // }
-  // @include breakpoint(lg) {
-  //   max-width: 768px;
-  // }
-  // @include breakpoint(md) {
-  //   max-width: 576px;
-  // }
-  // @include breakpoint(sm) {
-  //   max-width: 480px;
-  // }
-
   // брейпоинты для mobile first
 
   @include breakpoint(xs) {
@@ -233,30 +218,7 @@
   }
 }
 
-// .button--unique-blue-big{
-//   overflow: hidden;
-//   height: 172px;
-//   &:after{
-//     @include pseudo;
-//     right: -50px;
-//     top: 0;
-//     transform: skew(-25deg,0deg);
-//     z-index: -2;
-//     width: 150px;
-//     height: 100%;
-//     background-image: none;
-//     background-color: $lightBlue;
-//     border: none;
-//   }
-//   &:hover{
-//     transform: none;
-//     box-shadow: none;
-//   }
-// }
-
 .btn-prev {
-  top: 50%;
-  transform: translateY(-50%);
   padding: 10px;
   height: 26px;
   background-color: transparent;
@@ -264,14 +226,21 @@
   background-image: url($imageDir + 'arrow-left.svg');
   background-repeat: no-repeat;
   background-position: center;
-  &:hover{
-    transform: translateX(-5px) translateY(-50%);
+
+  @include breakpoint(md) {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &:hover {
+    @include breakpoint(md) {
+      transform: translateX(-5px) translateY(-50%);
+    }
   }
 }
 
 .btn-next {
-  top: 50%;
-  transform: translateY(-50%) rotate(-180deg);
+  transform: rotate(-180deg);
   padding: 10px;
   height: 26px;
   background-color: transparent;
@@ -279,8 +248,16 @@
   background-image: url($imageDir + 'arrow-left.svg');
   background-repeat: no-repeat;
   background-position: center;
-  &:hover{
-    transform: rotate(-180deg) translateX(-5px) translateY(50%);
+
+  @include breakpoint(md) {
+    top: 50%;
+    transform: translateY(-50%) rotate(-180deg);
+  }
+
+  &:hover {
+    @include breakpoint(md) {
+      transform: rotate(-180deg) translateX(-5px) translateY(50%);
+    }
   }
 }
 
@@ -509,7 +486,6 @@
 }
 
 .checkbox-square__checkmark {
-  // position: absolute;
   top: 0;
   left: 0;
   margin: 0;
@@ -527,13 +503,6 @@
   background-color: #f8f9fb;
   border: 1px solid #c6d1db;
 }
-
-
-// .checkbox-square__checkbox input:disabled~.checkbox-square__checkmark {
-//   background: #e6e6e6;
-//   opacity: 0.6;
-//   pointer-events: none;
-// }
 
 .checkbox-square__checkmark:after {
   box-sizing: unset;
@@ -605,6 +574,9 @@
 .tabs-words__item {
   position: relative;
   flex-shrink: 0;
+  &:last-child{
+    padding-right: 15px;
+  }
 }
 
 .tabs-words__item--active {

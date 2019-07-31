@@ -1,220 +1,163 @@
 <section class="selection-premises">
-  <div class="container">
-    <h2 class="selection-premises__title">Подбор помещения по параметрам</h2>
-    <button class="selection-premises__options-button button button--transparent-grey js-popup" type="button"
-      data-id="options">Параметры (6)</button>
-    <form class="selection-premises__form selection-premises__form--none" action="#">
-      <fieldset class="selection-premises__type type">
-        <legend class="visually-hidden">Тип помещения</legend>
-        <ul class="selection-premises__type-list type__list">
-          <li class="selection-premises__type-item type__item">
-            <label class="container-checkboxes type__checkbox">
-              <input class="type__checkbox-input" type="checkbox">
-              <span class="type__checkbox-checkmark"></span>
-              <span class="type__checkbox-name">Жилое</span>
-            </label>
-          </li>
-          <li class="selection-premises__type-item type__item">
-            <label class="container-checkboxes type__checkbox">
-              <input class="type__checkbox-input" type="checkbox" checked="checked">
-              <span class="type__checkbox-checkmark"></span>
-              <span class="type__checkbox-name">Коммерческое</span>
-            </label>
-          </li>
-          <li class="selection-premises__type-item type__item">
-            <label class="container-checkboxes type__checkbox">
-              <input class="type__checkbox-input" type="checkbox">
-              <span class="type__checkbox-checkmark"></span>
-              <span class="type__checkbox-name">Паркинг</span>
-            </label>
-          </li>
-          <li class="selection-premises__type-item type__item">
-            <label class="container-checkboxes type__checkbox">
-              <input class="type__checkbox-input" type="checkbox">
-              <span class="type__checkbox-checkmark"></span>
-              <span class="type__checkbox-name">Кладовка</span>
-            </label>
-          </li>
-        </ul>
-      </fieldset>
+	<div class="container">
+		<h2 class="selection-premises__title">Подбор помещения по параметрам</h2>
+		<p class="selection-premises__description">Актуальную информацию по наличию и стоимости коммерческих помещений,
+			кладовок и машиномест вы можете напрямую в отделе продаж - 954-00-10</p>
+		<button class="selection-premises__options-button button button--transparent-grey js-popup" type="button"
+			data-id="options">Параметры (6)</button>
+		<form class="selection-premises__form selection-premises__form--none" action="#">
+			<fieldset class="selection-premises__type type">
+			<div class="selection-premises__fieldset-block">
+				<fieldset class="selection-premises__housing checkbox-square">
+					<legend class="selection-premises__housing-title checkbox-square__title legend">Корпус</legend>
+					<ul class="selection-premises__housing-list checkbox-square__list">
+						<li class="selection-premises__housing-item checkbox-square__item">
+							<label
+								class="selection-premises__housing-container checkbox-square__checkbox checkbox-square__checkbox--big">
+								<input class="checkbox-square__input" type="checkbox">
+								<span class="checkbox-square__checkmark checkbox-square__checkmark--big">1</span>
+							</label>
+						</li>
+						<li class="selection-premises__housing-item checkbox-square__item">
+							<label
+								class="selection-premises__housing-container checkbox-square__checkbox checkbox-square__checkbox--big">
+								<input class="checkbox-square__input" type="checkbox" checked="checked">
+								<span class="checkbox-square__checkmark checkbox-square__checkmark--big">2</span>
+							</label>
+						</li>
+					</ul>
+				</fieldset>
 
-      <div class="selection-premises__fieldset-block">
-        <fieldset class="selection-premises__housing checkbox-square">
-          <legend class="selection-premises__housing-title checkbox-square__title legend">Очередь</legend>
-          <ul class="selection-premises__housing-list checkbox-square__list">
-            <li class="selection-premises__housing-item checkbox-square__item">
-              <label
-                class="selection-premises__housing-container checkbox-square__checkbox checkbox-square__checkbox--big">
-                <input class="checkbox-square__input" type="checkbox">
-                <span class="checkbox-square__checkmark checkbox-square__checkmark--big">1</span>
-              </label>
-            </li>
-            <li class="selection-premises__housing-item checkbox-square__item">
-              <label
-                class="selection-premises__housing-container checkbox-square__checkbox checkbox-square__checkbox--big">
-                <input class="checkbox-square__input" type="checkbox" checked="checked">
-                <span class="checkbox-square__checkmark checkbox-square__checkmark--big">2</span>
-              </label>
-            </li>
-          </ul>
-        </fieldset>
+				<fieldset class="selection-premises__room checkbox-square">
+					<legend class="selection-premises__room-title checkbox-square__title legend">Количество комнат
+					</legend>
+					<ul class="selection-premises__room-list checkbox-square__list">
+						<li class="selection-premises__room-item checkbox-square__item">
+							<label
+								class="selection-premises__room-container checkbox-square__checkbox checkbox-square__checkbox--big">
+								<input class="checkbox-square__input" type="checkbox">
+								<span class="checkbox-square__checkmark checkbox-square__checkmark--big">Студия</span>
+							</label>
+						</li>
+						<li class="selection-premises__room-item checkbox-square__item">
+							<label
+								class="selection-premises__room-container checkbox-square__checkbox checkbox-square__checkbox--big">
+								<input class="checkbox-square__input" type="checkbox">
+								<span class="checkbox-square__checkmark checkbox-square__checkmark--big">1</span>
+							</label>
+						</li>
+						<li class="selection-premises__room-item checkbox-square__item">
+							<label
+								class="selection-premises__room-container checkbox-square__checkbox checkbox-square__checkbox--big">
+								<input class="checkbox-square__input" type="checkbox" checked="checked">
+								<span class="checkbox-square__checkmark checkbox-square__checkmark--big">2</span>
+							</label>
+						</li>
+						<li class="selection-premises__room-item checkbox-square__item">
+							<label
+								class="selection-premises__room-container checkbox-square__checkbox checkbox-square__checkbox--big">
+								<input class="checkbox-square__input" type="checkbox" checked="checked">
+								<span class="checkbox-square__checkmark checkbox-square__checkmark--big">2 евро</span>
+							</label>
+						</li>
+						<li class="selection-premises__room-item checkbox-square__item">
+							<label
+								class="selection-premises__room-container checkbox-square__checkbox checkbox-square__checkbox--big">
+								<input class="checkbox-square__input" type="checkbox">
+								<span class="checkbox-square__checkmark checkbox-square__checkmark--big">3</span>
+							</label>
+						</li>
+						<li class="selection-premises__room-item checkbox-square__item">
+							<label
+								class="selection-premises__room-container checkbox-square__checkbox checkbox-square__checkbox--big">
+								<input class="checkbox-square__input" type="checkbox">
+								<span class="checkbox-square__checkmark checkbox-square__checkmark--big">3 евро</span>
+							</label>
+						</li>
+						<li class="selection-premises__room-item checkbox-square__item">
+							<label
+								class="selection-premises__room-container checkbox-square__checkbox checkbox-square__checkbox--big">
+								<input class="checkbox-square__input" type="checkbox">
+								<span class="checkbox-square__checkmark checkbox-square__checkmark--big">4</span>
+							</label>
+						</li>
+					</ul>
+				</fieldset>
+			</div>
+		</form>
 
-        <fieldset class="selection-premises__room checkbox-square">
-          <legend class="selection-premises__room-title checkbox-square__title legend">Количество комнат</legend>
-          <ul class="selection-premises__room-list checkbox-square__list">
-            <!-- <li class="selection-premises__room-item checkbox-square__item">
-              <label
-                class="selection-premises__room-container checkbox-square__checkbox checkbox-square__checkbox--big">
-                <input class="checkbox-square__input" type="checkbox">
-                <span class="checkbox-square__checkmark checkbox-square__checkmark--big">Студия</span>
-              </label>
-            </li> -->
-            <li class="selection-premises__room-item checkbox-square__item">
-              <label
-                class="selection-premises__room-container checkbox-square__checkbox checkbox-square__checkbox--big">
-                <input class="checkbox-square__input" type="checkbox">
-                <span class="checkbox-square__checkmark checkbox-square__checkmark--big">1</span>
-              </label>
-            </li>
-            <li class="selection-premises__room-item checkbox-square__item">
-              <label
-                class="selection-premises__room-container checkbox-square__checkbox checkbox-square__checkbox--big">
-                <input class="checkbox-square__input" type="checkbox" checked="checked">
-                <span class="checkbox-square__checkmark checkbox-square__checkmark--big">2е</span>
-              </label>
-            </li>
-            <li class="selection-premises__room-item checkbox-square__item">
-              <label
-                class="selection-premises__room-container checkbox-square__checkbox checkbox-square__checkbox--big">
-                <input class="checkbox-square__input" type="checkbox" checked="checked">
-                <span class="checkbox-square__checkmark checkbox-square__checkmark--big">2</span>
-              </label>
-            </li>
-            <li class="selection-premises__room-item checkbox-square__item">
-              <label
-                class="selection-premises__room-container checkbox-square__checkbox checkbox-square__checkbox--big">
-                <input class="checkbox-square__input" type="checkbox">
-                <span class="checkbox-square__checkmark checkbox-square__checkmark--big">3е</span>
-              </label>
-            </li>
-            <!-- <li class="selection-premises__room-item checkbox-square__item">
-              <label
-                class="selection-premises__room-container checkbox-square__checkbox checkbox-square__checkbox--big">
-                <input class="checkbox-square__input" type="checkbox">
-                <span class="checkbox-square__checkmark checkbox-square__checkmark--big">3 евро</span>
-              </label>
-            </li> -->
-            <li class="selection-premises__room-item checkbox-square__item">
-              <label
-                class="selection-premises__room-container checkbox-square__checkbox checkbox-square__checkbox--big">
-                <input class="checkbox-square__input" type="checkbox">
-                <span class="checkbox-square__checkmark checkbox-square__checkmark--big">4е</span>
-              </label>
-            </li>
-          </ul>
-        </fieldset>
-      </div>
-    </form>
+		<div class="selection-premises__filter-result filter-result">
+			<p class="filter-result__conclusion legend">Найдено 243 помещения</p>
 
-    <div class="selection-premises__filter-result filter-result">
-      <p class="filter-result__conclusion legend">Найдено 243 помещения</p>
+			<table class="filter-result__table">
+				<tr class="filter-result__header">
+					<th class="filter-result__options">Тип</th>
+					<th class="filter-result__options">Комнатность</th>
+					<th class="filter-result__options">Площадь, кв.м</th>
+					<th class="filter-result__options">Корпус</th>
+					<th class="filter-result__options">Этаж</th>
+					<th class="filter-result__options filter-result__options--black">Стоимость руб.</th>
+					<th class="filter-result__options">Особенности</th>
+				</tr>
+				<tr class="filter-result__row">
+					<td class="filter-result__value">Жилое</td>
+					<td class="filter-result__value filter-result__value--scheme-icon">1</td>
+					<td class="filter-result__value">35,43</td>
+					<td class="filter-result__value">1</td>
+					<td class="filter-result__value">1</td>
+					<td class="filter-result__value">3 977 283</td>
+					<td class="filter-result__value">Отделка в подарок</td>
+				</tr>
+				<tr class="filter-result__row">
+					<td class="filter-result__value">Жилое</td>
+					<td class="filter-result__value filter-result__value--scheme-icon">1</td>
+					<td class="filter-result__value">37,46</td>
+					<td class="filter-result__value">2</td>
+					<td class="filter-result__value">2</td>
+					<td class="filter-result__value">по запросу</td>
+					<td class="filter-result__value">Отделка в подарок</td>
+				</tr>
+				<tr class="filter-result__row">
+					<td class="filter-result__value">Жилое</td>
+					<td class="filter-result__value filter-result__value--scheme-icon">1</td>
+					<td class="filter-result__value">35,39</td>
+					<td class="filter-result__value">2</td>
+					<td class="filter-result__value">4</td>
+					<td class="filter-result__value">по запросу</td>
+					<td class="filter-result__value">Отделка в подарок</td>
+				</tr>
+				<tr class="filter-result__row">
+					<td class="filter-result__value">Жилое</td>
+					<td class="filter-result__value filter-result__value--scheme-icon">1</td>
+					<td class="filter-result__value">37,62</td>
+					<td class="filter-result__value">1</td>
+					<td class="filter-result__value">2</td>
+					<td class="filter-result__value">3 977 283</td>
+					<td class="filter-result__value">Отделка в подарок</td>
+				</tr>
+				<tr class="filter-result__row">
+					<td class="filter-result__value">Жилое</td>
+					<td class="filter-result__value filter-result__value--scheme-icon">1</td>
+					<td class="filter-result__value">36,12</td>
+					<td class="filter-result__value">1</td>
+					<td class="filter-result__value">2</td>
+					<td class="filter-result__value">3 977 283</td>
+					<td class="filter-result__value">Отделка в подарок</td>
+				</tr>
+			</table>
+		</div>
+		<button class="selection-premises__more-button button button--transparent-red" type="button">Загрузить
+			еще</button>
 
-      <table class="filter-result__table">
-        <tr class="filter-result__header">
-          <th class="filter-result__options">Тип</th>
-          <th class="filter-result__options">
-            <button class="filter-result__button" type="button">Комнатность
-              <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H3V2H0V0ZM0 3H6V5H0V3ZM0 6H8V8H0V6Z"
-                  fill="#B2C0CD" />
-              </svg>
-            </button>
-          </th>
-          <th class="filter-result__options">
-            <button class="filter-result__button" type="button">Площадь, кв.м
-              <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H3V2H0V0ZM0 3H6V5H0V3ZM0 6H8V8H0V6Z"
-                  fill="#B2C0CD" />
-              </svg>
-            </button>
-          </th>
-          <th class="filter-result__options">Очередь</th>
-          <th class="filter-result__options">
-            <button class="filter-result__button" type="button">Этаж
-              <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H3V2H0V0ZM0 3H6V5H0V3ZM0 6H8V8H0V6Z"
-                  fill="#B2C0CD" />
-              </svg>
-            </button>
-          </th>
-          <th class="filter-result__options filter-result__options--black">
-            <button class="filter-result__button" type="button">Стоимость руб.
-              <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H3V2H0V0ZM0 3H6V5H0V3ZM0 6H8V8H0V6Z"
-                  fill="#00adef" />
-              </svg>
-            </button>
-          </th>
-          <th class="filter-result__options">Особенности</th>
-        </tr>
-        <tr class="filter-result__row">
-          <td class="filter-result__value">Жилое</td>
-          <td class="filter-result__value filter-result__value--scheme-icon">1</td>
-          <td class="filter-result__value">35,43</td>
-          <td class="filter-result__value">1</td>
-          <td class="filter-result__value">1</td>
-          <td class="filter-result__value">3 977 283</td>
-          <td class="filter-result__value">Отделка в подарок</td>
-        </tr>
-        <tr class="filter-result__row">
-          <td class="filter-result__value">Коммерческое</td>
-          <td class="filter-result__value filter-result__value--scheme-icon">1</td>
-          <td class="filter-result__value">37,46</td>
-          <td class="filter-result__value">2</td>
-          <td class="filter-result__value">2—17</td>
-          <td class="filter-result__value">по запросу</td>
-          <td class="filter-result__value">Отделка в подарок</td>
-        </tr>
-        <tr class="filter-result__row">
-          <td class="filter-result__value">Жилое</td>
-          <td class="filter-result__value filter-result__value--scheme-icon">1</td>
-          <td class="filter-result__value">35,39</td>
-          <td class="filter-result__value">2</td>
-          <td class="filter-result__value">4—17</td>
-          <td class="filter-result__value">по запросу</td>
-          <td class="filter-result__value">Отделка в подарок</td>
-        </tr>
-        <tr class="filter-result__row">
-          <td class="filter-result__value">Кладовка</td>
-          <td class="filter-result__value filter-result__value--scheme-icon">1</td>
-          <td class="filter-result__value">37,62</td>
-          <td class="filter-result__value">1</td>
-          <td class="filter-result__value">2—15</td>
-          <td class="filter-result__value">3 977 283</td>
-          <td class="filter-result__value">Отделка в подарок</td>
-        </tr>
-        <tr class="filter-result__row">
-          <td class="filter-result__value">Паркинг</td>
-          <td class="filter-result__value filter-result__value--scheme-icon">1</td>
-          <td class="filter-result__value">36,12</td>
-          <td class="filter-result__value">1</td>
-          <td class="filter-result__value">2</td>
-          <td class="filter-result__value">3 977 283</td>
-          <td class="filter-result__value">Отделка в подарок</td>
-        </tr>
-      </table>
-    </div>
-    <button class="selection-premises__more-button button button--transparent-red" type="button">Загрузить еще</button>
-
-    <div class="selection-premises__find-apartments">
-      <b class="selection-premises__find-apartments-heading">Не нашли нужного помещения?</b>
-      <p class="selection-premises__find-apartments-text">Скачайте полную версию каталога квартир</p>
-      <a href="images/cat.png" class="selection-premises__find-apartments-link button button--red" download>
-        Скачать XLS
-      </a>
-      <svg class="selection-premises__marker-red-icon marker-red-icon" width="70" height="50" viewBox="0 0 70 50">
-        <use xlink:href="icons/sprite.svg#icon-marker-red"></use>
-      </svg>
-    </div>
-  </div>
+		<div class="selection-premises__find-apartments">
+			<b class="selection-premises__find-apartments-heading">Не нашли нужного помещения?</b>
+			<p class="selection-premises__find-apartments-text">Скачайте полную версию каталога квартир</p>
+			<a href="images/cat.png" class="selection-premises__find-apartments-link button button--red" download>
+				Скачать XLS
+			</a>
+			<svg class="selection-premises__marker-red-icon marker-red-icon" width="70" height="50" viewBox="0 0 70 50">
+				<use xlink:href="icons/sprite.svg#icon-marker-red"></use>
+			</svg>
+		</div>
+	</div>
 </section>

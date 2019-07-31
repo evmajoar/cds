@@ -6,7 +6,7 @@
 		<div class="modal__content modal-options__content">
 			<h2 class="selection-premises__title modal-options__title">Подбор помещения по параметрам</h2>
 			<form class="selection-premises__form modal-options__form" action="#">
-				<fieldset class="selection-premises__type type">
+				<!-- <fieldset class="selection-premises__type type">
 					<legend class="visually-hidden">Тип помещения</legend>
 					<ul class="selection-premises__type-list type__list modal-options__type-list">
 						<li class="selection-premises__type-item type__item modal-options__type-item">
@@ -38,7 +38,7 @@
 							</label>
 						</li>
 					</ul>
-				</fieldset>
+				</fieldset> -->
 
 				<div class="selection-premises__fieldset-block modal-options__fieldset-block">
 					<fieldset class="selection-premises__housing checkbox-square">
@@ -65,25 +65,18 @@
 						<legend class="selection-premises__room-title checkbox-square__title legend">Количество комнат
 						</legend>
 						<ul class="selection-premises__room-list checkbox-square__list modal-options__room-list">
-							<!-- <li class="selection-premises__room-item checkbox-square__item modal-options__room-item">
+							<li class="selection-premises__room-item checkbox-square__item modal-options__room-item">
 								<label
 									class="selection-premises__room-container checkbox-square__checkbox checkbox-square__checkbox--big">
 									<input class="checkbox-square__input" type="checkbox">
 									<span class="checkbox-square__checkmark checkbox-square__checkmark--big">Студия</span>
 								</label>
-							</li> -->
+							</li>
 							<li class="selection-premises__room-item checkbox-square__item">
 								<label
 									class="selection-premises__room-container checkbox-square__checkbox checkbox-square__checkbox--big">
 									<input class="checkbox-square__input" type="checkbox">
 									<span class="checkbox-square__checkmark checkbox-square__checkmark--big">1</span>
-								</label>
-							</li>
-							<li class="selection-premises__room-item checkbox-square__item">
-								<label
-									class="selection-premises__room-container checkbox-square__checkbox checkbox-square__checkbox--big">
-									<input class="checkbox-square__input" type="checkbox" checked="checked">
-									<span class="checkbox-square__checkmark checkbox-square__checkmark--big">2е</span>
 								</label>
 							</li>
 							<li class="selection-premises__room-item checkbox-square__item">
@@ -96,23 +89,29 @@
 							<li class="selection-premises__room-item checkbox-square__item">
 								<label
 									class="selection-premises__room-container checkbox-square__checkbox checkbox-square__checkbox--big">
-									<input class="checkbox-square__input" type="checkbox">
-									<span class="checkbox-square__checkmark checkbox-square__checkmark--big">3е</span>
+									<input class="checkbox-square__input" type="checkbox" checked="checked">
+									<span class="checkbox-square__checkmark checkbox-square__checkmark--big">2 евро</span>
 								</label>
 							</li>
-							<!-- <li class="selection-premises__room-item checkbox-square__item">
-								<label
-									class="selection-premises__room-container checkbox-square__checkbox checkbox-square__checkbox--big">
-									<input class="checkbox-square__input" type="checkbox">
-									<span class="checkbox-square__checkmark checkbox-square__checkmark--big">3
-										евро</span>
-								</label>
-							</li> -->
 							<li class="selection-premises__room-item checkbox-square__item">
 								<label
 									class="selection-premises__room-container checkbox-square__checkbox checkbox-square__checkbox--big">
 									<input class="checkbox-square__input" type="checkbox">
-									<span class="checkbox-square__checkmark checkbox-square__checkmark--big">4е</span>
+									<span class="checkbox-square__checkmark checkbox-square__checkmark--big">3</span>
+								</label>
+							</li>
+							<li class="selection-premises__room-item checkbox-square__item">
+								<label
+									class="selection-premises__room-container checkbox-square__checkbox checkbox-square__checkbox--big">
+									<input class="checkbox-square__input" type="checkbox">
+									<span class="checkbox-square__checkmark checkbox-square__checkmark--big">3 евро</span>
+								</label>
+							</li>
+							<li class="selection-premises__room-item checkbox-square__item">
+								<label
+									class="selection-premises__room-container checkbox-square__checkbox checkbox-square__checkbox--big">
+									<input class="checkbox-square__input" type="checkbox">
+									<span class="checkbox-square__checkmark checkbox-square__checkmark--big">4</span>
 								</label>
 							</li>
 						</ul>
@@ -120,6 +119,8 @@
 				</div>
 				<button class="modal-options__choose-button button button--red" type="button">Подобрать</button>
 			</form>
+			<p class="modal-options__description">Актуальную информацию по наличию и стоимости коммерческих помещений,
+				кладовок и машиномест вы можете получить напрямую в отделе продаж - 954-00-10</p>
 		</div>
 	</div>
 </div>
@@ -137,7 +138,8 @@
 			<form class="modal__form" action="#">
 				<p class="modal__block-input">
 					<label class="visually-hidden" for="callback-number-input">Номер телефона</label>
-					<input class="modal-callback__input input" id="callback-number-input" type="tel" placeholder="+7 (910) 123-45-67">
+					<input class="modal-callback__input input" id="callback-number-input" type="tel"
+						placeholder="+7 (910) 123-45-67">
 				</p>
 				<button class="modal__button button--blue button js-popup" type="submit">Заказать
 					звонок</button>
@@ -187,7 +189,8 @@
 				</ul>
 				<p class="modal__block-input modal-showroom__block">
 					<label class="visually-hidden" for="showroom-number-input">Номер телефона</label>
-					<input class="modal-showroom__input input" id="showroom-number-input" type="tel" placeholder="+7 (910) 123-45-67">
+					<input class="modal-showroom__input input" id="showroom-number-input" type="tel"
+						placeholder="+7 (910) 123-45-67">
 				</p>
 				<button class="modal__button button--blue button js-popup" type="submit">Заказать
 					звонок</button>
@@ -210,7 +213,8 @@
 			<form class="modal__form" action="#">
 				<p class="modal__block-input">
 					<label class="visually-hidden" for="premium-finish-number-input">Номер телефона</label>
-					<input class="modal-callback__input input" id="premium-finish-number-input" type="tel" placeholder="+7 (910) 123-45-67">
+					<input class="modal-callback__input input" id="premium-finish-number-input" type="tel"
+						placeholder="+7 (910) 123-45-67">
 				</p>
 				<button class="modal__button button--blue button js-popup" type="submit">Заказать
 					звонок</button>
@@ -228,7 +232,7 @@
 		<div class="modal__content modal-like-layout__modal-content">
 			<div class="modal-like-layout__item">
 				<p class="modal-like-layout__box">
-					<img class="modal-like-layout__img" src="images/flat.svg" alt="Планировка квартиры">
+					<img class="modal-like-layout__img" src="images/flat.jpg" alt="Планировка квартиры">
 					<button class="modal-like-layout__zoom-button js-popup" data-id="flat" type="button"><span
 							class="visually-hidden">Увеличить изображение</span></button>
 				</p>
@@ -265,7 +269,8 @@
 			<form class="modal__form" action="#">
 				<p class="modal__block-input">
 					<label class="visually-hidden" for="fill-form-number-input">Номер телефона</label>
-					<input class="modal-callback__input input" id="fill-form-number-input" type="tel" placeholder="+7 (910) 123-45-67">
+					<input class="modal-callback__input input" id="fill-form-number-input" type="tel"
+						placeholder="+7 (910) 123-45-67">
 				</p>
 				<button class="modal__button button--blue button js-popup" type="submit">Оставить заявку</button>
 			</form>
@@ -286,7 +291,8 @@
 			<form class="modal__form" action="#">
 				<p class="modal__block-input">
 					<label class="visually-hidden" for="approval-number-input">Номер телефона</label>
-					<input class="modal-callback__input input" id="approval-number-input" type="tel" placeholder="+7 (910) 123-45-67">
+					<input class="modal-callback__input input" id="approval-number-input" type="tel"
+						placeholder="+7 (910) 123-45-67">
 				</p>
 				<button class="modal__button button--blue button js-popup" type="submit">Оставить заявку</button>
 			</form>
@@ -377,7 +383,8 @@
 			<form class="modal__form" action="#">
 				<p class="modal__block-input">
 					<label class="visually-hidden" for="promotions-number-input">Номер телефона</label>
-					<input class="modal-callback__input input" id="promotions-number-input" type="tel" placeholder="+7 (910) 123-45-67">
+					<input class="modal-callback__input input" id="promotions-number-input" type="tel"
+						placeholder="+7 (910) 123-45-67">
 				</p>
 				<button class="modal__button button--blue button js-popup" type="submit">Оставить заявку</button>
 			</form>
@@ -565,7 +572,7 @@
 		<div class="modal__content modal-studio__modal-content">
 			<div class="modal-studio__item">
 				<p class="modal-studio__box">
-					<img class="modal-studio__img" src="images/flat.svg" alt="Планировка квартиры">
+					<img class="modal-studio__img" src="images/flat.jpg" alt="Планировка квартиры">
 					<button class="modal-studio__zoom-button js-popup" data-id="flat" type="button"><span
 							class="visually-hidden">Увеличить изображение</span></button>
 				</p>
@@ -590,7 +597,7 @@
 							<use xlink:href="icons/sprite.svg#icon-present"></use>
 						</svg>
 						Отделка в подарок!</p>
-					
+
 					<form class="modal__form modal-studio__form" action="#">
 						<p class="modal__block-input">
 							<label class="visually-hidden" for="studio-number-input">Номер телефона</label>
@@ -607,13 +614,13 @@
 
 <!-- Схема планировки -->
 <div id="flat" class="modal modal-flat">
-		<div class="modal__dialog modal-flat__dialog">
-			<button class="modal__close close close--grey" type="button">
-				<span class="visually-hidden">Закрыть модальное окно</span>
-			</button>
-			<div class="modal__content">
-				<h2 class="visually-hidden">Схема планировки</h2>
-				<img src="images/flat-big.png" alt="Схема планировки">
-			</div>
+	<div class="modal__dialog modal-flat__dialog">
+		<button class="modal__close close close--grey" type="button">
+			<span class="visually-hidden">Закрыть модальное окно</span>
+		</button>
+		<div class="modal__content">
+			<h2 class="visually-hidden">Схема планировки</h2>
+			<img src="images/flat-big.jpg" alt="Схема планировки">
 		</div>
 	</div>
+</div>

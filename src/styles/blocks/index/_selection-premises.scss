@@ -6,11 +6,6 @@
   position: relative;
   padding-bottom: 35px;
 
-  // &:after{
-  //   @include pseudo;
-
-  // }
-
   @include breakpoint(md) {
     padding-bottom: 70px;
   }
@@ -18,10 +13,21 @@
 
 .selection-premises__title {
   @include titleH2;
-  margin-bottom: 24px;
+  margin-bottom: 10px;
   text-align: left;
 
   @include breakpoint(sm) {
+    text-align: center;
+  }
+}
+
+.selection-premises__description{
+  margin-bottom: 24px;
+  max-width: 600px;
+  font-family: $UbuntuMedium;
+  text-align: left;
+  @include breakpoint(sm) {
+    margin: 0 auto 24px;
     text-align: center;
   }
   @include breakpoint(lg) {
@@ -35,7 +41,7 @@
   @media (min-width: 360px) and(max-width: 576px){
     width: 100%;
     max-width: 155px;
-    margin: 0 auto;
+    margin: 0 auto 20px;
   }
 
   @include breakpoint(sm) {
@@ -317,5 +323,11 @@
   top: -15px;
   @include breakpoint(lg) {
     display: block;
+  }
+}
+
+.filter-result__button{
+  &:hover{
+    color: $red;
   }
 }

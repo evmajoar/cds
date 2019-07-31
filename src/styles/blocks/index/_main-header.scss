@@ -17,11 +17,10 @@
   width: 100%;
   color: $white;
   text-align: center;
-  bottom: none;
   background-color: $lightBlue;
 }
 
-.main-header__advertising-banner--close{
+.main-header__advertising-banner--close {
   display: none;
 }
 
@@ -45,7 +44,7 @@
 }
 
 .main-header__advertising-close {
-  right: 8px;
+  right: 15px;
   top: 50%;
   transform: translateY(-50%);
   width: 12px;
@@ -53,19 +52,11 @@
 }
 
 .main-header__navigation {
-  display: grid;
   align-items: center;
-  grid-template-columns: 120px auto 35px;
-  // display: flex;
-  // align-items: center;
   padding: 15px 0 25px;
-
-  @include breakpoint(sm) {
-    grid-template-columns: 220px auto 35px;
-  }
+  display: flex;
 
   @include breakpoint(lg) {
-    grid-template-columns: 35px 215px auto;
     padding: 30px 0 20px;
   }
 }
@@ -74,6 +65,7 @@
   height: 100%;
   display: flex;
   align-content: center;
+
   @include breakpoint(lg) {
     margin-left: 25px;
   }
@@ -123,7 +115,7 @@
 
   &:after {
     @include pseudo;
-    top: 45%;
+    top: 31%;
     right: 47%;
     width: 6px;
     height: 6px;
@@ -137,8 +129,10 @@
   font-size: 10px;
   color: $lightBlue;
   text-transform: uppercase;
+
   &:hover {
     color: #009ed8;
+
     @include breakpoint(lg) {
       color: $white;
       background-color: #d6251f;
@@ -147,6 +141,7 @@
 
   &:active {
     color: #008abd;
+
     @include breakpoint(lg) {
       color: $white;
       background-color: #d6251f;
@@ -165,19 +160,28 @@
 }
 
 .main-header__burger-button {
+  margin-left: auto;
+  height: 21px;
+
+  @include breakpoint(sm) {
+    margin-left: 0;
+  }
+
   @include breakpoint(lg) {
-    grid-column: 1 / 2;
-    grid-row: 1 / 2;
+    order: -1;
   }
 }
 
 .main-header__banner {
   padding: 60px 0 35px;
   overflow-x: hidden;
-  background-image: url($imageDir +'header-bg-mob.jpg');
+  // background-image: url($imageDir +'header-bg-mob.jpg');
+  background-image: url($imageDir +'header-bg-mob1.jpg');
   background-color: #6d98c0;
   background-repeat: no-repeat;
-  background-position: top right;
+  // background-position: top right;
+  background-position: center right;
+  background-size: cover;
 
   @include breakpoint(sm) {
     background-image: url($imageDir +'header-bg.jpg');
@@ -247,8 +251,6 @@
   }
 
   @include breakpoint(sm) {
-    // width: auto;
-    // align-self: flex-start;
     justify-self: flex-start;
     padding: 12px 75px 10px 75px;
   }
@@ -265,7 +267,7 @@
   position: relative;
   margin: 0 -30px;
 
-  @media (min-width: 360px) and(max-width: 576px){
+  @media (min-width: 360px) and(max-width: 576px) {
     width: 320px;
     margin: 0;
     margin-left: 15px;
@@ -327,7 +329,8 @@
   &:nth-child(odd) {
     margin-left: auto;
   }
-  &:after{
+
+  &:after {
     @include pseudo;
     top: 0;
     left: 0;
@@ -338,11 +341,13 @@
     transform-origin: left;
     transition: all .5s;
   }
-  &:hover{
-    &:after{
+
+  &:hover {
+    &:after {
       width: 100%;
     }
-    .main-header__sales-text{
+
+    .main-header__sales-text {
       color: $white;
     }
   }
@@ -356,12 +361,15 @@
   color: $red;
 }
 
-.main-header__menu-close{
+.main-header__menu-close {
   top: 20px;
   right: 20px;
 }
 
-.main-header__logo{
+.main-header__logo {
+  display: block;
+  cursor: pointer;
+
   @include breakpoint(lg) {
     margin-left: 25px;
   }

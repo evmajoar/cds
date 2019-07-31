@@ -44,6 +44,7 @@
     }
     @include breakpoint(lg) {
       width: 320px;
+      padding: 5px;
     }
 
     &:not(:last-child) {
@@ -73,7 +74,7 @@
     padding: 32px 25px 25px;
   }
   &:hover{
-    box-shadow: 0 1px 8px 3px rgba(0,14,63,.25);
+    box-shadow: 0 1px 5px 1px rgba(0,14,63,.25);
     .icon-arrow-big{
       animation: arrow .5s ease-out;
       fill: $white;
@@ -203,13 +204,16 @@
 .discounts__carousel-wrapper{
   position: relative;
   width: 100%;
+  @include breakpoint(lg) {
+    width: 1010px;
+  }
 }
 
 .discounts__carousel-prev {
   position: absolute;
   left: -25px;
   @include breakpoint(lg) {
-    left: -55px;
+    left: -40px;
   }
 }
 
@@ -217,7 +221,7 @@
   position: absolute;
   right: -25px;
   @include breakpoint(lg) {
-    right: -55px;
+    right: -40px;
   }
 }
 
