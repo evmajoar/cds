@@ -1,0 +1,92 @@
+<section class="calculator-mortgages">
+  <div class="container">
+    <h2 class="calculator-mortgages__title">Калькулятор ипотеки</h2>
+    <div class="calculator-mortgages__content">
+      <form class="calculator-mortgages__form" action="#">
+        <ul class="calculator-mortgages__form-list">
+          <li class="calculator-mortgages__form-item">
+            <p class="calculator-mortgages__form-field">
+              <label class="calculator-mortgages__form-price" for="mortgages-price">Стоимость, руб.</label>
+              <input class="calculator-mortgages__form-input" id="mortgages-price" type="number" placeholder="2 176 231">
+            </p>
+            <p class="calculator-mortgages__form-range form-range">
+              <label class="visually-hidden" for="range">Диапазон</label>
+              <input class="range" id="range" type="range" min="1" max="100" value="50">
+            </p>
+          </li>
+          <li class="calculator-mortgages__form-item">
+            <p class="calculator-mortgages__form-field">
+              <label class="calculator-mortgages__form-price" for="initial-fee">Первоначальный взнос, руб.</label>
+              <input class="calculator-mortgages__form-input initial-fee-input" id="initial-fee" type="number">
+              <span class="calculator-mortgages__form-initial-fee">24%</! </p> <p
+                  class="calculator-mortgages__form-range form-range">
+                <label class="visually-hidden" for="range">Диапазон</label>
+                <input class="range" id="range" type="range" min="1" max="100" value="40">
+            </p>
+          </li>
+          <li class="calculator-mortgages__form-item calculator-mortgages__form-item--small">
+            <p class="calculator-mortgages__form-field">
+              <label class="calculator-mortgages__form-price" for="lending">Срок кредитования, годы</label>
+              <input class="calculator-mortgages__form-input" id="lending" type="number" placeholder="522 295">
+            </p>
+            <p class="calculator-mortgages__form-range form-range">
+              <label class="visually-hidden" for="range">Диапазон</label>
+              <input class="range" id="range" type="range" min="1" max="100" value="50">
+            </p>
+          </li>
+          <li class="calculator-mortgages__form-item calculator-mortgages__form-item--small">
+            <p class="calculator-mortgages__form-field">
+              <label class="calculator-mortgages__form-price" for="age">Возраст в годах</label>
+              <input class="calculator-mortgages__form-input" id="age" type="number" placeholder="48">
+            </p>
+            <p class="calculator-mortgages__form-range form-range">
+              <label class="visually-hidden" for="range">Диапазон</label>
+              <input class="range" id="range" type="range" min="1" max="100" value="50">
+            </p>
+          </li>
+        </ul>
+      </form>
+  
+      <div class="calculator-mortgages__banks">
+        <div class="calculator-mortgages__banks-info">
+          <img class="calculator-mortgages__banks-img" src="images/banks.jpg" alt="Банки">
+          <p class="calculator-mortgages__banks-offers">
+            от 7,5%
+            <span class="calculator-mortgages__banks-result">123 предложения</span>
+          </p>
+        </div>
+        <table class="calculator-mortgages__banks-table">
+          <tbody>
+            <tr class="calculator-mortgages__table-row">
+              <th class="visually-hidden">Scroll</th>
+              <th class="calculator-mortgages__table-header">В банке,<span class="calculator-mortgages__table-currency">руб.</span></th>
+              <th class="calculator-mortgages__table-header">С нами,<span class="calculator-mortgages__table-currency">руб.</span></th>
+            </tr>
+            <tr class="calculator-mortgages__table-row">
+              <th class="calculator-mortgages__table-options">Выплата в месяц</th>
+              <td class="calculator-mortgages__table-value">23 680</td>
+              <td class="calculator-mortgages__table-value">20 310</td>
+            </tr>
+            <tr class="calculator-mortgages__table-row">
+              <th class="calculator-mortgages__table-options">Сумма ипотеки</td>
+              <td class="calculator-mortgages__table-value">23,89 млн</td>
+              <td class="calculator-mortgages__table-value">18,89 млн</td>
+            </tr>
+            <tr class="calculator-mortgages__table-row">
+              <th class="calculator-mortgages__table-options">Переплата</th>
+              <td class="calculator-mortgages__table-value">13,89 млн</td>
+              <td class="calculator-mortgages__table-value">9,89 млн</td>
+            </tr>
+            <tr class="calculator-mortgages__table-row">
+              <th class="calculator-mortgages__table-options">Экономия</th>
+              <td class="visually-hidden">-</td>
+              <td class="calculator-mortgages__table-value calculator-mortgages__table-value--red">5 млн</td>
+            </tr>
+          </tbody>
+        </table>
+        <button class="calculator-mortgages__button calculator-mortgages__button--mobile button button--red js-popup" type="button" data-id="approval">Предварительное одобрение</button>
+      </div>
+    </div>
+    <button class="calculator-mortgages__button calculator-mortgages__button--desktop button button--red js-popup" type="button" data-id="approval">Предварительное одобрение</button>
+  </div>
+</section>
