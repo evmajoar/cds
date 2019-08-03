@@ -12,7 +12,7 @@
   @include titleH2;
   margin-bottom: 25px;
 
-  @include breakpoint(md) {
+  @include breakpoint(sm) {
     text-align: center;
   }
 
