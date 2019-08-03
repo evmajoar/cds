@@ -53,13 +53,6 @@
   border-radius: 4px;
   overflow: hidden;
 
-  // &:after{
-  //   @include pseudo;
-  //   background-color: #00adef;
-  //   height: 2px;
-  //   min-width: 1px;
-  //   width: 50%;
-  // }
   &:not(:last-child) {
     margin-bottom: 15px;
   }
@@ -124,7 +117,7 @@
 }
 .range::-ms-track {
   width: 100%;-bottom-left-radius: 50px;
-  background: transparent; /* Скрывает слайдер, чтобы можно было добавить собственные стили. */
+  background: transparent;
   border-color: transparent;
   color: transparent;
 }
@@ -167,20 +160,6 @@
   cursor: pointer;
 }
 
-
-
-
-// input[type=range] {
-// -webkit-appearance: none;
-// appearance: none;
-// width: 100%;
-// height: 2px;
-// padding: 0;
-// // box-shadow: inset 0 0 0 2px #2D7CFA;
-// // background: #AD020D;
-// // overflow: hidden;
-// }
-
 // /* Линия-ндикатор для Firefox */
 input[type=range]::-moz-range-track {
   background: none;
@@ -190,51 +169,6 @@ input[type=range]::-webkit-range-track {
   background: none;
   border: none;
 }
-
-// /* ползунок в Firefox */
-
-// input[type=range]::-moz-range-thumb {
-// -moz-appearance: none;
-// width: 20px;
-// height: 20px;
-// border-radius: 70%/30%;
-// border: 2px solid #818181;
-// box-shadow:
-// -13px 0 #4A0101, -26px 0 #4A0101, -39px 0 #4A0101,
-// -52px 0 #4A0101, -65px 0 #4A0101, -78px 0 #4A0101,
-// -91px 0 #4A0101, -104px 0 #4A0101, -117px 0 #4A0101,
-// -130px 0 #4A0101, -143px 0 #4A0101, -156px 0 #4A0101,
-// -169px 0 #4A0101, -182px 0 #4A0101, -195px 0 #4A0101,
-// -208px 0 #4A0101, -221px 0 #4A0101, -234px 0 #4A0101,
-// -247px 0 #4A0101, -260px 0 #4A0101, -273px 0 #4A0101,
-// -286px 0 #4A0101, -299px 0 #4A0101, -312px 0 #4A0101,
-// -325px 0 #4A0101, -338px 0 #4A0101, -351px 0 #4A0101,
-// -364px 0 #4A0101, -377px 0 #4A0101, -390px 0 #4A0101,
-// -403px 0 #4A0101, -416px 0 #4A0101, -420px 0 #4A0101;
-// }
-
-// /* ползунок в Хроме */
-
-// input[type=range]::-webkit-slider-thumb {
-// -webkit-appearance: none;
-// width:20px;
-// height:20px;
-// border-radius: 70%/30%;
-// border: 2px solid #818181;
-// background: #fff;
-// box-shadow:
-// -13px 0 #4A0101, -26px 0 #4A0101, -39px 0 #4A0101,
-// -52px 0 #4A0101, -65px 0 #4A0101, -78px 0 #4A0101,
-// -91px 0 #4A0101, -104px 0 #4A0101, -117px 0 #4A0101,
-// -130px 0 #4A0101, -143px 0 #4A0101, -156px 0 #4A0101,
-// -169px 0 #4A0101, -182px 0 #4A0101, -195px 0 #4A0101,
-// -208px 0 #4A0101, -221px 0 #4A0101, -234px 0 #4A0101,
-// -247px 0 #4A0101, -260px 0 #4A0101, -273px 0 #4A0101,
-// -286px 0 #4A0101, -299px 0 #4A0101, -312px 0 #4A0101,
-// -325px 0 #4A0101, -338px 0 #4A0101, -351px 0 #4A0101,
-// -364px 0 #4A0101, -377px 0 #4A0101, -390px 0 #4A0101,
-// -403px 0 #4A0101, -416px 0 #4A0101, -420px 0 #4A0101;
-// }
 
 .calculator-mortgages__banks {
   max-width: 425px;
@@ -313,14 +247,6 @@ input[type=range]::-webkit-range-track {
     td {
       padding-top: 12px;
     }
-
-    // &:after{
-    //   @include pseudo;
-    //   left: 0;
-    //   width: 100%;
-    //   height: 1px;
-    //   background-color: #d3dfeb;
-    // }
   }
 }
 
