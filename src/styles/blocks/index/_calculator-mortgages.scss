@@ -17,6 +17,10 @@
 .calculator-mortgages__title {
   @include titleH2;
   margin-bottom: 20px;
+  align-self: flex-start;
+  @include breakpoint(sm) {
+    align-self: center;
+  }
 }
 
 .calculator-mortgages__content{
