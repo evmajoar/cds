@@ -107,13 +107,6 @@
   }
 }
 
-// .form-range {
-//   position: relative;
-//   display: flex;
-//   width: 99.8%;
-//   margin-top: -3px;
-// }
-
 .calculator-mortgages__form-range{
   position: relative;
   display: flex;
@@ -197,7 +190,7 @@ input[type=range]::-webkit-range-track {
   border: none;
 }
 
-.form-range__track{
+.calculator-mortgages__form-range-track{
   position: absolute;
   bottom: -2px;
   left: 1px;
