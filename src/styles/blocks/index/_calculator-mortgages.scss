@@ -110,82 +110,118 @@
 // .form-range {
 //   position: relative;
 //   display: flex;
+//   width: 99.8%;
 //   margin-top: -3px;
 // }
 
-// .range {
-//   -webkit-appearance: none;
-//   width: 100%;
-//   height: 2px;
-//   background-color: #00adef;
-//   border-bottom-right-radius: 50px;
-//   border-bottom-left-radius: 50px;
-// }
-// .range::-ms-track {
-//   width: 100%;-bottom-left-radius: 50px;
-//   background: transparent;
-//   border-color: transparent;
-//   color: transparent;
-// }
-
-// .range::-webkit-slider-thumb {
-//   -webkit-appearance: none;
-//   appearance: none;
-//   margin-top: 5px;
-//   width: 30px;
-//   height: 30px;
-//   background-image: url($imageDir + 'oval.svg');
-//   border-radius: 50%;
-//   background-size: cover;
-//   background-repeat: no-repeat;
-//   cursor: pointer;
-// }
-
-// .range::-moz-range-thumb {
-//   margin-top: 7px;
-//   width: 30px;
-//   height: 30px;
-//   background-color: transparent;
-//   border: none;
-//   background-image: url($imageDir + 'oval.svg');
-//   border-radius: 50%;
-//   background-size: cover;
-//   background-repeat: no-repeat;
-//   cursor: pointer;
-// }
-
-// .range::-moz-range-track {
-//   -moz-appearance: none;
-//   margin-top: 5px;
-//   width: 30px;
-//   height: 30px;
-//   background-image: url($imageDir + 'oval.svg');
-//   border-radius: 50%;
-//   background-size: cover;
-//   background-repeat: no-repeat;
-//   cursor: pointer;
-// }
-
-// // /* Линия-ндикатор для Firefox */
-// input[type=range]::-moz-range-track {
-//   background: none;
-//   border: none;
-// }
-// input[type=range]::-webkit-range-track {
-//   background: none;
-//   border: none;
-// }
-
-
-.calculator-mortgages__form-range {
+.calculator-mortgages__form-range{
   position: relative;
-  width: 50%;
-  height: 2px;
-  margin-top: -2px;
-  margin-right: 2px;
-  border-bottom-left-radius: 75px;
-  background-color: $lightBlue;
+  display: flex;
+  width: 99.8%;
+  margin-top: -4px;
 }
+
+.range {
+  padding-top: 2px;
+  -webkit-appearance: none;
+  width: 100%;
+  height: 2px;
+  z-index: 2;
+  border-bottom-right-radius: 50px;
+  border-bottom-left-radius: 50px;
+}
+.range::-ms-track {
+  width: 100%;-bottom-left-radius: 50px;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+
+.range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  // margin-top: 6px;
+  width: 14px;
+  height: 14px;
+  // background-image: url($imageDir + 'oval.svg');
+  background-color: $white;
+  border: 2px solid $lightBlue;
+  // box-shadow: 0 2px 8px rgba(0, 36, 50, 0.32);
+  z-index: 2;
+  border-radius: 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.range::-moz-range-thumb {
+  // margin-top: 6px;
+  width: 14px;
+  height: 14px;
+  // background-color: transparent;
+  border: none;
+  // background-image: url($imageDir + 'oval.svg');
+  background-color: $white;
+  border: 2px solid $lightBlue;
+  // box-shadow: 0 2px 8px rgba(0, 36, 50, 0.32);
+  z-index: 2;
+  border-radius: 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.range::-moz-range-track {
+  -moz-appearance: none;
+  // margin-top: 6px;
+  width: 14px;
+  height: 14px;
+  // background-image: url($imageDir + 'oval.svg');
+  background-color: $white;
+  border: 2px solid $lightBlue;
+  // box-shadow: 0 2px 8px rgba(0, 36, 50, 0.32);
+  z-index: 2;
+  border-radius: 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+// /* Линия-ндикатор для Firefox */
+input[type=range]::-moz-range-track {
+  background: none;
+  border: none;
+}
+input[type=range]::-webkit-range-track {
+  background: none;
+  border: none;
+}
+
+.form-range__track{
+  position: absolute;
+  bottom: -2px;
+  left: 1px;
+  z-index: 1;
+  display: block;
+  width: 48%;
+  max-width: 100%;
+  height: 2px;
+  background-color: $lightBlue;
+  // border-radius: 4px;
+  border-bottom-left-radius: 75px;
+  overflow: hidden;
+}
+
+
+// .calculator-mortgages__form-range {
+//   position: relative;
+//   width: 50%;
+//   height: 2px;
+//   margin-top: -2px;
+//   margin-right: 2px;
+//   border-bottom-left-radius: 75px;
+//   background-color: $lightBlue;
+// }
 
 
 
@@ -368,4 +404,135 @@
   @include breakpoint(lg) {
     display: block;
   }
+}
+
+
+
+
+
+
+
+
+
+
+
+.result__range-wrapper {
+  display: block;
+  margin-top: 28px;
+  position: relative;
+  width: 100%;
+}
+
+.result__range {
+  background: 0 0;
+  height: 6px;
+  position: relative;
+  webkit-appearance: none;
+  width: 100%;
+  z-index: 2;
+}
+
+.result__range::-webkit-slider-thumb {
+  background: #83c550;
+  border: 0;
+  border-radius: 50%;
+  cursor: ew-resize;
+  height: 10px;
+  margin-top: -3px;
+  transition: background .15s linear .15s, -webkit-transform .15s linear;
+  transition: transform .15s linear, background .15s linear .15s, -webkit-transform .15s linear;
+  transition: transform .15s linear, background .15s linear .15s;
+  webkit-appearance: none;
+  webkit-transition: background .15s linear .15s, -webkit-transform .15s linear;
+  width: 10px;
+  z-index: 2;
+}
+
+.result__range::-webkit-slider-thumb:active,
+.result__range::-webkit-slider-thumb:hover {
+  background: #3058fe;
+  transform: scale(1.5);
+  webkit-transform: scale(1.5);
+}
+
+.result__range::-webkit-slider-runnable-track {
+  border: 1px solid #d1d1d1;
+  border-radius: 4px;
+  cursor: pointer;
+  height: 6px;
+  width: 100%;
+}
+
+.result__range::-moz-range-thumb {
+  background: #83c550;
+  border: 0;
+  border-radius: 50%;
+  cursor: ew-resize;
+  height: 10px;
+  transition: background .15s linear .15s, -webkit-transform .15s linear;
+  transition: transform .15s linear, background .15s linear .15s, -webkit-transform .15s linear;
+  transition: transform .15s linear, background .15s linear .15s;
+  webkit-transition: background .15s linear .15s, -webkit-transform .15s linear;
+  width: 10px;
+}
+
+.result__range::-moz-range-thumb:active,
+.result__range::-moz-range-thumb:hover {
+  background: #3058fe;
+  transform: scale(1.5);
+}
+
+.result__range::-moz-range-track {
+  background: 0 0;
+  border: 1px solid #d1d1d1;
+  border-radius: 4px;
+  cursor: pointer;
+  height: 4px;
+  width: 100%;
+}
+
+.result__range::-ms-thumb {
+  background: #83c550;
+  border: none;
+  border-radius: 0;
+  cursor: pointer;
+  height: 10px;
+  transition: background .15s linear .15s, -webkit-transform .15s linear;
+  transition: transform .15s linear, background .15s linear .15s, -webkit-transform .15s linear;
+  transition: transform .15s linear, background .15s linear .15s;
+  webkit-transition: background .15s linear .15s, -webkit-transform .15s linear;
+  width: 10px;
+}
+
+.result__range::-ms-thumb:active,
+.result__range::-ms-thumb:hover {
+  background: #3058fe;
+  transform: scale(1.5);
+}
+
+.result__range::-ms-track {
+  background: 0 0;
+  border: 1px solid #d1d1d1;
+  border-radius: 4px;
+  color: transparent;
+  cursor: pointer;
+  height: 6px;
+  position: relative;
+}
+
+.result__track {
+  background-color: transparent;
+  background-image: linear-gradient(-45deg, transparent 49.9%, #8b8b8b 49.9%, #8b8b8b 60%, transparent 60%), linear-gradient(-45deg, #8b8b8b 10%, transparent 10%);
+  background-repeat: repeat;
+  background-size: 4px 4px;
+  border-radius: 4px;
+  display: block;
+  height: 5px;
+  left: 1px;
+  max-width: 100% !important;
+  overflow: hidden;
+  position: absolute;
+  top: 9px;
+  width: 10%;
+  z-index: 1;
 }
