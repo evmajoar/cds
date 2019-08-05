@@ -1,0 +1,172 @@
+@import '../../helpers/variables';
+@import '../../helpers/mixins';
+
+
+.residential-complexes {
+  padding-bottom: 10px;
+  @include breakpoint(md) {
+    padding-bottom: 40px;
+  }
+  @include breakpoint(lg) {
+    padding-bottom: 70px;
+  }
+}
+
+.residential-complexes__title {
+  @include titleH2;
+  margin-bottom: 10px;
+}
+
+.residential-complexes__button{
+  align-self: flex-start;
+  margin-bottom: 25px;
+  text-transform: uppercase;
+  font-size: 13px;
+  font-family: $UbuntuMedium;
+  color: $lightBlue;
+  &:hover{
+    .residential-complexes__icon-arrow-big{
+      animation: arrow .5s ease-out;
+    }
+  }
+}
+
+.residential-complexes__icon-arrow-big{
+  margin-left: 10px;
+  vertical-align: text-top;
+  fill: $lightBlue;
+}
+
+.residential-complexes__list{
+  align-self: center;
+  max-width: 320px;
+  @include breakpoint(md) {
+    display: flex;
+    align-self: center;
+    flex-wrap: wrap;
+    max-width: 660px;
+  }
+  @include breakpoint(lg) {
+    max-width: 100%;
+  }
+}
+
+.residential-complexes__item{
+  &:nth-child(odd){
+    @include breakpoint(md) {
+      margin-right: 15px;
+    }
+    @include breakpoint(lg) {
+      margin-right: 0;
+    }
+  }
+  &:not(:last-child){
+    margin-bottom: 12px;
+    @include breakpoint(lg) {
+      margin-bottom: 0;
+      margin-right: 15px;
+    }
+  }
+  &:last-child{
+    .residential-complexes__item-table{
+      margin-bottom: 18px;
+    }
+  }
+}
+
+.residential-complexes__item-link{
+  display: block;
+  padding: 0 20px;
+  border-radius: 4px;
+  border: 1px solid #d2deec;
+  &:hover{
+    box-shadow: 0 0 39px -4px rgba(0,0,0,.28);
+    .residential-complexes__item-icon-arrow-big{
+      animation: arrow .5s ease-out;
+    }
+    .residential-complexes__item-img{
+      transform: scale(1.1);
+    }
+  }
+}
+
+.residential-complexes__item-img-block{
+  position: relative;
+  margin: 0 -20px;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+.residential-complexes__item-img{
+  display: block;
+  transition: all .5s;
+}
+
+.residential-complexes__item-present{
+  position: absolute;
+  bottom: 15px;
+  z-index: 1;
+  padding: 4px 0;
+  padding-left: 20px;
+  padding-right: 10px;
+  color: $white;
+  background-color: $lightBlue;
+  &:after{
+    @include pseudo;
+    top: 0;
+    right: -15px;
+    transform: skew(-28.5deg);
+    z-index: -1;
+    width: 30px;
+    height: 100%;
+    background-color: $lightBlue;
+  }
+}
+
+.residential-complexes__item-title{
+  margin-bottom: 5px;
+  font-family: $UbuntuMedium;
+  font-size: 17px;
+}
+
+.residential-complexes__item-address{
+  margin-bottom: 20px;
+  font-size: 13px;
+  color: $grey;
+}
+
+.residential-complexes__item-table{
+  width: 100%;
+  margin-bottom: 45px;
+  font-size: 13px; 
+}
+
+.residential-complexes__table-options{
+  font-weight: normal;
+  color: $grey;
+}
+
+.residential-complexes__table-value{
+  font-family: $UbuntuMedium;
+  color: $lightBlack;
+  text-align: right;
+}
+
+.residential-complexes__price{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  margin: 0 -20px;
+  border-top: 1px solid #d2deec;
+}
+
+.residential-complexes__numeral{
+  font-family: $UbuntuMedium;
+  font-size: 13px;
+  color: $lightBlue;
+}
+
+.residential-complexes__item-icon-arrow-big{
+  fill: $lightBlue;
+}

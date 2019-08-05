@@ -35,10 +35,9 @@
     bottom: 0;
     right: 0;
     z-index: -1;
-    clip-path: polygon(100% 0, 100% 0, 100% 100%, 0 100%);
     width: 172px;
     height: 300px;
-    background: #00adef;
+    background-image: url($imageDir + 'block-blue.png');
   }
 }
 
