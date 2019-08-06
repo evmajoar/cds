@@ -229,19 +229,27 @@ function assemblySvgSprites() {
 
 /* RUN BUILD */
 exports.cleanDirectory = cleanDirectory;
+exports.oi = optimizeImages;
 
 const build = gulp.series(cleanDirectory, gulp.parallel(
-  compileHTML,
-  compileCSS,
-  compileJS,
-  convertTTFtoWOFF,
-  convertTTFtoWOFF2,
-  optimizeImages,
-  convertImagesToWebp,
-  assemblySvgSprites,
+    compileHTML,
+    compileCSS,
+    compileJS,
+    convertTTFtoWOFF,
+    convertTTFtoWOFF2,
+    optimizeImages,
+    convertImagesToWebp,
+    assemblySvgSprites,
 ));
 
+const simpleBuild = gulp.parallel(
+    compileHTML,
+    compileCSS,
+    compileJS
+);
+
 exports.build = build;
+exports.simpleBuilduild = simpleBuild;
 
 
 /* RUN LIVE SERVER */
@@ -270,4 +278,4 @@ function watchFiles() {
 
 
 /* DEVELOPMENT */
-exports.development = gulp.series( build, gulp.parallel( runServer, watchFiles ) );
+exports.development = gulp.series( simpleBuild, gulp.parallel( runServer, watchFiles ) );

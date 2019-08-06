@@ -1,7 +1,7 @@
 <header class="main-header">
-	<div class="main-header__advertising-banner">
+	<div class="main-header__advertising-banner main-header__advertising-banner--opened">
 		<div class="container">
-			<p class="main-header__advertising-text">
+			<p class="main-header__advertising-text p-callback">
 				Летние скидки до 16%
 				<span class="main-header__advertising-text-part2">: как сэкономить 1,2 млн рублей</span>
 			</p>
@@ -11,7 +11,7 @@
 		</div>
 	</div>
 	<div class="container">
-		<nav class="main-header__navigation">
+		<div class="main-header__navigation">
 			<a class="main-header__logo-link">
 				<picture class="main-header__picture-logo">
 					<source srcset="images/logo-desc.svg" media="(min-width: 768px)">
@@ -26,7 +26,7 @@
 					class="main-header__block-phone-link main-header__block-phone-link--mobile block-phone__link">(812) 454 45
 					45</a>
 				<span class="main-header__block-phone-description block-phone__description">мы на связи</span>
-				<button class="main-header__button-callback button-callback js-popup" type="button" data-id="callback">Заказать
+				<button class="main-header__button-callback button-callback js-modal" type="button">Заказать
 					звонок</button>
 			</p>
 			<button class="main-header__burger-button burger-button" type="button">
@@ -34,56 +34,59 @@
 					<use xlink:href="icons/sprite.svg#icon-burger"></use>
 				</svg>
 			</button>
-			<section class="main-header__menu menu">
-				<div class="main-header__menu-content menu__content">
+			<nav class="main-header__menu menu">
+				<div class="menu__content">
 					<button class="main-header__menu-close close close--grey" type="button">
 						<span class="visually-hidden">Закрыть</span>
 					</button>
-					<h2 class="menu__title-list">Чёрная речка</h2>
-					<ul class="main-header__menu-list menu__list">
-						<li class="main-header__menu-item menu__item">
-							<a class="menu__link link link--blue" href="#">О комплексе</a>
-						</li>
-						<li class="main-header__menu-item menu__item">
-							<a class="menu__link link link--blue" href="#">Шоу-рум</a>
-						</li>
-						<li class="main-header__menu-item menu__item">
-							<a class="menu__link link link--blue" href="#">Презентация</a>
-						</li>
-						<li class="main-header__menu-item menu__item">
-							<a class="menu__link link link--blue" href="#">3D-модель</a>
-						</li>
-						<li class="main-header__menu-item menu__item">
-							<a class="menu__link link link--blue" href="#">Планировки</a>
-						</li>
-						<li class="main-header__menu-item menu__item">
-							<a class="menu__link link link--blue" href="#">Условия оплаты</a>
-						</li>
-						<li class="main-header__menu-item menu__item">
-							<a class="menu__link link link--blue" href="#">Как купить</a>
-						</li>
-					</ul>
-					<h2 class="menu__title-list">Комплексы в продаже</h2>
-					<ul class="main-header__menu-list menu__list">
-						<li class="main-header__menu-item menu__item">
-							<a class="menu__link link link--blue" href="#">Елизаровский</a>
-						</li>
-						<li class="main-header__menu-item menu__item">
-							<a class="menu__link link link--blue" href="#">Волковский</a>
-						</li>
-						<li class="main-header__menu-item menu__item">
-							<a class="menu__link link link--blue" href="#">Приневский</a>
-						</li>
-						<li class="main-header__menu-item menu__item">
-							<a class="menu__link link link--blue" href="#">Все</a>
-						</li>
-					</ul>
+					<div class="menu__body">
+						<h2 class="menu__title-list">Чёрная речка</h2>
+						<ul class="main-header__menu-list menu__list">
+							<li class="main-header__menu-item menu__item">
+								<a class="menu__link link link--blue" href="#">О комплексе</a>
+							</li>
+							<li class="main-header__menu-item menu__item">
+								<a class="menu__link link link--blue" href="#">Шоу-рум</a>
+							</li>
+							<li class="main-header__menu-item menu__item">
+								<a class="menu__link link link--blue" href="#">Презентация</a>
+							</li>
+							<li class="main-header__menu-item menu__item">
+								<a class="menu__link link link--blue" href="#">3D-модель</a>
+							</li>
+							<li class="main-header__menu-item menu__item">
+								<a class="menu__link link link--blue" href="#">Планировки</a>
+							</li>
+							<li class="main-header__menu-item menu__item">
+								<a class="menu__link link link--blue" href="#">Условия оплаты</a>
+							</li>
+							<li class="main-header__menu-item menu__item">
+								<a class="menu__link link link--blue" href="#">Как купить</a>
+							</li>
+						</ul>
+						<h2 class="menu__title-list">Комплексы в продаже</h2>
+						<ul class="main-header__menu-list menu__list">
+							<li class="main-header__menu-item menu__item">
+								<a class="menu__link link link--blue" href="#">Елизаровский</a>
+							</li>
+							<li class="main-header__menu-item menu__item">
+								<a class="menu__link link link--blue" href="#">Волковский</a>
+							</li>
+							<li class="main-header__menu-item menu__item">
+								<a class="menu__link link link--blue" href="#">Приневский</a>
+							</li>
+							<li class="main-header__menu-item menu__item">
+								<a class="menu__link link link--blue" href="#">Все</a>
+							</li>
+						</ul>
+					</div>
 					<p class="menu__button-container">
 						<button class="menu__button-selection button button--red js-popup" type="button">Подбор помещения</button>
 					</p>
 				</div>
-			</section>
-		</nav>
+				<div class="menu__overlay"></div>
+			</nav>
+		</div>
 	</div>
 	<div class="main-header__banner">
 		<div class="main-header__banner-container container">
@@ -102,13 +105,11 @@
 						1 корпус — от <span class="main-header__sales-number">3,12</span> млн руб.
 					</p>
 				</li>
-
 				<li class="main-header__sales-item">
 					<p class="main-header__sales-text">
 						2 корпус — от <span class="main-header__sales-number">4,57</span> млн руб.
 					</p>
 				</li>
-
 				<li class="main-header__sales-item">
 					<p class="main-header__sales-text">
 						2 корпус — от <span class="main-header__sales-number">4,23</span> млн руб.

@@ -21,20 +21,13 @@
     height: 100%;
   }
 
-  &__text {
-    animation: width 2s ease-in-out .3s forwards;
-    width: 0;
-    opacity: 0;
-  }
-
   &__logo {
-    width: 215px;
-    animation: scaleIn .6s ease-in-out, widthOut .6s ease-in-out .6s forwards;
+    max-width: 500px;
+    width: 100%;
+    animation: scaleOut .4s ease-in-out;
 
     &-letter {
       fill:#060707;
-      animation: show .3s ease-in-out .56s forwards;
-      opacity: 0;
     }
 
     &-blue {
