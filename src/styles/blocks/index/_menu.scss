@@ -11,6 +11,7 @@
 .menu__content {
   position: relative;
   z-index: 1;
+  display: none;
   margin-top: 40px;
   padding-top: 40px;
   padding-left: 25px;
@@ -19,8 +20,8 @@
   background-color: $white;
   box-shadow: 0 6px 18px rgba(0, 36, 50, 0.32);
   border-radius: 0 4px 4px 0;
+  overflow: hidden;
   animation: slideRight .3s ease-in-out;
-  display: none;
 
   &--slide {
     display: block
@@ -28,12 +29,13 @@
 
   &:after {
     @include pseudo;
-    bottom: 0;
-    right: 0;
+    right: -25px;
+    bottom: -35px;
+    transform: skewY(-55deg);
     z-index: -1;
     width: 172px;
-    height: 300px;
-    background-image: url($imageDir + 'block-blue.png');
+    height: 250px;
+    background-color: $lightBlue;
   }
 }
 
@@ -71,11 +73,10 @@
 }
 
 .menu {
-  animation: show .3s ease-in-out;
   display: none;
+  animation: show .3s ease-in-out;
 }
 
 .menu--opened {
   display: block;
 }
-
