@@ -60,6 +60,16 @@
   }
 }
 
+.main-header__logo-link{
+  max-width: 130px;
+  @media only screen and (min-width : 370px) {
+    max-width: 150px;
+  }
+  @include breakpoint(md) {
+    max-width: 215px;
+  }
+}
+
 .main-header__picture-logo {
   height: 100%;
   display: flex;
@@ -73,10 +83,10 @@
 .main-header__block-phone {
   display: grid;
   grid-row-gap: 5px;
+  margin-left: auto;
   line-height: 12px;
 
   @include breakpoint(sm) {
-    margin-left: auto;
     margin-right: 25px;
   }
 
@@ -159,11 +169,11 @@
 }
 
 .main-header__burger-button {
-  margin-left: auto;
+  // margin-left: auto;
   height: 21px;
 
   @include breakpoint(sm) {
-    margin-left: 0;
+    // margin-left: 0;
   }
 
   @include breakpoint(lg) {
