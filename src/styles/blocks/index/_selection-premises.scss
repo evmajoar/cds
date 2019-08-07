@@ -150,7 +150,7 @@
     &:hover {
       @include breakpoint(lg) {
         border-radius: 4px;
-        box-shadow: 0 6px 18px rgba(0, 36, 50, .32);
+        box-shadow: 0 6px 18px rgba(#002432, .32);
         cursor: pointer;
       }
     }
