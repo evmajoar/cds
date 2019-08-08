@@ -13,7 +13,7 @@ $(function () {
       $callModal = $('.js-modal'),
       $modalsOverlay = $('.modals__overlay'),
       $modalCallback = $('.modals__callback'),
-      $modalsClose = $('.modals__close');
+      $modalsClose = $('.modals__close'),
 
       $adverBanner = $('.main-header__advertising-banner'),
       $adverText = $('.main-header__advertising-text'),
@@ -41,24 +41,22 @@ $(function () {
       .removeClass(str);
   };
 
+  var openPopup = function(elem) {
+    var str = 'popup--opened';
+    toggleBodyClassHidden();
+    $modals.addClass( 'modals--opened' )
+      .find('.' + elem)
+      .addClass(str)
+      .find('input:first')
+      .focus();
+  };
+
+
   // PRELOADER
   setTimeout(function (a) {
     toggleBodyClassHidden('remove');
     $preloader.addClass('preloader--hide');
   }, 1500);
-
-  //
-  // var openPopup = function() {
-  //
-  //   toggleBodyClassHidden();
-  //
-  //   $modals.addClass( 'modals--opened' );
-  //
-  //   if ( $modalCallback.hasClass( 'popup-request--opened' ) ) {
-  //     $popupRequest.removeClass( 'popup-request--opened' );
-  //   }
-  //
-  // };
 
 
   // MENU
@@ -80,11 +78,24 @@ $(function () {
     if ( $targetTagName === 'button' ) {
       $adverBanner.removeClass('main-header__advertising-banner--opened');
     } else {
+      toggleBodyClassHidden();
       $modals.addClass('modals--opened')
         .find('.modals__callback')
         .addClass('popup--opened')
         .find('input:first')
         .focus();
+    }
+  });
+
+  $callModal.click(function () {
+    var $that = $(this),
+        jModal = 'js-modal--',
+        wModal = 'modals__';
+
+    if ( $that.hasClass(jModal + 'callback') ) {
+      openPopup(wModal + 'callback');
+    } else if ( $that.hasClass(jModal + 'callback') ) {
+
     }
   });
 
@@ -101,26 +112,5 @@ $(function () {
       closePopup();
     }
   });
-
-
-  //
-  //
-  // // MODALS
-  // $callModal.click(function (event) {
-  //
-  //   var $that = $(this);
-  //
-  //   if ( $that.is('a') ) {
-  //     event.preventDefault();
-  //   }
-  //
-  //   $modals.addClass('modals--opened');
-  //
-  //   if ( $that.hasClass('button-callback') ) {
-  //     $('.modals__callback').addClass('modals__callback--opened');
-  //   }
-  //
-  // });
-  //
 
 });
