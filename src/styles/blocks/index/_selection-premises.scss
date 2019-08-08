@@ -27,7 +27,7 @@
 .selection-premises__description{
   display: none;
   margin-bottom: 24px;
-  max-width: 600px;
+  max-width: 650px;
   font-family: $UbuntuMedium;
   text-align: left;
   @include breakpoint(sm) {
@@ -150,7 +150,7 @@
     &:hover {
       @include breakpoint(lg) {
         border-radius: 4px;
-        box-shadow: 0 6px 18px rgba(0, 36, 50, .32);
+        box-shadow: 0 6px 18px rgba(#002432, .32);
         cursor: pointer;
       }
     }
@@ -203,10 +203,6 @@
   }
 }
 
-.filter-result__options--black {
-  color: $lightBlack;
-}
-
 .filter-result__value {
   position: relative;
   padding: 18px 0;
@@ -239,7 +235,7 @@
     transform: translateY(-50%);
     width: 42px;
     height: 42px;
-    background-image: url($imageDir + 'filter-img.svg');
+    background-image: url($imageDir + 'filter-img.jpg');
     background-repeat: no-repeat;
   }
 }

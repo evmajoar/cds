@@ -90,7 +90,7 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  border-radius: 10px;
+  border-radius: 4px;
   outline: none;
 
   @include breakpoint(md) {
@@ -221,7 +221,7 @@
   position: absolute;
   right: -25px;
   @include breakpoint(lg) {
-    right: -40px;
+    // right: -40px;
   }
 }
 
