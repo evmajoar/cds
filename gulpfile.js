@@ -239,7 +239,7 @@ const build = gulp.series(cleanDirectory, gulp.parallel(
     convertTTFtoWOFF2,
     optimizeImages,
     convertImagesToWebp,
-    assemblySvgSprites,
+    assemblySvgSprites
 ));
 
 const simpleBuild = gulp.parallel(

@@ -9,20 +9,22 @@ var $layuotsCarousel = $( '.layouts__carousel-list' ),
     $layuotsActive = $( '.carousel-switch__number-slide-item:first-of-type' ),
     $layuotsTotal = $( '.carousel-switch__number-slide-item:last-of-type' );
 
-$layuotsCarousel.on('init afterChange', function(event, slick){
-    $layuotsActive.text(slick.currentSlide + 1);
-    $layuotsTotal.text(slick.slideCount);
-}).slick({
-    dots: false,
-    prevArrow: $layuotsPrev,
-    nextArrow: $layuotsNext,
-    responsive: [{
-        breakpoint: 768,
-        settings: {
-            prevArrow: $layuotsPrevT,
-            nextArrow: $layuotsNextT
-        }
-    }]
+$layuotsCarousel.each(function() {
+   $(this).on('init afterChange', function(event, slick){
+       $(this).find($layuotsActive).text(slick.currentSlide + 1);
+       $(this).find($layuotsTotal).text(slick.slideCount);
+   }).slick({
+       dots: false,
+       prevArrow: $layuotsPrev,
+       nextArrow: $layuotsNext,
+       responsive: [{
+           breakpoint: 768,
+           settings: {
+               prevArrow: $layuotsPrevT,
+               nextArrow: $layuotsNextT
+           }
+       }]
+   });
 });
 
 $('.about-us__carousel-list').slick({

@@ -1,0 +1,19 @@
+@import '../helpers/variables';
+@import '../helpers/mixins';
+
+.tabs {
+  &-content {
+    position: relative;
+    &__item {
+      visibility: hidden;
+      transform: scale(0);
+      width: 100%;
+      z-index: 10;
+      &--current {
+        transform: scale(1);
+        visibility: visible;
+        z-index: 11;
+      }
+    }
+  }
+}
