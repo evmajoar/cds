@@ -1,4 +1,4 @@
-<section class="modals">
+<section class="modals modals--opened">
 	<div id="options" class="popup modals__options">
 		<div class="modals__dialog modals-options__dialog">
 			<button class="modals__close modals-options__close close close--grey" type="button">
@@ -268,7 +268,7 @@
 	</div>
 
 	<!-- Акции и скидки -->
-	<div id="discounts" class="popup modals__discounts">
+	<div id="discounts" class="popup popup--opened modals__discounts">
 		<div class="modals__dialog modals-discounts__dialog">
 			<button class="modals__close close close--grey" type="button">
 				<span class="visually-hidden">Закрыть модальное окно</span>
@@ -277,34 +277,54 @@
 				<h2 class="modals__title">Акции и скидки</h2>
 				<ul class="discounts__carousel-list discounts__carousel-list--modal">
 					<li class="discounts__item discounts__item--1">
-						<a class="discounts__item-popup" href="#">
+						<a class="discounts__link js-popup" data-id="promo-list" href="#">
 							<h3 class="discounts__item-title">Скидки на паркинг<br>до 300 000 руб.</h3>
 							<p class="discounts__item-info">
 								<span class="discounts__item-date">до <time datetime="06-30">30 июня</time></span>
+								<span class="discounts__item-button button-arrow" role="presentation">
+									<svg class="button-arrow__icon-arrow-big icon-arrow-big" width="22" height="14" viewBox="0 0 22 14">
+										<use xlink:href="icons/sprite.svg#icon-arrow-big"></use>
+									</svg>
+								</span>
 							</p>
 						</a>
 					</li>
 					<li class="discounts__item discounts__item--2">
-						<a class="discounts__item-popup" href="#">
+						<a class="discounts__link js-popup" data-id="promo-list" href="#">
 							<h3 class="discounts__item-title">Удваиваем скидку<br>за повторную покупку</h3>
 							<p class="discounts__item-info">
 								<span class="discounts__item-date">до <time datetime="06-18">18 июня</time></span>
+								<span class="discounts__item-button button-arrow" role="presentation">
+									<svg class="button-arrow__icon-arrow-big" width="22" height="14" viewBox="0 0 22 14">
+										<use xlink:href="icons/sprite.svg#icon-arrow-big"></use>
+									</svg>
+								</span>
 							</p>
 						</a>
 					</li>
 					<li class="discounts__item discounts__item--3">
-						<a class="discounts__item-popup" href="#">
+						<a class="discounts__link js-popup" data-id="studio" href="#">
 							<h3 class="discounts__item-title">Суперцены на старте<br>продаж!</h3>
 							<p class="discounts__item-info">
 								<span class="discounts__item-date">до <time datetime="09-01">1 сентября</time></span>
+								<span class="discounts__item-button button-arrow" role="presentation">
+									<svg class="button-arrow__icon-arrow-big" width="22" height="14" viewBox="0 0 22 14">
+										<use xlink:href="icons/sprite.svg#icon-arrow-big"></use>
+									</svg>
+								</span>
 							</p>
 						</a>
 					</li>
 					<li class="discounts__item discounts__item--4">
-						<a class="discounts__item-popup" href="#">
-							<h3 class="discounts__item-title">Суперцены на старте<br>продаж!</h3>
+						<a class="discounts__link js-popup" data-id="promo-list" href="#">
+							<h3 class="discounts__item-title">Скидки на паркинг<br>до 300 000 руб.</h3>
 							<p class="discounts__item-info">
-								<span class="discounts__item-date">до <time datetime="09-01">1 сентября</time></span>
+								<span class="discounts__item-date">до <time datetime="06-30">30 июня</time></span>
+								<span class="discounts__item-button button-arrow" role="presentation">
+									<svg class="button-arrow__icon-arrow-big" width="22" height="14" viewBox="0 0 22 14">
+										<use xlink:href="icons/sprite.svg#icon-arrow-big"></use>
+									</svg>
+								</span>
 							</p>
 						</a>
 					</li>
