@@ -8,7 +8,10 @@ $(function () {
   /*
      SLICK SETTINGS
   */
-  var $layuotsCarousel = $( '.layouts__carousel-list' );
+  var $layuotsCarousel = $( '.layouts__carousel-list' ),
+          $discountsCarousel = $( '.discounts__carousel-list' ),
+          $discountsPrev = $( '.discounts__carousel-prev' ),
+          $discountsNext = $( '.discounts__carousel-next' );
 
   $layuotsCarousel.each(function() {
     $(this).on('init afterChange', function(event, slick){
@@ -21,10 +24,31 @@ $(function () {
       draggable: false,
       prevArrow: $(this).siblings('.layouts__carousel-row-button').find('.layouts__carousel-prev'),
       nextArrow: $(this).siblings('.layouts__carousel-row-button').find('.layouts__carousel-next'),
-      infinite: false,
+      infinite: true,
       responsive: [{
         breakpoint: 768,
         settings: {
+        }
+      }]
+    });
+  });
+
+  $discountsCarousel.each(function () {
+    $(this).slick({
+      dots: false,
+      slidesToShow: 3,
+      variableWidth: true,
+      draggable: false,
+      infinite: true,
+      prevArrow: $(this).siblings().find('.discounts__carousel-prev'),
+      nextArrow: $(this).siblings().find('.discounts__carousel-next'),
+      responsive: [{
+        breakpoint: 767,
+        settings: {
+          dots: false,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          variableWidth: true
         }
       }]
     });
@@ -36,47 +60,22 @@ $(function () {
     variableWidth: true
   });
 
-  var $discountsCarousel = $( '.discounts__carousel-list' ),
-    $discountsPrev = $( '.discounts__carousel-prev' ),
-    $discountsNext = $( '.discounts__carousel-next' );
-
-  $discountsPrev.click(function () {
-    console.log("Есть");
-  });
-
-  $discountsCarousel.slick({
-    dots: false,
-    slidesToShow: 3,
-    variableWidth: true,
-    prevArrow: $discountsPrev,
-    nextArrow: $discountsNext,
-    responsive: [{
-      breakpoint: 767,
-      settings: {
-        dots: false,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        variableWidth: true
-      }
-    }]
-  });
-
 
   // VARS
   var $body = $('body'),
-      $preloader = $('.preloader'),
+          $preloader = $('.preloader'),
 
-      $modals = $('.modals'),
-      $callModal = $('.js-modal'),
-      $modalsOverlay = $('.modals__overlay'),
-      $modalsClose = $('.modals__close'),
+          $modals = $('.modals'),
+          $callModal = $('.js-modal'),
+          $modalsOverlay = $('.modals__overlay'),
+          $modalsClose = $('.modals__close'),
 
-      $adverClose = $('.main-header__advertising-close'),
+          $adverClose = $('.main-header__advertising-close'),
 
-      $menu = $( '.menu' ),
-      $menuBtn = $( '.burger-button' ),
-      $menuClose = $('.main-header__menu-close'),
-      $phones = $( 'input[type="tel"]' );
+          $menu = $( '.menu' ),
+          $menuBtn = $( '.burger-button' ),
+          $menuClose = $('.main-header__menu-close'),
+          $phones = $( 'input[type="tel"]' );
 
 
   // FUNCTIONS
@@ -92,24 +91,24 @@ $(function () {
     var str = 'popup--opened';
     toggleBodyClassHidden('remove');
     $modals.removeClass( 'modals--opened' )
-      .find('.' + str)
-      .removeClass(str);
+            .find('.' + str)
+            .removeClass(str);
   };
 
   var openPopup = function(elem) {
     toggleBodyClassHidden();
     $modals.addClass( 'modals--opened' )
-      .find('.' + elem)
-      .addClass('popup--opened')
-      .find('input:first')
-      .focus();
+            .find('.' + elem)
+            .addClass('popup--opened')
+            .find('input:first')
+            .focus();
   };
 
   var filter = function (inpRoom, inpTurn) {
     $filterRow.each(function () {
       var $that = $(this),
-        $dataRoom = $that.data('room').toString(),
-        $dataTurn = $that.data('turn').toString();
+              $dataRoom = $that.data('room').toString(),
+              $dataTurn = $that.data('turn').toString();
 
       if ((inpRoom === $dataRoom || inpTurn === $dataTurn) && (inpRoom === $dataRoom && inpTurn === $dataTurn)) {
         $(this).css('display', 'table-row');
@@ -141,9 +140,17 @@ $(function () {
       var $that = $( this ), hb = $( 'body, html' );
 
       if ( $that.is( 'button' ) ) {
-        hb.stop().animate({ scrollTop: $( '.' + $that.data( 'id' ) ).offset().top }, 1000, 'swing');
+
+        hb.stop().animate({
+          scrollTop: $( '.' + $that.data( 'id' ) ).offset().top
+        }, 1000, 'swing');
+
       } else if ( $that.is( 'a' ) ) {
-        hb.stop().animate({ scrollTop: $( '.' + $that.attr( 'href' ).replace('#', '') ).offset().top }, 1000, 'swing');
+
+        hb.stop().animate({
+          scrollTop: $( '.' + $that.attr( 'href' ).replace('#', '') ).offset().top
+        }, 1000, 'swing');
+
       }
 
     });
@@ -154,8 +161,12 @@ $(function () {
     PRELOADER
    */
   setTimeout(function (a) {
+
     toggleBodyClassHidden('remove');
-    $preloader.addClass('preloader--hide');
+
+    $preloader
+            .addClass('preloader--hide');
+
   }, 3000);
 
 
@@ -163,13 +174,21 @@ $(function () {
     MENU
    */
   $menuBtn.click(function () {
+
     toggleBodyClassHidden();
-    $menu.addClass('menu--opened');
+
+    $menu
+            .addClass('menu--opened');
+
   });
 
   $menuClose.click(function () {
+
     toggleBodyClassHidden('remove');
-    $menu.removeClass('menu--opened');
+
+    $menu
+            .removeClass('menu--opened');
+
   });
 
 
@@ -177,7 +196,8 @@ $(function () {
     BANNER
    */
   $adverClose.click(function (event) {
-    $('.main-header__advertising-banner').removeClass('main-header__advertising-banner--opened');
+    $('.main-header__advertising-banner')
+            .removeClass('main-header__advertising-banner--opened');
   });
 
 
@@ -185,12 +205,21 @@ $(function () {
     MODALS
    */
   $callModal.click(function () {
-    var thatData = $(this).data('id').toString();
+
+    var thatData = $(this)
+            .data('id')
+            .toString();
+
     toggleBodyClassHidden();
+
     openPopup('modals__' + thatData);
+
   });
+
   $modalsClose.click(closePopup);
+
   $modalsOverlay.click(closePopup);
+
   $(document).keyup(function(e) {
     if (e.keyCode === 27) {
       closePopup();
@@ -202,18 +231,22 @@ $(function () {
     TABS
   */
   var $tabsSwitch = $('.tabs-switch'),
-      $tabsSwitchItemClass = 'tabs-switch__item',
-      $tabsContent = $('.tabs-content'),
-      $tabsContentItemClass = 'tabs-content__item';
+          $tabsSwitchItemClass = 'tabs-switch__item',
+          $tabsContent = $('.tabs-content'),
+          $tabsContentItemClass = 'tabs-content__item';
 
   $tabsContent.each(function () {
     $(this).children().each(function (index) {
 
-      $(this).addClass($tabsContentItemClass)
-        .attr('id', 'tab-index-' + (index + 1));
+      $(this)
+              .wrap('<div class="' + $tabsContentItemClass + '"></div>')
+              .parent()
+              .attr('id', 'tab-index-' + (index + 1));
 
       if (index === 0) {
-        $(this).addClass($tabsContentItemClass + '--current');
+        $(this)
+                .parent()
+                .addClass($tabsContentItemClass + '--current');
       }
 
     });
@@ -222,28 +255,31 @@ $(function () {
   $tabsSwitch.each(function () {
     $(this).children().each(function (index) {
 
-      $(this).addClass()
-        .attr('data-index', 'tab-index-' + (index + 1));
+      $(this)
+              .addClass()
+              .attr('data-index', 'tab-index-' + (index + 1));
 
       if (index === 0) {
-        $(this).addClass($tabsSwitchItemClass + '--active')
+        $(this)
+                .addClass($tabsSwitchItemClass + '--active')
       }
 
     });
-  }).children().click(function () {
+  }).children().on('click', function () {
 
     var $that = $(this),
-        $thatId = $that.data('index');
+            $thatId = $that.data('index');
 
-    $that.addClass($tabsSwitchItemClass + '--active')
-      .siblings()
-      .removeClass($tabsSwitchItemClass + '--active')
-      .closest('section')
-      .find($tabsContent)
-      .children('#' + $thatId)
-      .addClass($tabsContentItemClass + '--current')
-      .siblings()
-      .removeClass($tabsContentItemClass + '--current');
+    $that
+            .addClass($tabsSwitchItemClass + '--active')
+            .siblings()
+            .removeClass($tabsSwitchItemClass + '--active')
+            .closest('section')
+            .find($tabsContent)
+            .children('#' + $thatId)
+            .addClass($tabsContentItemClass + '--current')
+            .siblings()
+            .removeClass($tabsContentItemClass + '--current');
   });
 
 
@@ -251,19 +287,23 @@ $(function () {
     FILTER
    */
   var $filterForm = $('.selection-premises__form'),
-      $filterRow = $('.filter-result__row'),
-      $filterCheckedRoomVal = $filterForm.find('input[name="room"]:checked').val(),
-      $filterCheckedTurnVal = $filterForm.find('input[name="square"]:checked').val(),
-      $buttonFilterM = $filterForm.find('.selection-premises__form-button');
+          $filterRow = $('.filter-result__row'),
+          $filterCheckedRoomVal = $filterForm.find('input[name="room"]:checked').val(),
+          $filterCheckedTurnVal = $filterForm.find('input[name="square"]:checked').val(),
+          $buttonFilterM = $filterForm.find('.selection-premises__form-button');
 
 
   $filterForm.on('change', function () {
 
-      var $that = $(this),
-        $inpRoomChecked = $that.find('input[name="room"]:checked').val(),
-        $inpTurnChecked = $that.find('input[name="square"]:checked').val();
+    var $that = $(this),
+            $inpRoomChecked = $that
+                    .find('input[name="room"]:checked')
+                    .val(),
+            $inpTurnChecked = $that
+                    .find('input[name="square"]:checked')
+                    .val();
 
-      filter($inpRoomChecked, $inpTurnChecked);
+    filter($inpRoomChecked, $inpTurnChecked);
 
   });
 

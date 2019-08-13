@@ -4,13 +4,15 @@
 .tabs {
   &-content {
     position: relative;
+    overflow: hidden;
     &__item {
+      transform: translate3d(0, -100%, 0);
       height: 0;
-      overflow-y: hidden;
+      overflow: hidden;
       transition: all .3s ease-in-out;
       &--current {
+        transform: translate3d(0, 0, 0);
         height: auto;
-        overflow-y: visible;
       }
     }
   }
