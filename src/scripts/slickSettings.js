@@ -31,7 +31,7 @@ $('.about-us__carousel-list').slick({
     variableWidth: true
 });
 
-var $discountsCarousel = $( '.discounts__carousel-list' ),
+var $discountsCarousel = $( '.discounts__carousel-wrapper .discounts__carousel-list' ),
     $discountsPrev = $( '.discounts__carousel-prev' ),
     $discountsNext = $( '.discounts__carousel-next' );
 
