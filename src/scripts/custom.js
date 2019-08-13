@@ -9,7 +9,7 @@ $(function () {
      SLICK SETTINGS
   */
   var $layuotsCarousel = $( '.layouts__carousel-list' ),
-          $discountsCarousel = $( '.discounts__carousel-list' ),
+          $discountsCarousel = $( '.discounts__carousel-wrapper .discounts__carousel-list' ),
           $discountsPrev = $( '.discounts__carousel-prev' ),
           $discountsNext = $( '.discounts__carousel-next' );
 
