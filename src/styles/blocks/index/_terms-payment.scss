@@ -174,9 +174,6 @@
 
 .terms-payment__form{
   grid-column: 2 / -1;
-  // @media only screen and (min-width : 360px) {
-  //   margin: 0 auto;
-  // }
   @include breakpoint(md) {
     margin: 0 auto;
   }
