@@ -559,7 +559,7 @@
 // табы-текст
 .tabs-words {
   display: flex;
-  overflow-x: scroll;
+  overflow-x: auto;
   overflow-y: hidden;
 
   @include breakpoint(sm) {

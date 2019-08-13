@@ -105,15 +105,22 @@
   margin-bottom: 10px;
 }
 
-.layouts__carousel-wrapper, .tabs-content {
+.layouts__carousel-wrapper,
+.layouts__tabs-room-content {
   position: relative;
-  margin-bottom: 30px;
   max-width: 100%;
+}
 
+.layouts__tabs-room-content {
+  margin-bottom: 30px;
   @include breakpoint(md) {
     margin-bottom: 70px;
   }
 }
+
+//.layouts__carousel-wrapper {
+//  width: 1000px;
+//}
 
 .layouts__carousel-list {
   position: relative;
@@ -301,6 +308,7 @@
       }
     }
   }
+}
 
   .layout-dowload__wrapper {
     padding: 24px;
@@ -429,4 +437,3 @@
       left: 70px;
     }
   }
-}

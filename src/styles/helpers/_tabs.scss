@@ -5,14 +5,12 @@
   &-content {
     position: relative;
     &__item {
-      visibility: hidden;
-      transform: scale(0);
-      width: 100%;
-      z-index: 10;
+      height: 0;
+      overflow-y: hidden;
+      transition: all .3s ease-in-out;
       &--current {
-        transform: scale(1);
-        visibility: visible;
-        z-index: 11;
+        height: auto;
+        overflow-y: visible;
       }
     }
   }
