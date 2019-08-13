@@ -360,10 +360,15 @@
 
 .discounts__carousel-list--modal {
   display: grid;
-  grid-template-columns: repeat(2, 190px);
+  grid-template-columns: 220px;
   grid-gap: 20px;
   justify-content: center;
   margin: 0;
+  margin-bottom: 20px;
+
+  @include breakpoint(sm) {
+    grid-template-columns: repeat(2, 190px);
+  }
 
   @include breakpoint(md) {
     grid-template-columns: repeat(2, 220px);
