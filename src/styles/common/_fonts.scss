@@ -4,15 +4,18 @@
 
 @font-face {
   font-family: 'Ubuntu';
+  font-display: swap;
   src: local('Ubuntu'), url($fontDir + 'ubuntu.woff2') format('woff2'), url($fontDir + 'ubuntu.woff') format('woff');
 }
 
 @font-face {
   font-family: 'Ubuntu Medium';
+  font-display: swap;
   src: local('Ubuntu Medium'), local('Ubuntu-Medium'), url($fontDir + 'ubuntumedium.woff2') format('woff2'), url($fontDir + 'ubuntumedium.woff') format('woff');
 }
 
 @font-face {
   font-family: 'Ubuntu Bold';
+  font-display: swap;
   src: local('Ubuntu Bold'), local('Ubuntu-Bold'), url($fontDir + 'ubuntubold.woff2') format('woff2'), url($fontDir + 'ubuntubold.woff') format('woff');
 }

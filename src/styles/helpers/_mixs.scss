@@ -337,9 +337,15 @@
 .block-phone__link {
   display: block;
   font-family: $UbuntuMedium;
-
   @include breakpoint(lg) {
     font-size: 20px;
+  }
+  b {
+    display: none;
+    font-weight: 400;
+    @include breakpoint(lg) {
+      display: inline;
+    }
   }
 }
 
@@ -553,7 +559,7 @@
 // табы-текст
 .tabs-words {
   display: flex;
-  overflow-x: scroll;
+  overflow-x: auto;
   overflow-y: hidden;
 
   @include breakpoint(sm) {
@@ -575,9 +581,6 @@
 .tabs-words__item {
   position: relative;
   flex-shrink: 0;
-  &:last-child{
-    padding-right: 15px;
-  }
 }
 
 .tabs-words__item--active {

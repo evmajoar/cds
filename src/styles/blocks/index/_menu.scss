@@ -9,36 +9,42 @@
   height: 100%;
   z-index: 4;
 
-  &--opened,
-  &--opened .menu__content {
+  &--opened {
     display: block;
   }
+  &--opened .menu__content {
+    transform: translate3d(0, 0, 0);
+
+  }
+  &--opened .menu__content::after {
+    right: -36px;
+    bottom: -85px;
+  }
+
 }
 
 .menu__content {
+  display: block;
   position: relative;
   z-index: 6;
-  //margin-top: 40px;
-  //padding-top: 40px;
-  //padding-left: 25px;
-  //padding-right: 25px;
   max-width: 320px;
   height: 100%;
+  overflow: hidden;
   background-color: $white;
   box-shadow: 0 6px 18px rgba(0, 36, 50, 0.32);
   border-radius: 0 4px 4px 0;
-  overflow: hidden;
-  animation: slideRight .3s ease-in-out;
-
+  transition: all 2s ease-in-out;
+  transform: translate3d(0, -100%, 0);
   &:after {
     @include pseudo;
-    right: -25px;
-    bottom: -35px;
+    transition: all 2s ease-in-out;
+    right: 100%;
+    bottom: 100%;
     transform: skewY(-55deg);
-    z-index: -1;
+    z-index: 1;
     width: 172px;
-    height: 250px;
-    background-color: $lightBlue;
+    height: 300px;
+    background: $lightBlue;
   }
 }
 
@@ -78,6 +84,7 @@
   width: 100%;
   //margin: 0 -25px;
   padding: 25px;
+  z-index: 2;
   background-color: $white;
   box-shadow: 0 6px 18px rgba(0, 36, 50, 0.32);
   border-radius: 0 4px 4px 0;
@@ -85,15 +92,6 @@
 
 .menu__button-selection {
   width: 100%;
-}
-
-.menu {
-  display: none;
-  animation: show .3s ease-in-out;
-}
-
-.menu--opened {
-  display: block;
 }
 
 .menu__overlay {

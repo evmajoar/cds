@@ -105,15 +105,22 @@
   margin-bottom: 10px;
 }
 
-.layouts__carousel-wrapper {
+.layouts__carousel-wrapper,
+.layouts__tabs-room-content {
   position: relative;
-  margin-bottom: 30px;
   max-width: 100%;
+}
 
+.layouts__tabs-room-content {
+  margin-bottom: 30px;
   @include breakpoint(md) {
     margin-bottom: 70px;
   }
 }
+
+//.layouts__carousel-wrapper {
+//  width: 1000px;
+//}
 
 .layouts__carousel-list {
   position: relative;
@@ -285,132 +292,148 @@
   &:not(:last-child) {
     margin-right: 15px;
   }
-}
 
-.layout-dowload__wrapper {
-  padding: 24px;
-  color: $white;
-  background-image: url($imageDir + 'layout-dowload-mobile.jpg');
-  background-color: #4f3f39;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  border-radius: 4px;
+  &.tabs-switch__item {
+    &--active {
+      color: rgba(#3d3d3d, .6);
 
-  @include breakpoint(lg) {
-    padding: 32px 20px 20px 24px;
-    display: flex;
-    justify-content: space-between;
-    background-image: url($imageDir + 'layout-dowload-desktop.jpg');
+      &:after {
+        @include pseudo;
+        top: auto;
+        right: 0;
+        bottom: -1px;
+        left: 0;
+        height: 4px;
+        background: #00adef;
+      }
+    }
   }
 }
 
-.layout-dowload__box--1 {
-  position: relative;
-  padding-bottom: 235px;
-  margin-bottom: 30px;
+  .layout-dowload__wrapper {
+    padding: 24px;
+    color: $white;
+    background-image: url($imageDir + 'layout-dowload-mobile.jpg');
+    background-color: #4f3f39;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 4px;
 
-  @include breakpoint(lg) {
-    margin-bottom: 0;
-    padding-bottom: 0;
-    padding-right: 350px;
+    @include breakpoint(lg) {
+      padding: 32px 20px 20px 24px;
+      display: flex;
+      justify-content: space-between;
+      background-image: url($imageDir + 'layout-dowload-desktop.jpg');
+    }
   }
 
-  @include breakpoint(lg) {
-    max-width: 640px;
+  .layout-dowload__box--1 {
+    position: relative;
+    padding-bottom: 235px;
+    margin-bottom: 30px;
+
+    @include breakpoint(lg) {
+      margin-bottom: 0;
+      padding-bottom: 0;
+      padding-right: 350px;
+    }
+
+    @include breakpoint(lg) {
+      max-width: 640px;
+      width: 100%;
+    }
+  }
+
+  .layout-dowload__box--2 {
+    @include breakpoint(lg) {
+      max-width: 280px;
+    }
+  }
+
+  .layout-dowload__heading {
+    margin-bottom: 10px;
+    display: block;
+    font-family: $UbuntuMedium;
+    font-weight: normal;
+    font-size: 17px;
+  }
+
+  .layout-dowload__text {
+    margin-bottom: 30px;
+  }
+
+  .layout-dowload__link {
+    display: block;
     width: 100%;
-  }
-}
+    text-align: center;
 
-.layout-dowload__box--2 {
-  @include breakpoint(lg) {
-    max-width: 280px;
-  }
-}
+    @media only screen and (min-width: 360px) {
+      margin: 0 auto;
+      max-width: 155px;
+    }
 
-.layout-dowload__heading {
-  margin-bottom: 10px;
-  display: block;
-  font-family: $UbuntuMedium;
-  font-weight: normal;
-  font-size: 17px;
-}
-
-.layout-dowload__text {
-  margin-bottom: 30px;
-}
-
-.layout-dowload__link {
-  display: block;
-  width: 100%;
-  text-align: center;
-
-  @media only screen and (min-width: 360px) {
-    margin: 0 auto;
-    max-width: 155px;
+    @include breakpoint(lg) {
+      margin: 0;
+      margin-left: auto;
+    }
   }
 
-  @include breakpoint(lg) {
-    margin: 0;
-    margin-left: auto;
+  .layout-dowload__img-block {
+    position: absolute;
+    top: 130px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 250px;
+
+    @include breakpoint(sm) {
+      max-width: 300px;
+    }
+
+    @include breakpoint(md) {
+      top: 100px;
+      max-width: 300px;
+    }
+
+    @include breakpoint(lg) {
+      left: auto;
+      right: 0;
+      top: 0;
+      transform: translateX(0);
+      max-width: 321px;
+      height: auto;
+    }
   }
-}
 
-.layout-dowload__img-block {
-  position: absolute;
-  top: 130px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100%;
-  max-width: 250px;
-
-  @include breakpoint(sm) {
-    max-width: 300px;
+  .layout-dowload__img {
+    position: absolute;
+    width: 235px;
+    height: 156px;
   }
 
-  @include breakpoint(md) {
-    top: 100px;
-    max-width: 300px;
+  .layout-dowload__img--1 {
+    z-index: 2;
   }
 
-  @include breakpoint(lg) {
-    left: auto;
-    right: 0;
-    top: 0;
-    transform: translateX(0);
-    max-width: 321px;
-    height: auto;
-  }
-}
-
-.layout-dowload__img {
-  position: absolute;
-  width: 235px;
-  height: 156px;
-}
-
-.layout-dowload__img--1 {
-  z-index: 2;
-}
-
-.layout-dowload__img--2 {
-  top: 24px;
-  left: 10px;
-  z-index: 1;
-
-  @include breakpoint(sm) {
-    top: 12px;
-    left: 35px;
-  }
-}
-
-.layout-dowload__img--3 {
-  top: 48px;
-  left: 20px;
-  z-index: 0;
-
-  @include breakpoint(sm) {
+  .layout-dowload__img--2 {
     top: 24px;
-    left: 70px;
+    left: 10px;
+    z-index: 1;
+
+    @include breakpoint(sm) {
+      top: 12px;
+      left: 35px;
+    }
   }
-}
+
+  .layout-dowload__img--3 {
+    top: 48px;
+    left: 20px;
+    z-index: 0;
+
+    @include breakpoint(sm) {
+      top: 24px;
+      left: 70px;
+    }
+  }

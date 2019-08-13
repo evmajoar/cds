@@ -5,7 +5,7 @@
   color: $white;
 }
 
-.main-header>.container {
+.main-header > .container {
   @include breakpoint(lg) {
     max-width: 1360px;
   }
@@ -98,19 +98,19 @@
   }
 }
 
-.main-header__block-phone-link--mobile {
-  @include breakpoint(md) {
-    display: none;
-  }
-}
+//.main-header__block-phone-link--mobile {
+//  @include breakpoint(md) {
+//    display: none;
+//  }
+//}
 
-.main-header__block-phone-link--desktop {
-  display: none;
-
-  @include breakpoint(md) {
-    display: block;
-  }
-}
+//.main-header__block-phone-link--desktop {
+//  display: none;
+//
+//  @include breakpoint(md) {
+//    display: block;
+//  }
+//}
 
 .main-header__block-phone-description {
   position: relative;
