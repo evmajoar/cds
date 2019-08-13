@@ -378,6 +378,7 @@
 // Подбор помещения
 .modals-choose-apartment__dialog {
   position: relative;
+  flex-direction: column;
   height: 100%;
   color: $white;
   background-image: url($imageDir + 'choose-apartment-bg-mobile.jpg');
@@ -456,6 +457,7 @@
 }
 
 .modals-choose-apartment__steps {
+  justify-content: center;
   width: 100%;
 
   @media only screen and (min-width : 360px) {

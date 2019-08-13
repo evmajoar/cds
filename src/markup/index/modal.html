@@ -1,4 +1,4 @@
-<section class="modals">
+<section class="modals modals--opened">
 	<div id="options" class="popup modals__options">
 		<div class="modals__dialog modals-options__dialog">
 			<button class="modals__close modals-options__close close close--grey" type="button">
@@ -358,7 +358,7 @@
 	</div>
 
 	<!-- Подбор помещения  -->
-	<div id="choose-apartment" class="popup modals__choose-apartment">
+	<div id="choose-apartment" class="popup popup--opened modals__choose-apartment">
 		<div class="modals__dialog modals-choose-apartment__dialog">
 			<button class="modals__close close close--grey" type="button">
 				<span class="visually-hidden">Закрыть модальное окно</span>
@@ -380,8 +380,9 @@
 						class="modals-choose-apartment__button button button--transparent-white button--transparent-white-blue js-popup"
 						data-id="choose-apartment" type="button">Для инвестиций</button>
 				</p>
-
-				<ul class="modals-choose-apartment__steps tabs-number">
+			</div>
+			<div class="tabs-content">
+				<ul class="modals-choose-apartment__steps tabs-number tabs-switch">
 					<li
 						class="modals-choose-apartment__number-link tabs-number__item modals-choose-apartment__number-link--active tabs-number__item--active">
 						<button class="tabs-number__button">1</button>
