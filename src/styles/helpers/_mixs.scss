@@ -78,6 +78,15 @@
   }
 }
 
+.button--big {
+  text-transform: none;
+  font-size: 17px;
+}
+
+.button--notransform {
+  text-transform: none;
+}
+
 .button--red {
   background-color: $red;
 
@@ -337,12 +346,15 @@
 .block-phone__link {
   display: block;
   font-family: $UbuntuMedium;
+
   @include breakpoint(lg) {
     font-size: 20px;
   }
+
   b {
     display: none;
     font-weight: 400;
+
     @include breakpoint(lg) {
       display: inline;
     }
@@ -581,19 +593,21 @@
 .tabs-words__item {
   position: relative;
   flex-shrink: 0;
-}
 
-.tabs-words__item--active {
-  color: rgba(#3d3d3d, .6);
+  &.tabs-switch__item {
+    &--active {
+      color: rgba(#3d3d3d, .6);
 
-  &:after {
-    @include pseudo;
-    top: auto;
-    right: 0;
-    bottom: -1px;
-    left: 0;
-    height: 4px;
-    background: #00adef;
+      &:after {
+        @include pseudo;
+        top: auto;
+        right: 0;
+        bottom: -1px;
+        left: 0;
+        height: 4px;
+        background: #00adef;
+      }
+    }
   }
 }
 
@@ -604,6 +618,14 @@
   &:hover {
     opacity: .6;
   }
+}
+
+.tabs-content {
+  overflow: visible !important;
+}
+
+.tabs-content__item {
+  overflow: visible !important;
 }
 
 .carousel-switch {
@@ -626,20 +648,22 @@
   &:not(:last-child) {
     margin-right: 5px;
   }
-}
 
-.tabs-number__item--active {
-  color: $colorSite;
+  &.tabs-switch__item {
+    &--active {
+      color: $colorSite;
 
-  &:after {
-    @include pseudo;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #f4f5f9;
-    border-radius: 50%;
-    z-index: -1;
+      &:after {
+        @include pseudo;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #f4f5f9;
+        border-radius: 50%;
+        z-index: -1;
+      }
+    }
   }
 }
 

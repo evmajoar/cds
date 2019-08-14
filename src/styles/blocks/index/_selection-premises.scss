@@ -186,6 +186,12 @@
 
 .filter-result__row {
   border-bottom: 1px solid #d3dfeb;
+  display: none;
+  animation: show .3s ease-in-out;
+
+  &--show {
+    display: table-row;
+  }
 }
 
 .filter-result__options {

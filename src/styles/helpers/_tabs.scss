@@ -2,16 +2,19 @@
 @import '../helpers/mixins';
 
 .tabs {
+  width: 100%;
   &-content {
     position: relative;
     overflow: hidden;
     &__item {
-      transform: translate3d(0, -100%, 0);
+      //transform: translate3d(0, -100%, 0);
+      opacity: 0;
       height: 0;
       overflow: hidden;
       transition: all .3s ease-in-out;
       &--current {
-        transform: translate3d(0, 0, 0);
+        opacity: 1;
+        //transform: translate3d(0, 0, 0);
         height: auto;
       }
     }

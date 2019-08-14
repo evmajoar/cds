@@ -412,7 +412,23 @@
 
   @include breakpoint(sm) {
     max-width: 550px;
+    // padding: 0 15px;
   }
+  @include breakpoint(lg) {
+    // padding: 0 15px;
+  }
+}
+
+.modals-choose-apartment__content--tab5{
+  max-width: 650px;
+}
+
+.modals-choose-apartment__content--tab6{
+  max-width: 670px;
+}
+
+.modals-choose-apartment__row-buttons--wrap{
+  flex-wrap: wrap;
 }
 
 .modals-choose-apartment__heading {
@@ -427,12 +443,29 @@
   }
 }
 
+.modals-choose-apartment__heading--small{
+  @include breakpoint(md) {
+    max-width: 425px;
+  }
+
+  .choose-apartment__marker-red-icon{
+    left: 0;
+  }
+}
+
 .modals-choose-apartment__row-buttons {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
   margin-bottom: 25px;
+
+  // @media only screen and (min-width : 400px) {
+  //   flex-direction: row;
+  //   align-items: center;
+  //   justify-content: center;
+  //   margin-bottom: 35px;
+  // }
 
   @include breakpoint(sm) {
     flex-direction: row;
@@ -442,23 +475,59 @@
   }
 }
 
+// .modals-choose-apartment__item{
+//   &:not(:last-child) {
+
+//     @include breakpoint(sm) {
+//       margin-right: 15px;
+//     }
+//   }
+// }
+
 .modals-choose-apartment__button {
   width: 100%;
+  margin-bottom: 8px;
 
-  @media only screen and (min-width : 360px) {
-    width: 100%;
-    max-width: 170px;
+  // @media only screen and (min-width : 400px) {
+  //   width: auto;
+  //   // max-width: 170px;
+  // }
+
+  @include breakpoint(sm) {
+    width: auto;
   }
 
   &:not(:last-child) {
-    margin-bottom: 8px;
+    // margin-bottom: 8px;
+
+    // @media only screen and (min-width : 400px) {
+    //   margin: 0;
+    //   margin-right: 15px;
+    // }
 
     @include breakpoint(sm) {
-      margin: 0;
+      // margin: 0;
       margin-right: 15px;
-      max-width: 170px;
     }
+
+    // @include breakpoint(sm) {
+    //   margin: 0;
+    //   margin-right: 15px;
+    //   // max-width: 170px;
+    // }
   }
+}
+
+.modals-choose-apartment__label{
+  position: relative;
+  text-align: center;
+}
+
+.modals-choose-apartment__input{
+  position: absolute;
+  top: 0;
+  right: 0;
+  opacity: 0;
 }
 
 .modals-choose-apartment__steps {
