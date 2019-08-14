@@ -1,4 +1,4 @@
-<section class="modals">
+<section class="modals modals--opened">
 	<div id="options" class="popup modals__options">
 		<div class="modals__dialog modals-options__dialog">
 			<button class="modals__close modals-options__close close close--grey" type="button">
@@ -378,27 +378,307 @@
 	</div>
 
 	<!-- Подбор помещения  -->
-	<div class="popup modals__choose-apartment">
+	<div class="popup popup--opened modals__choose-apartment">
 		<div class="modals__dialog modals-choose-apartment__dialog">
 			<button class="modals__close close close--grey" type="button">
 				<span class="visually-hidden">Закрыть модальное окно</span>
 			</button>
 			<div class="tabs">
-				<form class="tabs-content" action="/" method="post">
-					<div class="modals__content modals-choose-apartment__content">
-						<b class="modals-choose-apartment__heading choose-apartment__heading">Вы планируете приобрести квартиру для жизни или инвестиций?
+				<d class="tabs-content" action="/" method="post">
+					<!-- вопрос 1 -->
+					<!-- <div class="modals__content modals-choose-apartment__content">
+						<b class="modals-choose-apartment__heading choose-apartment__heading">Какую квартиру вы рассматриваете для
+							покупки?
 							<svg class="choose-apartment__marker-red-icon marker-red-icon" width="70" height="50" viewBox="0 0 70 50">
 								<use xlink:href="icons/sprite.svg#icon-marker-red"></use>
 							</svg>
 						</b>
-						<p class="modals-choose-apartment__row-buttons">
-							<button class="modals-choose-apartment__button button button--transparent-white button--transparent-white-blue" data-id="choose-apartment" type="button">Для жизни</button>
-							<button class="modals-choose-apartment__button button button--transparent-white button--transparent-white-blue" data-id="choose-apartment" type="button">Для инвестиций</button>
-						</p>
+						<ul class="modals-choose-apartment__row-buttons">
+							<li
+								class="modals-choose-apartment__button button button--transparent-white button--transparent-white-blue button--big">
+								<label class="modals-choose-apartment__label">
+									1
+									<input class="modals-choose-apartment__input" name="choice" type="radio">
+								</label>
+							</li>
+
+							<li
+								class="modals-choose-apartment__button button button--transparent-white button--transparent-white-blue button--big">
+								<label class="modals-choose-apartment__label">
+									2
+									<input class="modals-choose-apartment__input" name="choice" type="radio">
+								</label>
+							</li>
+
+							<li
+								class="modals-choose-apartment__button button button--transparent-white button--transparent-white-blue button--big">
+								<label class="modals-choose-apartment__label">
+									3
+									<input class="modals-choose-apartment__input" name="choice" type="radio">
+								</label>
+							</li>
+
+							<li
+								class="modals-choose-apartment__button button button--transparent-white button--transparent-white-blue button--big">
+								<label class="modals-choose-apartment__label">
+									4 и больше
+									<input class="modals-choose-apartment__input" name="choice" type="radio">
+								</label>
+							</li>
+						</ul>
+					</div> -->
+
+					<!-- вопрос 2 -->
+					<!-- <div class="modals__content modals-choose-apartment__content">
+						<b class="modals-choose-apartment__heading choose-apartment__heading">Вы планируете приобрести квартиру для
+							жизни или инвестиций?
+							<svg class="choose-apartment__marker-red-icon marker-red-icon" width="70" height="50" viewBox="0 0 70 50">
+								<use xlink:href="icons/sprite.svg#icon-marker-red"></use>
+							</svg>
+						</b>
+						<ul class="modals-choose-apartment__row-buttons">
+							<li
+								class="modals-choose-apartment__button button button--transparent-white button--transparent-white-blue">
+								<label class="modals-choose-apartment__label">
+									Для жизни
+									<input class="modals-choose-apartment__input" name="choice" type="radio">
+								</label>
+							</li>
+
+							<li
+								class="modals-choose-apartment__button button button--transparent-white button--transparent-white-blue">
+								<label class="modals-choose-apartment__label">
+									Для инвестиций
+									<input class="modals-choose-apartment__input" name="choice" type="radio">
+								</label>
+							</li>
+							
+							<li
+								class="modals-choose-apartment__button button button--transparent-white button--transparent-white-blue">
+								<label class="modals-choose-apartment__label">
+									Для инвестиций
+									<input class="modals-choose-apartment__input" name="choice" type="radio">
+								</label>
+							</li>
+						</ul>
+					</div> -->
+
+					<!-- вопрос 3 -->
+					<!-- <div class="modals__content modals-choose-apartment__content">
+						<b class="modals-choose-apartment__heading choose-apartment__heading">Где вы хотели бы приобрести квартиру?
+							<svg class="choose-apartment__marker-red-icon marker-red-icon" width="70" height="50" viewBox="0 0 70 50">
+								<use xlink:href="icons/sprite.svg#icon-marker-red"></use>
+							</svg>
+						</b>
+						<ul class="modals-choose-apartment__row-buttons">
+							<li
+								class="modals-choose-apartment__button button button--transparent-white button--transparent-white-blue">
+								<label class="modals-choose-apartment__label">
+									север
+									<input class="modals-choose-apartment__input" name="choice" type="radio">
+								</label>
+							</li>
+
+							<li
+								class="modals-choose-apartment__button button button--transparent-white button--transparent-white-blue">
+								<label class="modals-choose-apartment__label">
+									юг
+									<input class="modals-choose-apartment__input" name="choice" type="radio">
+								</label>
+							</li>
+
+							<li
+								class="modals-choose-apartment__button button button--transparent-white button--transparent-white-blue">
+								<label class="modals-choose-apartment__label">
+									определился с комплексом
+									<input class="modals-choose-apartment__input" name="choice" type="radio">
+								</label>
+							</li>
+						</ul>
+					</div> -->
+
+					<!-- вопрос 4 -->
+					<!-- <div class="modals__content modals-choose-apartment__content">
+						<b class="modals-choose-apartment__heading choose-apartment__heading">Какую отделку квартиры вы
+							рассматриваете?
+							<svg class="choose-apartment__marker-red-icon marker-red-icon choose-apartment__marker-red-icon--tab4" width="70" height="50" viewBox="0 0 70 50">
+								<use xlink:href="icons/sprite.svg#icon-marker-red"></use>
+							</svg>
+							
+						</b>
+						<ul class="modals-choose-apartment__row-buttons">
+							<li
+								class="modals-choose-apartment__button button button--transparent-white button--transparent-white-blue">
+								<label class="modals-choose-apartment__label">
+									Без отделки
+									<input class="modals-choose-apartment__input" name="choice" type="radio">
+								</label>
+							</li>
+
+							<li
+								class="modals-choose-apartment__button button button--transparent-white button--transparent-white-blue">
+								<label class="modals-choose-apartment__label">
+									подчистовая
+									<input class="modals-choose-apartment__input" name="choice" type="radio">
+								</label>
+							</li>
+
+							<li
+								class="modals-choose-apartment__button button button--transparent-white button--transparent-white-blue">
+								<label class="modals-choose-apartment__label">
+									чистовая
+									<input class="modals-choose-apartment__input" name="choice" type="radio">
+								</label>
+							</li>
+						</ul>
+					</div> -->
+
+					<!-- вопрос 5 -->
+					<!-- <div class="modals__content modals-choose-apartment__content modals-choose-apartment__content--tab5">
+						<b
+							class="modals-choose-apartment__heading choose-apartment__heading modals-choose-apartment__heading--small">Какой
+							бюджет покупки вы запланировали?
+							<svg class="choose-apartment__marker-red-icon marker-red-icon" width="70" height="50" viewBox="0 0 70 50">
+								<use xlink:href="icons/sprite.svg#icon-marker-red"></use>
+							</svg>
+
+						</b>
+						<ul class="modals-choose-apartment__row-buttons modals-choose-apartment__row-buttons--wrap">
+							<li
+								class="modals-choose-apartment__button button button--transparent-white button--transparent-white-blue button--notransform">
+								<label class="modals-choose-apartment__label">
+									до 5 млн
+									<input class="modals-choose-apartment__input" name="choice" type="radio">
+								</label>
+							</li>
+
+							<li
+								class="modals-choose-apartment__button button button--transparent-white button--transparent-white-blue button--notransform">
+								<label class="modals-choose-apartment__label">
+									5,5 - 8 млн
+									<input class="modals-choose-apartment__input" name="choice" type="radio">
+								</label>
+							</li>
+
+							<li
+								class="modals-choose-apartment__button button button--transparent-white button--transparent-white-blue button--notransform">
+								<label class="modals-choose-apartment__label">
+									8,5 - 12 млн
+									<input class="modals-choose-apartment__input" name="choice" type="radio">
+								</label>
+							</li>
+
+							<li
+								class="modals-choose-apartment__button button button--transparent-white button--transparent-white-blue button--notransform">
+								<label class="modals-choose-apartment__label">
+									12,5 - 15 млн
+									<input class="modals-choose-apartment__input" name="choice" type="radio">
+								</label>
+							</li>
+
+							<li
+								class="modals-choose-apartment__button button button--transparent-white button--transparent-white-blue button--notransform">
+								<label class="modals-choose-apartment__label">
+									БОЛЕЕ 15 млн
+									<input class="modals-choose-apartment__input" name="choice" type="radio">
+								</label>
+							</li>
+						</ul>
+					</div> -->
+
+					<!-- вопрос 6 -->
+					<!-- <div class="modals__content modals-choose-apartment__content modals-choose-apartment__content--tab6">
+						<b
+							class="modals-choose-apartment__heading choose-apartment__heading modals-choose-apartment__heading--small">Какой
+							бюджет покупки вы запланировали?
+							<svg class="choose-apartment__marker-red-icon marker-red-icon" width="70" height="50" viewBox="0 0 70 50">
+								<use xlink:href="icons/sprite.svg#icon-marker-red"></use>
+							</svg>
+
+						</b>
+						<ul class="modals-choose-apartment__row-buttons modals-choose-apartment__row-buttons--wrap">
+							<li
+								class="modals-choose-apartment__button button button--transparent-white button--transparent-white-blue">
+								<label class="modals-choose-apartment__label">
+									ипотека
+									<input class="modals-choose-apartment__input" name="choice" type="radio">
+								</label>
+							</li>
+
+							<li
+								class="modals-choose-apartment__button button button--transparent-white button--transparent-white-blue">
+								<label class="modals-choose-apartment__label">
+									100% оплата
+									<input class="modals-choose-apartment__input" name="choice" type="radio">
+								</label>
+							</li>
+
+							<li
+								class="modals-choose-apartment__button button button--transparent-white button--transparent-white-blue">
+								<label class="modals-choose-apartment__label">
+									субсидия
+									<input class="modals-choose-apartment__input" name="choice" type="radio">
+								</label>
+							</li>
+
+							<li
+								class="modals-choose-apartment__button button button--transparent-white button--transparent-white-blue">
+								<label class="modals-choose-apartment__label">
+									рассрочка
+									<input class="modals-choose-apartment__input" name="choice" type="radio">
+								</label>
+							</li>
+
+							<li
+								class="modals-choose-apartment__button button button--transparent-white button--transparent-white-blue">
+								<label class="modals-choose-apartment__label">
+									не определен
+									<input class="modals-choose-apartment__input" name="choice" type="radio">
+								</label>
+							</li>
+						</ul>
+					</div> -->
+
+					<!-- вопрос 7 -->
+					<!-- <div class="modals__content modals-choose-apartment__content">
+						<h2 class="visually-hidden">Нашли 10 квартир</h2>
+						<b class="modals-choose-apartment__heading choose-apartment__heading">Мы нашли более 10 квартир,
+							которые наверняка вам понравятся!
+							<svg class="choose-apartment__marker-red-icon marker-red-icon" width="70" height="50" viewBox="0 0 70 50">
+								<use xlink:href="icons/sprite.svg#icon-marker-red"></use>
+							</svg>
+						</b>
+
+						<p class="modals-choose-apartment__text choose-apartment__text">Оставьте заявку — и ваш личный менеджер
+							расскажет
+							об актуальных акциях,
+							стоимости со скидкой при 100% оплате и индивидуальных условиях покупки</p>
+						<div class="modals-choose-apartment__form modals__form">
+							<p class="modals-choose-apartment__block-input">
+								<label class="visually-hidden" for="found-apartments-number-input">Номер телефона</label>
+								<input class="modals-callback__input input input--transparent" id="found-apartments-number-input"
+									type="tel" placeholder="+7 (___) ___-__-__">
+							</p>
+							<button class="modals-choose-apartment__link button button--transparent-white js-popup"
+								data-id="choose-apartment" type="button">Оставить заявку</button>
+						</div>
+					</div> -->
+
+					<!-- вопрос 7 -->
+					<div class="modals__content modals-choose-apartment__content modals-choose-apartment__content--tab7">
+						<b
+							class="modals-choose-apartment__heading choose-apartment__heading">Спасибо за заявку! 
+							<svg class="choose-apartment__marker-red-icon marker-red-icon" width="70" height="50" viewBox="0 0 70 50">
+								<use xlink:href="icons/sprite.svg#icon-marker-red"></use>
+							</svg>
+						</b>
+
 					</div>
+
 				</form>
 				<ul class="modals-choose-apartment__steps tabs-number tabs-switch">
-					<li class="modals-choose-apartment__number-link tabs-number__item modals-choose-apartment__number-link--active tabs-number__item--active">
+					<li
+						class="modals-choose-apartment__number-link tabs-number__item modals-choose-apartment__number-link--active tabs-number__item--active">
 						<button class="tabs-number__button">1</button>
 					</li>
 					<li class="modals-choose-apartment__number-link tabs-number__item">
@@ -423,6 +703,7 @@
 			</div>
 		</div>
 	</div>
+
 
 	<!-- Нашли 10 квартир  -->
 	<div id="found-apartments" class="popup modals__found-apartments">

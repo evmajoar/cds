@@ -78,6 +78,15 @@
   }
 }
 
+.button--big {
+  text-transform: none;
+  font-size: 17px;
+}
+
+.button--notransform {
+  text-transform: none;
+}
+
 .button--red {
   background-color: $red;
 
@@ -337,12 +346,15 @@
 .block-phone__link {
   display: block;
   font-family: $UbuntuMedium;
+
   @include breakpoint(lg) {
     font-size: 20px;
   }
+
   b {
     display: none;
     font-weight: 400;
+
     @include breakpoint(lg) {
       display: inline;
     }
@@ -606,6 +618,14 @@
   &:hover {
     opacity: .6;
   }
+}
+
+.tabs-content {
+  overflow: visible !important;
+}
+
+.tabs-content__item {
+  overflow: visible !important;
 }
 
 .carousel-switch {
