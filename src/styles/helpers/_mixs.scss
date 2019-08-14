@@ -649,24 +649,6 @@
   z-index: 2;
 }
 
-.tabs-description__title {
-  color: $lightBlack;
-  font-size: 17px;
-  font-family: $UbuntuMedium;
-}
-
-.tabs-description__description {
-  margin-bottom: 30px;
-  line-height: 24px;
-
-  @include breakpoint(md) {
-    margin-bottom: 55px;
-  }
-
-  @include breakpoint(lg) {
-    margin-bottom: 85px;
-  }
-}
 
 .marker-red-icon {
   position: absolute;
