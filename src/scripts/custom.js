@@ -8,10 +8,8 @@ $(function () {
   /*
      SLICK SETTINGS
   */
-  var $layuotsCarousel = $( '.layouts__carousel-list' ),
-          $discountsCarousel = $( '.discounts__carousel-wrapper .discounts__carousel-list' ),
-          $discountsPrev = $( '.discounts__carousel-prev' ),
-          $discountsNext = $( '.discounts__carousel-next' );
+  var $layuotsCarousel = $( '.layouts__carousel-list'),
+          $discountsCarousel = $( '.discounts__carousel-list', '.discounts__carousel-wrapper');
 
   $layuotsCarousel.each(function() {
     $(this).on('init afterChange', function(event, slick){
@@ -22,8 +20,8 @@ $(function () {
       dots: false,
       arrows: true,
       draggable: false,
-      prevArrow: $(this).siblings('.layouts__carousel-row-button').find('.layouts__carousel-prev'),
-      nextArrow: $(this).siblings('.layouts__carousel-row-button').find('.layouts__carousel-next'),
+      prevArrow: $(this).siblings().find('.btn-prev'),
+      nextArrow: $(this).siblings().find('.btn-next'),
       infinite: true,
       responsive: [{
         breakpoint: 768,
@@ -104,20 +102,6 @@ $(function () {
             .focus();
   };
 
-  var filter = function (inpRoom, inpTurn) {
-    $filterRow.each(function () {
-      var $that = $(this),
-              $dataRoom = $that.data('room').toString(),
-              $dataTurn = $that.data('turn').toString();
-
-      if ((inpRoom === $dataRoom || inpTurn === $dataTurn) && (inpRoom === $dataRoom && inpTurn === $dataTurn)) {
-        $(this).css('display', 'table-row');
-        $('.filter-result__conclusion-count').text($(this).css('display', 'table-row').length);
-      } else {
-        $(this).css('display', 'none');
-      }
-    });
-  };
 
 
   /*
@@ -204,7 +188,9 @@ $(function () {
   /*
     MODALS
    */
-  $callModal.click(function () {
+  $callModal.click(function (event) {
+
+    $(this).is('a') ? event.preventDefault() : false;
 
     var thatData = $(this)
             .data('id')
@@ -239,14 +225,14 @@ $(function () {
     $(this).children().each(function (index) {
 
       $(this)
-              .wrap('<div class="' + $tabsContentItemClass + '"></div>')
-              .parent()
-              .attr('id', 'tab-index-' + (index + 1));
+        .wrap('<div class="' + $tabsContentItemClass + '"></div>')
+        .parent()
+        .attr('id', 'tab-index-' + (index + 1));
 
       if (index === 0) {
         $(this)
-                .parent()
-                .addClass($tabsContentItemClass + '--current');
+          .parent()
+          .addClass($tabsContentItemClass + '--current');
       }
 
     });
@@ -256,30 +242,31 @@ $(function () {
     $(this).children().each(function (index) {
 
       $(this)
-              .addClass()
-              .attr('data-index', 'tab-index-' + (index + 1));
+        .addClass()
+        .attr('data-index', 'tab-index-' + (index + 1));
 
       if (index === 0) {
         $(this)
-                .addClass($tabsSwitchItemClass + '--active')
+          .addClass($tabsSwitchItemClass + '--active');
       }
 
     });
   }).children().on('click', function () {
 
     var $that = $(this),
-            $thatId = $that.data('index');
+      $thatId = $that.data('index');
 
     $that
-            .addClass($tabsSwitchItemClass + '--active')
-            .siblings()
-            .removeClass($tabsSwitchItemClass + '--active')
-            .closest('section')
-            .find($tabsContent)
-            .children('#' + $thatId)
-            .addClass($tabsContentItemClass + '--current')
-            .siblings()
-            .removeClass($tabsContentItemClass + '--current');
+      .addClass($tabsSwitchItemClass + '--active')
+      .siblings()
+      .removeClass($tabsSwitchItemClass + '--active')
+      .closest('.tabs')
+      .find($tabsContent)
+      .first()
+      .children('#' + $thatId)
+      .addClass($tabsContentItemClass + '--current')
+      .siblings()
+      .removeClass($tabsContentItemClass + '--current');
   });
 
 
@@ -287,23 +274,57 @@ $(function () {
     FILTER
    */
   var $filterForm = $('.selection-premises__form'),
-          $filterRow = $('.filter-result__row'),
-          $filterCheckedRoomVal = $filterForm.find('input[name="room"]:checked').val(),
-          $filterCheckedTurnVal = $filterForm.find('input[name="square"]:checked').val(),
-          $buttonFilterM = $filterForm.find('.selection-premises__form-button');
+    $filterRow = $('.filter-result__row'),
+    $filterCheckedRoomVal = $filterForm.find('input[name="room"]:checked').val(),
+    $filterCheckedTurnVal = $filterForm.find('input[name="square"]:checked').val(),
+    $buttonFilterM = $filterForm.find('.selection-premises__form-button');
 
+  var filteredRooms = function (inpRoom, inpTurn) {
+    $filterRow
+      .each(function () {
+
+        var $that = $(this),
+          $dataRoom = $that.data('room').toString(),
+          $dataTurn = $that.data('turn').toString();
+
+        if (
+          (inpRoom === $dataRoom || inpTurn === $dataTurn)
+          &&
+          (inpRoom === $dataRoom && inpTurn === $dataTurn)
+        ) {
+          $(this)
+            .addClass('filter-result__row--show');
+        } else {
+          $(this)
+            .removeClass('filter-result__row--show');
+        }
+      });
+
+  };
+
+  // var countFilteredElements = function() {
+  //   $filterForm
+  //     .siblings()
+  //     .find('.filter-result__conclusion-count')
+  //     .text($filterRow.filter('.filter-result__row--show').length.toString());
+  // };
+
+  // countFilteredElements();
+  filteredRooms($filterCheckedRoomVal, $filterCheckedTurnVal);
 
   $filterForm.on('change', function () {
 
     var $that = $(this),
-            $inpRoomChecked = $that
-                    .find('input[name="room"]:checked')
-                    .val(),
-            $inpTurnChecked = $that
-                    .find('input[name="square"]:checked')
-                    .val();
+      $inpRoomChecked = $that
+        .find('input[name="room"]:checked')
+        .val(),
+      $inpTurnChecked = $that
+        .find('input[name="square"]:checked')
+        .val();
 
-    filter($inpRoomChecked, $inpTurnChecked);
+    filteredRooms($inpRoomChecked, $inpTurnChecked);
+
+    // countFilteredElements();
 
   });
 

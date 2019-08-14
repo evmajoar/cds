@@ -378,33 +378,27 @@
 	</div>
 
 	<!-- Подбор помещения  -->
-	<div id="choose-apartment" class="popup modals__choose-apartment">
+	<div class="popup modals__choose-apartment">
 		<div class="modals__dialog modals-choose-apartment__dialog">
 			<button class="modals__close close close--grey" type="button">
 				<span class="visually-hidden">Закрыть модальное окно</span>
 			</button>
-			<div class="modals__content modals-choose-apartment__content">
-				<h2 class="visually-hidden">Подбор помещения</h2>
-				<b class="modals-choose-apartment__heading choose-apartment__heading">Вы планируете приобрести квартиру
-					для жизни или инвестиций?
-					<svg class="choose-apartment__marker-red-icon marker-red-icon" width="70" height="50" viewBox="0 0 70 50">
-						<use xlink:href="icons/sprite.svg#icon-marker-red"></use>
-					</svg>
-				</b>
-
-				<p class="modals-choose-apartment__row-buttons">
-					<button
-						class="modals-choose-apartment__button button button--transparent-white button--transparent-white-blue js-popup"
-						data-id="choose-apartment" type="button">Для жизни</button>
-					<button
-						class="modals-choose-apartment__button button button--transparent-white button--transparent-white-blue js-popup"
-						data-id="choose-apartment" type="button">Для инвестиций</button>
-				</p>
-			</div>
-			<div class="tabs-content">
+			<div class="tabs">
+				<form class="tabs-content" action="/" method="post">
+					<div class="modals__content modals-choose-apartment__content">
+						<b class="modals-choose-apartment__heading choose-apartment__heading">Вы планируете приобрести квартиру для жизни или инвестиций?
+							<svg class="choose-apartment__marker-red-icon marker-red-icon" width="70" height="50" viewBox="0 0 70 50">
+								<use xlink:href="icons/sprite.svg#icon-marker-red"></use>
+							</svg>
+						</b>
+						<p class="modals-choose-apartment__row-buttons">
+							<button class="modals-choose-apartment__button button button--transparent-white button--transparent-white-blue" data-id="choose-apartment" type="button">Для жизни</button>
+							<button class="modals-choose-apartment__button button button--transparent-white button--transparent-white-blue" data-id="choose-apartment" type="button">Для инвестиций</button>
+						</p>
+					</div>
+				</form>
 				<ul class="modals-choose-apartment__steps tabs-number tabs-switch">
-					<li
-						class="modals-choose-apartment__number-link tabs-number__item modals-choose-apartment__number-link--active tabs-number__item--active">
+					<li class="modals-choose-apartment__number-link tabs-number__item modals-choose-apartment__number-link--active tabs-number__item--active">
 						<button class="tabs-number__button">1</button>
 					</li>
 					<li class="modals-choose-apartment__number-link tabs-number__item">
